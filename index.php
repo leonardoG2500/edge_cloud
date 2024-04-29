@@ -464,32 +464,34 @@
                     <div class="row g-3">
                         <p class="fs-5 fw-medium">Consigue una cotización</p>
                         <form action="form.php" method="POST">
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
-                                    <label for="nombre">Nombre</label>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
+                                        <label for="nombre">Nombre</label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="correo" name="correo" placeholder="Correo" required>
-                                    <label for="correo">Correo</label>
+                                <div class="col-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="correo" name="correo" placeholder="Correo" required>
+                                        <label for="correo">Correo</label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono" required>
-                                    <label for="telefono">Celular</label>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono" required>
+                                        <label for="telefono">Celular</label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Mensaje" id="mensaje" name="mensaje" style="height: 130px" required></textarea>
-                                    <label for="mensaje">Mensaje</label>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Mensaje" id="mensaje" name="mensaje" style="height: 130px" required></textarea>
+                                        <label for="mensaje">Mensaje</label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-12 text-center">
-                                <button class="btn w-100 py-3" style="background-color: #00296b; color: white;" type="submit" name="enviar">Enviar</button>
+                                <div class="col-12 text-center">
+                                    <button class="btn btn-primary rounded-pill py-3 px-5" style="background-color: #00296b; color: white;" type="submit" name="enviar">Enviar</button>
+                                </div>
                             </div>
                         </form>
                     </div>
