@@ -252,7 +252,7 @@
                         </div> -->
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
@@ -265,7 +265,7 @@
                         </div> -->
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
@@ -298,7 +298,7 @@
 
 
     <!--Work Us Start-->
-    <div class="container-xxl d-flex py-5">
+    <div class="container-xxl wow fadeInUp d-flex py-5">
         <div class="row">
             <div class="col-lg-6 d-flex align-items-center">
                 <img class="img-fluid" src="img/proyect/work.jpg" alt="" style="width: 90%; margin: auto;">
@@ -389,7 +389,7 @@
                 <p class="fs-5 fw-medium">Clientes</p>
                 <h1 class="display-6 mb-5">Ellos han confiado en nosotros</h1>
             </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.5s">
                 <div class="client-item p-4 p-lg-5 mb-5">
                     <img class="mb-4" src="img/clientes/envases.png" alt="logo_cliente">
                 </div>
@@ -503,11 +503,11 @@
 
 
     <!-- Contacts Start -->
-    <div class="container-xxl py-5" data-wow-delay="0.5s">
+    <div class="container-xxl py-5">
         <div class="wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px; margin: auto;">
             <h1 class="display-6 mb-5 text-center">Visitanos</h1>
         </div>
-        <div class="row">
+        <div class="row wow fadeInUp" data-wow-delay="0.5s">
             <div class="col-lg-4" style="margin: auto;">
                 <div class="d-flex border-bottom pb-3 mb-3">
                     <div class="flex-shrink-0 btn-square rounded-circle" style="background-color: #00296b;">
