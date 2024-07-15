@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Edge & Cloud | Especialistas en tecnologías de la información</title>
+    <title>Pagina principal</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="Somos una organización, que ofrece servicios de consultoría y soluciones integrales en tecnologías de la información y 
