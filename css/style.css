@@ -25,11 +25,12 @@ body{
 
 
 /**text**/
-h1 {
-    font-family: system-ui, sans-serif;
-    font-size: 5rem;
+#titleText
+{
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     --s: 0.1em; /* the thickness of the line */
     --c: #00296b; /* the color */
   
@@ -41,14 +42,13 @@ h1 {
     -webkit-background-clip: text, padding-box;
     background-clip: text, padding-box;
     transition: 0.5s;
-
-    
   }
-  h1:hover {
+  #titleText:hover{
     --_p: 100%;
   }
 
   h3{
+    font-size: 20px;
     color: #00296b;
   }
 
@@ -368,6 +368,7 @@ h1 {
     background-size: cover;
 }
 
+
 .page-header .breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);
 }
@@ -378,6 +379,20 @@ h1 {
     color: var(--light);
 }
 
+.page-header-ei {
+  background: url(../img/carousel-3.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.page-header-ei .breadcrumb-item+.breadcrumb-item::before {
+  color: var(--light);
+}
+
+.page-header-ei .breadcrumb-item,
+.page-header-ei .breadcrumb-item a {
+  font-size: 18px;
+  color: var(--light);
+}
 
 /*** Service ***/
 .service-item .service-text {
@@ -677,4 +692,61 @@ h1 {
 
 .copyright a:hover {
     color: var(--primary) !important;
+}
+
+
+dialog {
+  padding: 1rem 3rem;
+  background: white;
+  max-width: 400px;
+  padding-top: 2rem;
+  border-radius: 20px;
+  border: 0;
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1);
+  -webkit-animation: fadeIn 1s ease both;
+          animation: fadeIn 1s ease both;
+}
+dialog::-webkit-backdrop {
+  -webkit-animation: fadeIn 1s ease both;
+          animation: fadeIn 1s ease both;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: 2;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+dialog::backdrop {
+  -webkit-animation: fadeIn 1s ease both;
+          animation: fadeIn 1s ease both;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: 2;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+dialog .x {
+  filter: grayscale(1);
+  border: none;
+  background: none;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  transition: ease filter, transform 0.3s;
+  cursor: pointer;
+  transform-origin: center;
+}
+dialog .x:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+dialog h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+dialog p {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  padding: 0.5rem 0;
+}
+dialog p a:visited {
+  color: rgb(var(--vs-primary));
 }

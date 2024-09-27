@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
          // CAMBIAR CREDENCIALES DEL CORREO
          $mail->Username = 'contacto@edgecloud.com.mx'; // Tu dirección de correo electrónico
-         $mail->Password = 'Soluciones1'; // Tu contraseña de correo electrónico (considérala mover a un archivo de configuración o variable de entorno)
+         $mail->Password = 'Operaciones1'; // Tu contraseña de correo electrónico (considérala mover a un archivo de configuración o variable de entorno)
          $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Habilitar la encriptación SSL/TLS
          $mail->Port = 465;                      // Puerto TCP para conectarse
 

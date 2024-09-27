@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Edge & Cloud | Especialistas en tecnologías de la información</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
+    <meta content="Edge & Cloud, edge, cloud, electromecánica, " name="keywords">
     <meta content="Somos una organización, que ofrece servicios de consultoría y soluciones integrales en tecnologías de la información y 
     transformación digital con personal altamente calificado, generando mayor rentabilidad a nuestros clientes actuales y futuros" name="description">
 
@@ -32,6 +32,15 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0XDQFMG7Q1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0XDQFMG7Q1');
+</script>
 
 <body>
 
@@ -58,7 +67,7 @@
         <div class="container py-1">
             <div class="d-flex align-items-center">
                 <a href="./">
-                    <img src="img/Logo_E&C.png" style="width: 95px; height: 45px;"></img>
+                    <img src="img/Logo_E&C.png" alt="Logo_E&C" style="width: 95px; height: 45px;"></img>
                 </a>
                 <div class="ms-auto d-flex align-items-center">
                     <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>Benedicto XV #144 San Jeronimo ll</small>
@@ -81,7 +90,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
                 <a href="./" class="navbar-brand d-lg-none">
-                    <img src="/img/Logo_E&C_.png" style="width: 95px; height: 45px;"></img>
+                    <img src="img/Logo_E&C_.png" alt="Logo_E&C" style="width: 95px; height: 45px;"></img>
                 </a>
                 <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
@@ -89,7 +98,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav" >
                         <a href="./" class="nav-item nav-link active">Inicio</a>
-                        <a href="/nosotros/" class="nav-item nav-link">Nosotros</a>
+                        <a href="./nosotros/" class="nav-item nav-link">Nosotros</a>
                         <!-- <div class="nav-item dropdown">
                             <a href="../servicio/" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Servicios</a>
                             <div class="dropdown-menu rounded-0 rounded-bottom m-0">
@@ -104,7 +113,7 @@
                                 <a href="404.html" class="dropdown-item">Sistemas de seguridad</a>
                             </div>
                         </div> -->
-                        <a href="/contacto/" class="nav-item nav-link">Contactos</a>
+                        <a href="./contacto/" class="nav-item nav-link">Contactos</a>
                     </div>
                 </div>
             </nav>
@@ -123,7 +132,7 @@
                         <div class="container">
                             <div class="row justify-content-start">
                                 <div class="col-lg-6 text-start">
-                                    <p class="fs-2 text-white animated slideInRight">Bienvenido a <h2 class="display-1 animated slideInRight text-white">Edge & Cloud</h2></p>
+                                    <p class="fs-2 text-white animated slideInRight">Bienvenido a <h1 class="display-1 animated slideInRight text-white">Edge & Cloud</h1></p>
                                     <!-- <a href="" class="btn btn-primary rounded-pill py-3 px-5 animated slideInRight">Explore More</a> -->
                                 </div>
                             </div>
@@ -136,8 +145,8 @@
                         <div class="container">
                             <div class="row justify-content-end">
                                 <div class="col-lg-6 text-end">
-                                    <h3 class="display-1 text-white mb-5 animated slideInLeft">Ya llegamos</h3>
-                                    <!-- <a href="" class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Explore More</a> -->
+                                    <p class="display-1 text-white mb-5 animated slideInLeft">Equipamiento Industrial</p>
+                                    <a href="servicio/equipamiento-industrial/" class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Ver más</a>
                                 </div>
                             </div>
                         </div>
@@ -171,126 +180,122 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-6 mb-5">Nuestros Servicios</h1>
+                <h2 id="titleText" class="display-3 mb-5">Nuestros Servicios</h2>
             </div>
-            <div class="row g-4">
+            <div class="row g-4 justify-content-around">
+                <!-- Servicio 1 -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5" >
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
                                 <img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
                             </div>
-                            <h5 class="mb-3">Consultoria en transformación digital</h4>
+                            <h3 class="mb-3">Consultoria en transformación digital</h3>
                         </div>
                         <!-- <div class="service-btn rounded-0 rounded-bottom">
                             <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
                         </div> -->
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item position-relative h-100">
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-2.png" alt="Icon">
-                            </div>
-                            <h5 class="mb-3">Soluciones de software y hardware</h4>
-                        </div>
-                        <!-- <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div> -->
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item position-relative h-100">
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-3.png" alt="Icon">
-                            </div>
-                            <h5 class="mb-3">Consultoria de proyectos de nueva generación</h4>
-                        </div>
-                        <!-- <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div> -->
-                    </div>
-                </div>
+                <!-- Servicio 2 -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
                                 <img class="img-fluid" src="img/icon/icon-4.png" alt="Icon">
                             </div>
-                            <h5 class="mb-3">Diseño e integración de sistemas de seguridad</h4>
+                            <h3 class="mb-3">Diseño e integración de sistemas de seguridad inteligente</h3>
                         </div>
                         <!-- <div class="service-btn rounded-0 rounded-bottom">
                             <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
                         </div>  -->
                     </div>
                 </div>
+                <!-- Servicio 3 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item position-relative h-100">
+                        <div class="service-text rounded p-5">
+                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                                <img class="img-fluid" src="img/icon/icon-3.png" alt="Icon">
+                            </div>
+                            <h3 class="mb-3">Consultoria de proyectos de nueva generación</h3>
+                        </div>
+                        <!-- <div class="service-btn rounded-0 rounded-bottom">
+                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- Servicio 4 -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
                                 <img class="img-fluid" src="img/icon/icon-5.png" alt="Icon">
                             </div>
-                            <h5 class="mb-3">Remodelación y mantenimiento industrial</h4>
+                            <h3 class="mb-3">Remodelación y mantenimiento industrial</h3>
                         </div>
                         <!-- <div class="service-btn rounded-0 rounded-bottom">
                             <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
                         </div> -->
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <!-- Servicio 5 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
                                 <img class="img-fluid" src="img/icon/icon-8.png" alt="Icon">
                             </div>
-                            <h5 class="mb-3">Fibra óptica y cableado estructurado</h4>
+                            <h3 class="mb-3">Fibra óptica y cableado estructurado</h3>
                         </div>
                         <!-- <div class="service-btn rounded-0 rounded-bottom">
                             <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
                         </div> -->
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <!-- Servicio 6 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
                                 <img class="img-fluid" src="img/icon/icon-6.png" alt="Icon">
                             </div>
-                            <h5 class="mb-3">Electromecánica</h4>
+                            <h3 class="mb-3">Electromecánica</h3>
                         </div>
                         <!-- <div class="service-btn rounded-0 rounded-bottom">
                             <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
                         </div> -->
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item position-relative h-100">
+                <!-- Servicio 7 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item position-static h-100">
+                        <div class="service-text rounded p-5">
+                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                                <img class="img-fluid" src="img/icon/icon-2.png" alt="Icon">
+                            </div>
+                            <h3 class="mb-3">Equipamiento industrial</h3>
+                        </div>
+                        <!-- <div class="service-btn rounded-0 rounded-bottom">
+                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- Servicio 8 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item position-static h-100">
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
                                 <img class="img-fluid" src="img/icon/icon-7.png" alt="Icon">
                             </div>
-                            <h5 class="mb-3">Soluciones inalambricas</h4>
+                            <h3 class="mb-3">Soluciones inalambricas</h3>
                         </div>
                         <!-- <div class="service-btn rounded-0 rounded-bottom">
                             <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
                         </div> -->
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item position-relative h-100">
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-9.png" alt="Icon">
-                            </div>
-                            <h5 class="mb-3">Sistemas de seguridad</h4>
-                        </div>
-                        <!-- <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div> -->
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
@@ -301,7 +306,7 @@
     <div class="container-xxl wow fadeInUp d-flex py-5">
         <div class="row">
             <div class="col-lg-6 d-flex align-items-center">
-                <img class="img-fluid" src="img/proyect/work.jpg" alt="" style="width: 90%; margin: auto;">
+                <img class="img-fluid" src="img/proyect/work.jpg" alt="" style="width: 90%; margin: auto; border-radius: 10px;">
             </div>
             <div class="col-lg-5 d-flex align-items-center px-4 py-3">
                 <div class="row">
@@ -323,7 +328,7 @@
         <div class="container">
             <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <p class="fs-5 fw-medium">Nuestros Proyectos</p>
-                <h1 class="display-6 mb-5">Hemos realizado muchos proyectos increíbles</h1>
+                <h2 id="titleText" class="display-6 mb-5">Hemos realizado muchos proyectos increíbles</h2>
             </div>
             <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
                 <!-- proyect 1 -->
@@ -332,7 +337,7 @@
                         <img class="img-fluid" src="img/proyect/project-1.jpg" alt="">
                     </div>
                     <div class="p-4">
-                        <p class="text-center d-block h5" style="color: #00296b;">Sistemas de seguridad inteligente</p>
+                        <h3 class="text-center d-block" style="color: #00296b;">Sistemas de seguridad inteligente</h3>
                         <!-- <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span> -->
                     </div>
                 </div>
@@ -342,7 +347,7 @@
                         <img class="img-fluid" src="img/proyect/project-2.jpg" alt="servicio">
                     </div>
                     <div class="p-4">
-                        <p class="text-center d-block h5" style="color: #00296b;">Electromecánica</p>
+                        <h3 class="text-center d-block" style="color: #00296b;">Electromecánica</h3>
                         <!-- <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span> -->
                     </div>
                 </div>
@@ -352,7 +357,7 @@
                         <img class="img-fluid" src="img/proyect/project-3.jpg" alt="servicio">
                     </div>
                     <div class="p-4">
-                        <p class="text-center d-block h5" style="color: #00296b;">Controles de acceso</p>
+                        <h3 class="text-center d-block" style="color: #00296b;">Controles de acceso</h3>
                         <!-- <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span> -->
                     </div>
                 </div>
@@ -362,7 +367,7 @@
                         <img class="img-fluid" src="img/proyect/project-4.jpg" alt="servicio">
                     </div>
                     <div class="p-4">
-                        <p class="text-center d-block h5" style="color: #00296b;">Cableado estructurado</p>
+                        <h3 class="text-center d-block" style="color: #00296b;">Cableado estructurado</h3>
                         <!-- <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span> -->
                     </div>
                 </div>
@@ -372,7 +377,7 @@
                         <img class="img-fluid" src="img/proyect/project-5.jpg" alt="servicio">
                     </div>
                     <div class="p-4">
-                        <p class="text-center d-block h5" style="color: #00296b;">Cámaras de vigilancia inteligente</p>
+                        <h3 class="text-center d-block" style="color: #00296b;">Cámaras de vigilancia inteligente</h3>
                         <!-- <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span> -->
                     </div>
                 </div>
@@ -387,7 +392,7 @@
         <div class="container">
             <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <p class="fs-5 fw-medium">Clientes</p>
-                <h1 class="display-6 mb-5">Ellos han confiado en nosotros</h1>
+                <h2 id="titleText" class="display-6 mb-5">Ellos han confiado en nosotros</h2>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.5s">
                 <div class="client-item p-4 p-lg-5 mb-5">
@@ -403,10 +408,10 @@
                     <img class="mb-4" src="img/clientes/tsubaki.png" alt="logo_cliente">
                 </div>
                 <div class="client-item p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="../img/clientes/club_leon.png" alt="logo_cliente">
+                    <img class="mb-4" src="img/clientes/club_leon.png" alt="logo_cliente">
                 </div>
                 <div class="client-item p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="../img/clientes/gto.png" alt="logo_cliente">
+                    <img class="mb-4" src="img/clientes/gto.png" alt="logo_cliente">
                 </div>
             </div>
         </div>
@@ -458,20 +463,20 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <p class="fs-5 fw-medium">Consigue una cotización</p>
-                    <h1 class="display-6 mb-4">¿Necesitas algún experto? Contacta con nosotros</h1>
+                    <h2 id="titleText" class="display-6 mb-4">¿Necesitas algún experto? Contacta con nosotros</h2>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="row g-3">
                         <p class="fs-5 fw-medium">Consigue una cotización</p>
                         <form action="form.php" method="POST">
                             <div class="row g-3">
-                                <div class="col-6">
+                                <div class="col-md-6">
                                     <div class="form-floating">
                                         <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
                                         <label for="nombre">Nombre</label>
                                     </div>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-md-6">
                                     <div class="form-floating">
                                         <input type="email" class="form-control" id="correo" name="correo" placeholder="Correo" required>
                                         <label for="correo">Correo</label>
@@ -492,6 +497,7 @@
                                 <div class="col-12 text-center">
                                     <button class="btn btn-primary rounded-pill py-3 px-5" style="background-color: #00296b; color: white;" type="submit" name="enviar">Enviar</button>
                                 </div>
+
                             </div>
                         </form>
                     </div>
@@ -505,7 +511,7 @@
     <!-- Contacts Start -->
     <div class="container-xxl py-5">
         <div class="wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px; margin: auto;">
-            <h1 class="display-6 mb-5 text-center">Visitanos</h1>
+            <h2 id="titleText" class="display-6 mb-5 text-center">Visitanos</h2>
         </div>
         <div class="row wow fadeInUp" data-wow-delay="0.5s">
             <div class="col-lg-4" style="margin: auto;">
@@ -514,7 +520,7 @@
                         <i class="fa fa-map-marker-alt text-white"></i>
                     </div>
                     <div class="ms-3">
-                        <h6>Dirección</h6>
+                        <h3>Dirección</h3>
                         <span>Benedicto XV #144 San Jeronimo ll</span>
                     </div>
                 </div>
@@ -523,7 +529,7 @@
                         <i class="fa fa-envelope text-white"></i>
                     </div>
                     <div class="ms-3">
-                        <h6>Correo</h6>
+                        <h3>Correo</h3>
                         <span>contacto@edgecloud.com.mx</span>
                     </div>
                 </div>
@@ -532,7 +538,7 @@
                         <i class="fab fa-whatsapp text-white"></i>
                     </div>
                     <div class="ms-3">
-                        <h6>Whatsapp</h6>
+                        <h3>Whatsapp</h3>
                         <span>477 754 7672</span>
                     </div>
                 </div>
@@ -554,20 +560,20 @@
             <h2 class="mb-5 text-white text-center">Contactanos</h2>
             <div class="row">
                 <div class="col-lg mb-3">
-                    <h4 class="text-white text-center">Ubicación</h4>
+                    <h3 class="text-white text-center">Ubicación</h3>
                     <p class="text-center"><i class="fa fa-map-marker-alt me-3"></i>Benedicto XV #144 San Jeronimo ll. C.P. 37148 León, Guanajuato. MX</p>
                     <p class="text-center"><i class="fa fa-envelope me-3"></i>contacto@edgecloud.com.mx</p>
                     <p class="text-center"><i class="fab fa-whatsapp me-3"></i>477 754 7672</p>
                 </div>
                 <br>
                 <div class="col-lg mb-3">
-                    <h4 class="text-white text-center">Horario</h4>
+                    <h3 class="text-white text-center">Horario</h3>
                     <p class="text-center">Lunes - Viernes</p>
                     <p class="text-center">09:00 am - 06:00 pm</p>
                 </div>
                 <br>
                 <div class="col-lg mb-3">
-                    <h4 class="text-white text-center">Redes Sociales</h4>
+                    <h3 class="text-white text-center">Redes Sociales</h3>
                     <div class="d-flex justify-content-center">
                         <a class="btn btn-square btn-light rounded-circle me-2" href="https://www.facebook.com/profile.php?id=61553718295104"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-square btn-light rounded-circle me-2" href="https://www.instagram.com/edgecloud_/"><i class="fab fa-instagram"></i></a>
@@ -576,7 +582,7 @@
                 </div>
             </div>
         </div>
-        <div class="text-center"><img id="gto" src="img/marca_gto.png" style="max-width: 100%; width: 75px;"></img></div>
+        <div class="text-center"><img id="gto" src="img/marca_gto.png" alt="Marca_GTO" style="max-width: 100%; width: 75px;"></img></div>
     </div>
     <!-- Footer End -->
 
