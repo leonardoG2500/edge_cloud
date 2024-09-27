@@ -750,3 +750,31 @@ dialog p {
 dialog p a:visited {
   color: rgb(var(--vs-primary));
 }
+
+.modal-content {
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+}
+
+.modal-header {
+  text-align: center; /* Centrar texto en el encabezado */
+}
+
+.modal-body {
+  font-size: 1.1rem; /* Aumentar el tamaño de fuente en el cuerpo */
+  padding: 20px; /* Espaciado interno */
+}
+
+.modal-footer {
+  justify-content: center; /* Centrar el botón en el pie del modal */
+}
+
+.btn-primary {
+  background-color: #00296b; /* Color de fondo del botón */
+  border-color: #00296b; /* Color del borde del botón */
+  transition: background-color 0.3s; /* Efecto de transición en el color de fondo */
+}
+
+.btn-primary:hover {
+  background-color: #001f4d; /* Color de fondo en hover */
+}

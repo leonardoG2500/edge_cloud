@@ -10,47 +10,46 @@ require 'PHPMailer/Exception.php';
 require 'PHPMailer/SMTP.php';
 require 'PHPMailer/PHPMailer.php';
 
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $mail = new PHPMailer(true);
 
     try {
         // Configuraciones del servidor SMTP
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;           // Habilitar la salida de depuración detallada
-        $mail->isSMTP(); // Enviar utilizando SMTP
-        $mail->Host = 'mail.edgecloud.com.mx'; // Servidor SMTP de Gmail
-        $mail->SMTPAuth = true; // Habilitar la autenticación SMTP
-
-        // CAMBIAR CREDENCIALES DEL CORREO
-        $mail->Username = 'contacto@edgecloud.com.mx'; // Tu dirección de correo electrónico
-        $mail->Password = 'Operaciones1'; // Tu contraseña de correo electrónico (considérala mover a un archivo de configuración o variable de entorno)
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Habilitar la encriptación SSL/TLS
+        $mail->SMTPDebug = SMTP::DEBUG_OFF; // Deshabilitar salida de depuración en producción
+        $mail->isSMTP();
+        $mail->Host = 'mail.edgecloud.com.mx';
+        $mail->SMTPAuth = true;
+        
+        // Mover credenciales de correo a un archivo seguro o variable de entorno
+        $mail->Username = 'contacto@edgecloud.com.mx'; 
+        $mail->Password = 'Operaciones1';
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
-
 
         // Destinatario del correo
         $mail->setFrom('contacto@edgecloud.com.mx', 'EDGE & CLOUD');
-        $mail->addAddress('contacto@edgecloud.com.mx'); // Dirección de correo del destinatario
+        $mail->addAddress('contacto@edgecloud.com.mx');
 
         // Asunto y cuerpo del correo
-        $mail->isHTML(true);                             // Establecer el formato de correo HTML
-        $mail->Subject = 'EDGE & CLOUD - SOLICITUD DE COTIZACION';       // Asunto del correo
+        $mail->isHTML(true);
+        $mail->Subject = 'EDGE & CLOUD - SOLICITUD DE COTIZACION';
 
-        // Construir el cuerpo del correo electrónico usando los datos del formulario
+        // Cuerpo del correo usando los datos del formulario
         $body = '<p>Nombre: ' . $_POST['nombre'] . '</p>';
         $body .= '<p>Correo: ' . $_POST['correo'] . '</p>';
         $body .= '<p>Telefono: ' . $_POST['telefono'] . '</p>';
         $body .= '<p>Mensaje: ' . $_POST['mensaje'] . '</p>';
 
-        $mail->Body = $body;  // Cuerpo del correo electrónico
+        $mail->Body = $body;
 
-        // Enviar el correo electrónico
+        // Enviar el correo
         $mail->send();
-        echo "¡Mensaje enviado!";
-        // Redirigir al usuario al archivo index.php
+        
+        // Redirigir después del envío exitoso
         header('Location: ./');
-        exit; // Asegura que el script se detenga después de la redirección
+        exit;
+
     } catch (Exception $e) {
         echo "El mensaje no pudo ser enviado. Error: {$mail->ErrorInfo}";
     }
