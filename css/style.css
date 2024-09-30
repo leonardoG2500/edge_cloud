@@ -379,8 +379,9 @@ body{
     color: var(--light);
 }
 
+
 .page-header-ei {
-  background: url(../img/carousel-3.jpg) center center no-repeat;
+  background: url(../img/carousel-3.jpg) center no-repeat;
   background-size: cover;
 }
 
@@ -408,7 +409,7 @@ body{
 }
 
 .service-item:hover .service-text {
-    top: -1.3rem;
+    top: -1rem;
 }
 
 .service-item .service-text h5 {
@@ -423,7 +424,7 @@ body{
     position: absolute;
     width: 90%;
     height: 60px;
-    left: 10%;
+    left: 0%;
     bottom: 0;
     display: flex;
     align-items: center;

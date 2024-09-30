@@ -597,7 +597,6 @@
     </script>
 
 
-
     <!-- Contacts Start -->
     <div class="container-xxl py-5">
         <div class="wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px; margin: auto;">
@@ -628,7 +627,7 @@
                         <i class="fab fa-whatsapp text-white"></i>
                     </div>
                     <div class="ms-3">
-                        <h3>Whatsapp</h3>
+                        <h3>WhatsApp</h3>
                         <span>477 754 7672</span>
                     </div>
                 </div>
