@@ -6,10 +6,8 @@
     <title>Edge & Cloud | Especialistas en tecnologías de la información</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Edge & Cloud, edge, cloud, electromecánica, " name="keywords">
-    <meta
-        content="Somos una organización, que ofrece servicios de consultoría y soluciones integrales en tecnologías de la información y 
-    transformación digital con personal altamente calificado, generando mayor rentabilidad a nuestros clientes actuales y futuros"
-        name="description">
+    <meta content="Somos una organización, que ofrece servicios de consultoría y soluciones integrales en tecnologías de la información y 
+    transformación digital con personal altamente calificado, generando mayor rentabilidad a nuestros clientes actuales y futuros"name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.png" rel="icon" type="image/x-icon">
@@ -17,9 +15,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -165,7 +161,7 @@
                     </div>
                 </div>
                 <div class="carousel-item" id="bg">
-                    <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+                    <img class="w-100" src="img/carousel-4.jpg" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-end">
@@ -173,7 +169,7 @@
                                     <p class="display-1 text-white mb-5 animated slideInLeft">Equipamiento Industrial
                                     </p>
                                     <a href="servicio/equipamiento-industrial/"
-                                        class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Ver más</a>
+                                        class="btn btn-light rounded-pill py-3 px-5 animated slideInLeft" type="button">Ver más</a>
                                 </div>
                             </div>
                         </div>
@@ -530,10 +526,11 @@
                                     </div>
                                 </div>
                                 <div class="col-12 text-center">
-                                    <button class="btn btn-primary rounded-pill py-3 px-5"
+                                    <button class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft"
                                         style="background-color: #00296b; color: white;" type="submit">Enviar</button>
                                 </div>
                             </div>
+                            
                         </form>
                     </div>
                 </div>
@@ -703,7 +700,7 @@
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
