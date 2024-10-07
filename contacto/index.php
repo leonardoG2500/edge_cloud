@@ -120,8 +120,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav">
-                        <a href="../" class="nav-item nav-link">Inicio</a>
+                        <a href="../" class="nav-item nav-link  ">Inicio</a>
                         <a href="../nosotros/" class="nav-item nav-link">Nosotros</a>
+                        <a href="../servicio/equipamiento-industrial/" class="nav-item nav-link">Equipamiento
+                            Industrial</a>
                         <!-- <div class="nav-item dropdown">
                             <a href="../servicio/" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Servicios</a>
                             <div class="dropdown-menu rounded-0 rounded-bottom m-0">
