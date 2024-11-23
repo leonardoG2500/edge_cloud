@@ -7,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Edge & Cloud, edge, cloud, electromecánica, " name="keywords">
     <meta content="Somos una organización, que ofrece servicios de consultoría y soluciones integrales en tecnologías de la información y 
-    transformación digital con personal altamente calificado, generando mayor rentabilidad a nuestros clientes actuales y futuros"name="description">
+    transformación digital con personal altamente calificado, generando mayor rentabilidad a nuestros clientes actuales y futuros" name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.png" rel="icon" type="image/x-icon">
@@ -118,7 +118,7 @@
                         <a href="./nosotros/" class="nav-item nav-link">Nosotros</a>
                         <a href="./servicio/equipamiento-industrial/" class="nav-item nav-link">Equipamiento
                             Industrial</a>
-                        <!-- <div class="nav-item dropdown">
+                        <div class="nav-item dropdown">
                             <a href="../servicio/" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Servicios</a>
                             <div class="dropdown-menu rounded-0 rounded-bottom m-0">
                                 <a href="../servicios/servicios.html" class="dropdown-item">Consultoría en transformación digital</a>
@@ -131,7 +131,7 @@
                                 <a href="404.html" class="dropdown-item">Fibra óptica y cableado estructural</a>
                                 <a href="404.html" class="dropdown-item">Sistemas de seguridad</a>
                             </div>
-                        </div> -->
+                        </div>
                         <a href="./contacto/" class="nav-item nav-link">Contactos</a>
                     </div>
                 </div>
@@ -151,8 +151,8 @@
                         <div class="container">
                             <div class="row justify-content-start">
                                 <div class="col-lg-6 text-start">
-                                    <p class="fs-2 text-white animated slideInRight">Bienvenido a
-                                    <h1 class="display-1 animated slideInRight text-white">Edge & Cloud</h1>
+                                    <p class="fs-2 text-white animated slideInRight">
+                                    <h1 class="display-1 animated slideInRight text-white">Proximamente</h1>
                                     </p>
                                     <!-- <a href="" class="btn btn-primary rounded-pill py-3 px-5 animated slideInRight">Explore More</a> -->
                                 </div>
@@ -161,15 +161,13 @@
                     </div>
                 </div>
                 <div class="carousel-item" id="bg">
-                    <img class="w-100" src="img/carousel-4.jpg" alt="Image">
+                    <img class="w-100" src="img/carousel-5.jpg" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-end">
                                 <div class="col-lg-6 text-end">
-                                    <p class="display-1 text-white mb-5 animated slideInLeft">Equipamiento Industrial
-                                    </p>
-                                    <a href="servicio/equipamiento-industrial/"
-                                        class="btn btn-light rounded-pill py-3 px-5 animated slideInLeft" type="button">Ver más</a>
+                                    <h1 class="display-1 text-white mb-5 animated slideInLeft"></h1>
+                                    <!-- <a href="servicio/equipamiento-industrial/" class="btn btn-light rounded-pill py-3 px-5 animated slideInLeft" type="button">Ver más</a> -->
                                 </div>
                             </div>
                         </div>
@@ -203,20 +201,21 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h2 id="titleText" class="display-3 mb-5">Nuestros Servicios</h2>
+                <h2 id="titleText" class="display-3 mb-5">Nuestros Aliados</h2>
             </div>
             <div class="row g-4 justify-content-around">
                 <!-- Servicio 1 -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
+                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
+                                <a href="">
+                                    <img class="img-fluid" src="img/aliados/business_view.jpg" alt="Icon">
+                                </a>
                             </div>
-                            <h3 class="mb-3">Consultoria en transformación digital</h3>
                         </div>
                         <!-- <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
+                            <a class="fw-medium" style="color: #00296b;" href="">Rea More<i class="bi bi-chevron-double-right ms-2"></i></a>
                         </div> -->
                     </div>
                 </div>
@@ -224,24 +223,26 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-4.png" alt="Icon">
+                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
+                                <a href="">
+                                    <img class="img-fluid" src="img/aliados/famco.jpg" alt="Icon">
+                                </a>
                             </div>
-                            <h3 class="mb-3">Diseño e integración de sistemas de seguridad inteligente</h3>
                         </div>
                         <!-- <div class="service-btn rounded-0 rounded-bottom">
                             <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div>  -->
+                        </div> -->
                     </div>
                 </div>
                 <!-- Servicio 3 -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-3.png" alt="Icon">
+                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
+                                <a href="">
+                                    <img class="img-fluid" src="img/aliados/gposesp.jpg" alt="Icon">
+                                </a>
                             </div>
-                            <h3 class="mb-3">Consultoria de proyectos de nueva generación</h3>
                         </div>
                         <!-- <div class="service-btn rounded-0 rounded-bottom">
                             <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
@@ -252,10 +253,11 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-5.png" alt="Icon">
+                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
+                                <a href="">
+                                    <img class="img-fluid" src="img/aliados/grupo_vetro.jpg" alt="Icon">
+                                </a>
                             </div>
-                            <h3 class="mb-3">Remodelación y mantenimiento industrial</h3>
                         </div>
                         <!-- <div class="service-btn rounded-0 rounded-bottom">
                             <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
@@ -266,10 +268,12 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-8.png" alt="Icon">
+                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
+                                <a href="">
+                                    <img class="img-fluid" src="img/aliados/rama.jpg" alt="Icon">
+                                </a>
+                               
                             </div>
-                            <h3 class="mb-3">Fibra óptica y cableado estructurado</h3>
                         </div>
                         <!-- <div class="service-btn rounded-0 rounded-bottom">
                             <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
@@ -280,10 +284,11 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-6.png" alt="Icon">
+                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
+                                <a href="">
+                                    <img class="img-fluid" src="img/aliados/seem.jpg" alt="Icon">
+                                </a>
                             </div>
-                            <h3 class="mb-3">Electromecánica</h3>
                         </div>
                         <!-- <div class="service-btn rounded-0 rounded-bottom">
                             <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
@@ -294,10 +299,11 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item position-static h-100">
                         <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-2.png" alt="Icon">
+                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
+                                <a href="">
+                                    <img class="img-fluid" src="img/aliados/siprom.jpg" alt="Icon">
+                                </a>
                             </div>
-                            <h3 class="mb-3">Equipamiento industrial</h3>
                         </div>
                         <!-- <div class="service-btn rounded-0 rounded-bottom">
                             <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
@@ -308,10 +314,26 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item position-static h-100">
                         <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-7.png" alt="Icon">
+                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
+                                <a href="">
+                                    <img class="img-fluid" src="img/aliados/tecnolep.jpg" alt="Icon">
+                                </a>
                             </div>
-                            <h3 class="mb-3">Soluciones inalambricas</h3>
+                        </div>
+                        <!-- <div class="service-btn rounded-0 rounded-bottom">
+                            <a class="fw-medium" style="color: #00296b;" href="">Rea More<i class="bi bi-chevron-double-right ms-2"></i></a>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item position-static h-100">
+                        <div class="service-text rounded p-5">
+                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
+                                <a href="">
+                                    <img class="img-fluid" src="img/aliados/grupo_yavar.jpg" alt="Icon">
+                                </a>
+                            </div>
                         </div>
                         <!-- <div class="service-btn rounded-0 rounded-bottom">
                             <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
@@ -319,14 +341,28 @@
                     </div>
                 </div>
 
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item position-static h-100">
+                        <div class="service-text rounded p-5">
+                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
+                                <a href="">
+                                    <img class="img-fluid" src="img/aliados/business_view.jpg" alt="Icon">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- <div class="service-btn rounded-0 rounded-bottom">
+                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
+                        </div> -->
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!--Service End -->
+    <!-- Service End -->
 
 
     <!--Work Us Start-->
-    <div class="container-xxl wow fadeInUp d-flex py-5">
+    <div class="container-xxl wow fadeInUp d-flex py-5" style="padding: 5% 0;">
         <div class="row">
             <div class="col-lg-6 d-flex align-items-center">
                 <img class="img-fluid" src="img/proyect/work.jpg" alt=""
@@ -365,7 +401,7 @@
                     </div>
                     <div class="p-4">
                         <h3 class="text-center d-block" style="color: #00296b;">Sistemas de seguridad inteligente</h3>
-                        <!-- <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span> -->
+                        <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span>
                     </div>
                 </div>
                 <!-- Proyecto 2 -->
@@ -375,7 +411,7 @@
                     </div>
                     <div class="p-4">
                         <h3 class="text-center d-block" style="color: #00296b;">Electromecánica</h3>
-                        <!-- <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span> -->
+                        <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span>
                     </div>
                 </div>
                 <!-- Proyecto 3 -->
@@ -385,7 +421,7 @@
                     </div>
                     <div class="p-4">
                         <h3 class="text-center d-block" style="color: #00296b;">Controles de acceso</h3>
-                        <!-- <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span> -->
+                        <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span>
                     </div>
                 </div>
                 <!-- Proyecto 4 -->
@@ -395,7 +431,7 @@
                     </div>
                     <div class="p-4">
                         <h3 class="text-center d-block" style="color: #00296b;">Cableado estructurado</h3>
-                        <!-- <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span> -->
+                        <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span>
                     </div>
                 </div>
                 <!-- Proyecto 5 -->
@@ -405,7 +441,7 @@
                     </div>
                     <div class="p-4">
                         <h3 class="text-center d-block" style="color: #00296b;">Cámaras de vigilancia inteligente</h3>
-                        <!-- <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span> -->
+                        <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span>
                     </div>
                 </div>
             </div>
@@ -447,8 +483,34 @@
     <!--Clients End-->
 
 
-    <!--Testimony Start
-    <div class="container-xxl py-6">
+    <!--Prueba Star-->
+    <div class="container-xxl py-5" style="padding: 3% 0">
+        <div class="container">
+            <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="fs-5 fw-medium">Clientes</p>
+                <h2 id="titleText" class="display-6 mb-5">Ellos han confiado en nosotros</h2>
+            </div>
+            <div class="row1">
+                <div class="column">
+                    <img src="img/clientes/envases.png" alt="logo_cliente" style="max-width: 100%; width: 300px;">
+                    <img src="img/clientes/psw.png" alt="logo_cliente" style="max-width: 100%; width: 300px;">
+                </div>
+                <div class="column">
+                    <img src="img/clientes/tsubaki.png" alt="logo_cliente" style="max-width: 100%; width: 300px;">
+                    <img src="img/clientes/club_leon.png" alt="logo_cliente" style="max-width: 100%; width: 300px;">
+                </div>
+                <div class="column">
+                    <img src="img/clientes/ryiobi.png" alt="logo_cliente" style="max-width: 100%; width: 300px;">
+                    <img src="img/clientes/gto.png" alt="logo_cliente" style="max-width: 100%; width: 300px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Prueba End-->
+
+
+    <!--Testimony Start -->
+    <!-- <div class="container-xxl py-6">
         <div class="container">
             <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <p class="fs-5 fw-medium">Testimonios</p>
@@ -481,8 +543,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    Testimony End-->
+    </div> -->
+    <!-- Testimony End -->
 
 
     <!-- Formulario de cotización -->
@@ -591,7 +653,7 @@
                     alert('Hubo un problema al enviar el formulario. Inténtalo de nuevo más tarde.');
                 });
         });
-    </script>
+    </script> -->
 
 
     <!-- Contacts Start -->

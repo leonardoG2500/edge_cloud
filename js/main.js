@@ -29,6 +29,7 @@
         return false;
     });
 
+    
 
     // Project and Testimonial carousel
     $(".project-carousel, .testimonial-carousel").owlCarousel({
