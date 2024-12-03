@@ -212,11 +212,11 @@
                                 <a href="">
                                     <img class="img-fluid" src="img/aliados/business_view.jpg" alt="Icon">
                                 </a>
+                                <div class="content-service">
+                                    <h3>Texto de los servicios</h3>
+                                </div>
                             </div>
                         </div>
-                        <!-- <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="fw-medium" style="color: #00296b;" href="">Rea More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div> -->
                     </div>
                 </div>
                 <!-- Servicio 2 -->
