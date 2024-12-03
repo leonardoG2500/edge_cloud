@@ -212,8 +212,13 @@
                                 <a href="">
                                     <img class="img-fluid" src="img/aliados/business_view.jpg" alt="Icon">
                                 </a>
-                                <div class="content-service">
-                                    <h3>Texto de los servicios</h3>
+                                <div class="content-service position-absolute d-flex flex-column justify-content-center align-items-center">
+                                    <ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
+                                        <li>Google Business View</li>
+                                        <li>Recorrido virtual en tu web</li>
+                                        <li>Materport</li>
+                                        <li><a href="">Ver más</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -227,11 +232,16 @@
                                 <a href="">
                                     <img class="img-fluid" src="img/aliados/famco.jpg" alt="Icon">
                                 </a>
+                                <div class="content-service position-absolute d-flex flex-column justify-content-center align-items-center">
+                                    <ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
+                                        <li>Google Business View</li>
+                                        <li>Recorrido virtual en tu web</li>
+                                        <li>Materport</li>
+                                        <li><a href="">Ver más</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <!-- <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div> -->
                     </div>
                 </div>
                 <!-- Servicio 3 -->
@@ -240,121 +250,161 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
                                 <a href="">
-                                    <img class="img-fluid" src="img/aliados/gposesp.jpg" alt="Icon">
+                                    <img class="img-fluid" src="img/aliados/grupo_vetro.jpg" alt="Icon">
                                 </a>
+                                <div class="content-service position-absolute d-flex flex-column justify-content-center align-items-center">
+                                    <ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
+                                        <li>Google Business View</li>
+                                        <li>Recorrido virtual en tu web</li>
+                                        <li>Materport</li>
+                                        <li><a href="">Ver más</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <!-- <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div> -->
                     </div>
                 </div>
                 <!-- Servicio 4 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
                                 <a href="">
-                                    <img class="img-fluid" src="img/aliados/grupo_vetro.jpg" alt="Icon">
+                                    <img class="img-fluid" src="img/aliados/grupo_yavar.jpg" alt="Icon">
                                 </a>
+                                <div class="content-service position-absolute d-flex flex-column justify-content-center align-items-center">
+                                    <ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
+                                        <li>Google Business View</li>
+                                        <li>Recorrido virtual en tu web</li>
+                                        <li>Materport</li>
+                                        <li><a href="">Ver más</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <!-- <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div> -->
                     </div>
                 </div>
                 <!-- Servicio 5 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
                                 <a href="">
                                     <img class="img-fluid" src="img/aliados/rama.jpg" alt="Icon">
                                 </a>
-                               
+                                <div class="content-service position-absolute d-flex flex-column justify-content-center align-items-center">
+                                    <ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
+                                        <li>Google Business View</li>
+                                        <li>Recorrido virtual en tu web</li>
+                                        <li>Materport</li>
+                                        <li><a href="">Ver más</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <!-- <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div> -->
                     </div>
                 </div>
                 <!-- Servicio 6 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
                                 <a href="">
                                     <img class="img-fluid" src="img/aliados/seem.jpg" alt="Icon">
                                 </a>
+                                <div class="content-service position-absolute d-flex flex-column justify-content-center align-items-center">
+                                    <ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
+                                        <li>Fibra optica</li>
+                                        <li>CCTV</li>
+                                        <li>Electromecanica</li>
+                                        <li><a href="https://www.seem.com.mx">Ver más</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <!-- <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div> -->
                     </div>
                 </div>
                 <!-- Servicio 7 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item position-static h-100">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
                                 <a href="">
                                     <img class="img-fluid" src="img/aliados/siprom.jpg" alt="Icon">
                                 </a>
+                                <div class="content-service position-absolute d-flex flex-column justify-content-center align-items-center">
+                                    <ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
+                                        <li>Google Business View</li>
+                                        <li>Recorrido virtual en tu web</li>
+                                        <li>Materport</li>
+                                        <li><a href="">Ver más</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <!-- <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div> -->
                     </div>
                 </div>
                 <!-- Servicio 8 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item position-static h-100">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
                                 <a href="">
                                     <img class="img-fluid" src="img/aliados/tecnolep.jpg" alt="Icon">
                                 </a>
+                                <div class="content-service position-absolute d-flex flex-column justify-content-center align-items-center">
+                                    <ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
+                                        <li>Google Business View</li>
+                                        <li>Recorrido virtual en tu web</li>
+                                        <li>Materport</li>
+                                        <li><a href="">Ver más</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <!-- <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="fw-medium" style="color: #00296b;" href="">Rea More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div> -->
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item position-static h-100">
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
-                                <a href="">
-                                    <img class="img-fluid" src="img/aliados/grupo_yavar.jpg" alt="Icon">
-                                </a>
-                            </div>
-                        </div>
-                        <!-- <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div> -->
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item position-static h-100">
+                <!-- Servicio 9 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
                                 <a href="">
                                     <img class="img-fluid" src="img/aliados/business_view.jpg" alt="Icon">
                                 </a>
+                                <div class="content-service position-absolute d-flex flex-column justify-content-center align-items-center">
+                                    <ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
+                                        <li>Google Business View</li>
+                                        <li>Recorrido virtual en tu web</li>
+                                        <li>Materport</li>
+                                        <li><a href="">Ver más</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <!-- <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div> -->
                     </div>
                 </div>
+                <!-- Servicio 10 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item position-relative h-100">
+                        <div class="service-text rounded p-5">
+                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
+                                <a href="">
+                                    <img class="img-fluid" src="img/aliados/business_view.jpg" alt="Icon">
+                                </a>
+                                <div class="content-service position-absolute d-flex flex-column justify-content-center align-items-center">
+                                    <ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
+                                        <li>Google Business View</li>
+                                        <li>Recorrido virtual en tu web</li>
+                                        <li>Materport</li>
+                                        <li><a href="">Ver más</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
