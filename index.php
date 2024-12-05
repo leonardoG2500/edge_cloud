@@ -146,13 +146,13 @@
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" id="bg">
-                    <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+                    <img class="w-100" src="img/carousel-6.jpg" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-start">
                                 <div class="col-lg-6 text-start">
                                     <p class="fs-2 text-white animated slideInRight">
-                                    <h1 class="display-1 animated slideInRight text-white">Proximamente</h1>
+                                    <!-- <h1 class="display-1 animated slideInRight text-white">Proximamente</h1> -->
                                     </p>
                                     <!-- <a href="" class="btn btn-primary rounded-pill py-3 px-5 animated slideInRight">Explore More</a> -->
                                 </div>
@@ -274,7 +274,7 @@
                                 </a>
                                 <div class="content-service position-absolute d-flex flex-column justify-content-center align-items-center">
                                     <ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
-                                        <li>Google Business View</li>
+                                        <li>Organizar eventos</li>
                                         <li>Recorrido virtual en tu web</li>
                                         <li>Materport</li>
                                         <li><a href="">Ver más</a></li>
@@ -294,9 +294,10 @@
                                 </a>
                                 <div class="content-service position-absolute d-flex flex-column justify-content-center align-items-center">
                                     <ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
-                                        <li>Google Business View</li>
-                                        <li>Recorrido virtual en tu web</li>
-                                        <li>Materport</li>
+                                        <li>Muros de contención</li>
+                                        <li>Insfraestructuras</li>
+                                        <li>Mantenimiento comercial e industrial</li>
+                                        <li>Edificicaión</li>
                                         <li><a href="">Ver más</a></li>
                                     </ul>
                                 </div>
@@ -447,41 +448,41 @@
                 <!-- proyect 1 -->
                 <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/proyect/project-1.jpg" alt="">
+                        <img class="img-fluid" src="img/img_test_1.jpg" alt="">
                     </div>
                     <div class="p-4">
-                        <h3 class="text-center d-block" style="color: #00296b;">Sistemas de seguridad inteligente</h3>
-                        <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span>
+                        <h3 class="text-center d-block" style="color: #00296b;">Tipo de servicio</h3>
+                        <span><a href="" class="text-center d-block" style="border-bottom: 2px solid blue;">Sabes más de Yavar</a></span>
                     </div>
                 </div>
                 <!-- Proyecto 2 -->
                 <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/proyect/project-2.jpg" alt="servicio">
+                        <img class="img-fluid" src="img/img_test_2.jpg" alt="servicio">
                     </div>
                     <div class="p-4">
-                        <h3 class="text-center d-block" style="color: #00296b;">Electromecánica</h3>
-                        <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span>
+                        <h3 class="text-center d-block" style="color: #00296b;">Tipo de servicio</h3>
+                        <!-- <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span> -->
                     </div>
                 </div>
                 <!-- Proyecto 3 -->
                 <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/proyect/project-3.jpg" alt="servicio">
+                        <img class="img-fluid" src="img/img_test_3.jpg" alt="servicio">
                     </div>
                     <div class="p-4">
-                        <h3 class="text-center d-block" style="color: #00296b;">Controles de acceso</h3>
-                        <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span>
+                        <h3 class="text-center d-block" style="color: #00296b;">Tipo de servicio</h3>
+                        <!-- <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span> -->
                     </div>
                 </div>
                 <!-- Proyecto 4 -->
                 <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/proyect/project-4.jpg" alt="servicio">
+                        <img class="img-fluid" src="img/img_test_4.jpg" alt="servicio">
                     </div>
                     <div class="p-4">
-                        <h3 class="text-center d-block" style="color: #00296b;">Cableado estructurado</h3>
-                        <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span>
+                        <h3 class="text-center d-block" style="color: #00296b;">Tipo de servicio</h3>
+                        <!-- <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span> -->
                     </div>
                 </div>
                 <!-- Proyecto 5 -->
@@ -490,8 +491,8 @@
                         <img class="img-fluid" src="img/proyect/project-5.jpg" alt="servicio">
                     </div>
                     <div class="p-4">
-                        <h3 class="text-center d-block" style="color: #00296b;">Cámaras de vigilancia inteligente</h3>
-                        <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span>
+                        <h3 class="text-center d-block" style="color: #00296b;">Tipo de servicio</h3>
+                        <!-- <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span> -->
                     </div>
                 </div>
             </div>
