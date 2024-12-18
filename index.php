@@ -33,18 +33,20 @@
     <link href="css/style.css" rel="stylesheet">
 
 
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0XDQFMG7Q1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0XDQFMG7Q1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-0XDQFMG7Q1');
-</script>
+        gtag('config', 'G-0XDQFMG7Q1');
+    </script>
 
 <body>
+    
+    <div id="custom-cursor"></div>
 
     <!--Loader star-->
     <div class="loader loader--active">
@@ -412,6 +414,137 @@
     <!-- Service End -->
 
 
+
+    <!-- Service prueba Start-->
+    <div class="container-xxl py-5">
+        <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <h2 id="titleText" class="display-3 mb-5">Nuestros Aliados</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp card" data-wow-delay="0.1s">
+                    <div class="service-item position-relative h-100">
+                        <div class="service-text rounded p-5" >
+                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                                <img class="img-fluid" id="img_serv" src="img/icon/icon-1.png" alt="Icon">
+                            </div>
+                            <h3 class="mb-3">Consultoria en transformación digital</h3>
+                        </div>
+                        <!-- <div class="service-btn rounded-0 rounded-bottom">
+                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp card" data-wow-delay="0.1s">
+                    <div class="service-item position-relative h-100">
+                        <div class="service-text rounded p-5" >
+                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                                <img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
+                            </div>
+                            <h3 class="mb-3">Consultoria en transformación digital</h3>
+                        </div>
+                        <!-- <div class="service-btn rounded-0 rounded-bottom">
+                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp card" data-wow-delay="0.1s">
+                    <div class="service-item position-relative h-100">
+                        <div class="service-text rounded p-5" >
+                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                                <img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
+                            </div>
+                            <h3 class="mb-3">Consultoria en transformación digital</h3>
+                        </div>
+                        <!-- <div class="service-btn rounded-0 rounded-bottom">
+                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp card" data-wow-delay="0.1s">
+                    <div class="service-item position-relative h-100">
+                        <div class="service-text rounded p-5" >
+                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                                <img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
+                            </div>
+                            <h3 class="mb-3">Consultoria en transformación digital</h3>
+                        </div>
+                        <!-- <div class="service-btn rounded-0 rounded-bottom">
+                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp card" data-wow-delay="0.1s">
+                    <div class="service-item position-relative h-90">
+                        <div class="service-text rounded p-5" >
+                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                                <img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
+                            </div>
+                            <h3 class="mb-3">Consultoria en transformación digital</h3>
+                        </div>
+                        <!-- <div class="service-btn rounded-0 rounded-bottom">
+                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp card" data-wow-delay="0.1s">
+                    <div class="service-item position-relative h-100">
+                        <div class="service-text rounded p-5" >
+                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                                <img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
+                            </div>
+                            <h3 class="mb-3">Consultoria en transformación digital</h3>
+                        </div>
+                        <!-- <div class="service-btn rounded-0 rounded-bottom">
+                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp card" data-wow-delay="0.1s">
+                    <div class="service-item position-relative h-100">
+                        <div class="service-text rounded p-5" >
+                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                                <img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
+                            </div>
+                            <h3 class="mb-3">Consultoria en transformación digital</h3>
+                        </div>
+                        <!-- <div class="service-btn rounded-0 rounded-bottom">
+                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp card" data-wow-delay="0.1s">
+                    <div class="service-item position-relative h-100">
+                        <div class="service-text rounded p-5" >
+                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                                <img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
+                            </div>
+                            <h3 class="mb-3">Consultoria en transformación digital</h3>
+                        </div>
+                        <!-- <div class="service-btn rounded-0 rounded-bottom">
+                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp card" data-wow-delay="0.1s">
+                    <div class="service-item position-relative h-100">
+                        <div class="service-text rounded p-5" >
+                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                                <img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
+                            </div>
+                            <h3 class="mb-3">Consultoria en transformación digital</h3>
+                        </div>
+                        <!-- <div class="service-btn rounded-0 rounded-bottom">
+                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Service End -->
+
+
     <!--Work Us Start-->
     <div class="container-xxl wow fadeInUp d-flex py-5" style="padding: 5% 0;">
         <div class="row">
@@ -532,32 +665,6 @@
         </div>
     </div>
     <!--Clients End-->
-
-
-    <!--Prueba Star-->
-    <div class="container-xxl py-5" style="padding: 3% 0">
-        <div class="container">
-            <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="fs-5 fw-medium">Clientes</p>
-                <h2 id="titleText" class="display-6 mb-5">Ellos han confiado en nosotros</h2>
-            </div>
-            <div class="row1">
-                <div class="column">
-                    <img src="img/clientes/envases.png" alt="logo_cliente" style="max-width: 100%; width: 300px;">
-                    <img src="img/clientes/psw.png" alt="logo_cliente" style="max-width: 100%; width: 300px;">
-                </div>
-                <div class="column">
-                    <img src="img/clientes/tsubaki.png" alt="logo_cliente" style="max-width: 100%; width: 300px;">
-                    <img src="img/clientes/club_leon.png" alt="logo_cliente" style="max-width: 100%; width: 300px;">
-                </div>
-                <div class="column">
-                    <img src="img/clientes/ryiobi.png" alt="logo_cliente" style="max-width: 100%; width: 300px;">
-                    <img src="img/clientes/gto.png" alt="logo_cliente" style="max-width: 100%; width: 300px;">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Prueba End-->
 
 
     <!--Testimony Start -->

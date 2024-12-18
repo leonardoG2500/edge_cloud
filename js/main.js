@@ -79,6 +79,47 @@ document.querySelector('.btn').addEventListener('click', function () {
 })
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    const customCursor = document.getElementById("custom-cursor");
+  
+    // Mover el cursor personalizado con el mouse
+    document.addEventListener("mousemove", (e) => {
+      customCursor.style.top = `${e.clientY}px`;
+      customCursor.style.left = `${e.clientX}px`;
+    });
+  
+    // Cambiar estilos al interactuar con enlaces u otros elementos
+    document.querySelectorAll("a, button").forEach(el => {
+      el.addEventListener("mouseenter", () => {
+        customCursor.style.transform = "scale(1.5)"; // Agrandar el cursor
+        customCursor.style.backgroundColor = "rgba(255, 126, 179, 0.3)"; // Color de fondo
+      });
+      el.addEventListener("mouseleave", () => {
+        customCursor.style.transform = "scale(1)";
+        customCursor.style.backgroundColor = "transparent";
+      });
+    });
+  });
+
+  let cursorX = 0, cursorY = 0;
+let posX = 0, posY = 0;
+
+document.addEventListener("mousemove", (e) => {
+  cursorX = e.clientX;
+  cursorY = e.clientY;
+});
+
+function animateCursor() {
+  posX += (cursorX - posX) * 0.1; // Interpolación suave
+  posY += (cursorY - posY) * 0.1;
+
+  customCursor.style.top = `${posY}px`;
+  customCursor.style.left = `${posX}px`;
+
+  requestAnimationFrame(animateCursor); // Loop continuo
+}
+
+animateCursor();
 
 
 // //header img Prueba

@@ -1,7 +1,63 @@
 /********** Template CSS **********/
 body{
     background-color: #EEEEEE;
+    cursor: none; /* Oculta el cursor predeterminado */
 }
+
+
+/* Cursor Start */
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px; /* Ajusta el tamaño */
+  height: 20px;
+  border: 4px solid #00296b; /* Estilo del cursor */
+  border-radius: 50%; /* Forma circular */
+  pointer-events: none; /* Evita que interfiera con clics */
+  z-index: 9999;
+  transition: transform 0.1s ease;
+  transform: translate(-50%, -50%); /* Centra el cursor personalizado */
+  pointer-events: none; /* Evita que el cursor estándar interfiera */
+}
+
+a, button {
+  cursor: none; /* Oculta el cursor estándar en enlaces y botones */
+  pointer-events: auto; /* Mantén la funcionalidad de clic */
+}
+
+a:hover #custom-cursor {
+  transform: scale(1.5); /* Agranda el cursor */
+  background-color: #00296b3d; /* Cambia el fondo */
+  border-color: #00296b; /* Cambia el color del borde */
+}
+/* Cursor End */
+
+
+/* Estilo de la barra de scroll */
+::-webkit-scrollbar {
+  width: 7px; /* Ancho de la barra */
+  height: 10px; /* Altura de la barra */
+}
+
+/* Fondo de la barra de scroll */
+::-webkit-scrollbar-track {
+  background: #EEEEEE; /* Color del fondo */
+  border-radius: 5px;
+}
+
+/* Color de la barra de scroll */
+::-webkit-scrollbar-thumb {
+  background: #00296b; /* Color del thumb (barra) */
+  border-radius: 5px; /* Bordes redondeados */
+  border: 2px solid #ffffff; /* Espaciado interno */
+}
+
+/* Hover sobre la barra */
+::-webkit-scrollbar-thumb:hover {
+  background: #0056b3; /* Color más oscuro en hover */
+}
+/* Estilo de la barra de scroll */
 
 
 :root {
@@ -437,14 +493,12 @@ body{
 }
 
 /*** Service ***/
-.service-item .service-text {
+/* .service-item .service-text {
     position: relative;
     width: 100%;
     top: 0;
     left: 0;
     text-align: center;
-    background: #FFFFFF;
-    box-shadow: 0 0 40px rgba(0, 0, 0, .06);
     z-index: 2;
 }
 
@@ -468,25 +522,97 @@ body{
   opacity: 0;
   transition: opacity 0.4s ease;
   z-index: 2;
-}
+} */
 
-.service-item:hover img {
+/* .service-item:hover img {
   opacity: 0;
-}
+} */
 
-.service-item:hover .content-service{
+/* .service-item:hover .content-service{
   opacity: 1;
+} */
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+  max-width: 300px; /* Define el ancho máximo del card */
+  min-height: 200px; /* Establece una altura mínima */
+  margin: 15px auto; /* Centra el card horizontalmente */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.content-service ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%; /* Ocupa todo el ancho disponible en pantallas pequeñas */
+    min-height: 150px; /* Reduce la altura mínima en pantallas pequeñas */
+  }
 }
 
-.content-service li {
-  font-size: 20px;
-  line-height: 1.8;
+@media (min-width: 1200px) {
+  .card {
+    max-width: 380px; /* Amplía el tamaño en pantallas grandes */
+    min-height: 250px;
+  }
+}
+
+.card:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #00296b7e, #00378f);
+  
+}
+
+.card img {
+  transition: filter 0.4s ease;
+}
+
+.card:hover img {
+  filter: brightness(0) invert(1); /* Cambia el color a blanco */
+}
+
+.card h3 {
+  transition: 0.4s ease;
+  color: #00296b;
+}
+
+.card:hover h3{
+  color: #fff;
+}
+
+/* Efecto de brillo */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.5), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.5s ease;
+  transform: scale(1.5) rotate(45deg);
+}
+
+.card:hover::before {
+  opacity: 0.7;
+  transform: scale(1) rotate(45deg);
+}
+
+/* Efecto en el texto */
+.card-content {
+  position: relative;
+  z-index: 2;
+  color: #333;
+  text-align: center;
+  transition: color 0.4s ease;
+}
+
+.card:hover .card-content {
+  color: #fff;
 }
 
 /* .service-item:hover .service-text {
