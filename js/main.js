@@ -17,17 +17,52 @@
     
     
     // Back to top button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
-            $('.back-to-top').fadeIn('slow');
-        } else {
-            $('.back-to-top').fadeOut('slow');
-        }
+
+    // Back to top button
+    const backToTopButton = document.getElementById("backToTop");
+
+    // Muestra el botón al hacer scroll
+    window.addEventListener("scroll", () => {
+      // Condición para mostrar el botón (puedes ajustarla)
+      if (window.scrollY > 200) {
+        backToTopButton.classList.add("visible");
+        backToTopButton.style.opacity = 1;
+      } else {
+        backToTopButton.style.opacity = 0;
+        setTimeout(() => {
+          backToTopButton.classList.remove("visible");
+        }, 300); // Tiempo de desvanecimiento
+      }
     });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 100, 'easeInOutExpo');
-        return false;
+
+
+
+    // Función para subir al inicio con animación suave
+    backToTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // Animación suave
+      });
+      backToTopButton.style.opacity = 0;
+      setTimeout(() => {
+        backToTopButton.classList.remove("visible");
+      }, 300); // Tiempo de desvanecimiento
     });
+
+
+
+
+    // $(window).scroll(function () {
+    //     if ($(this).scrollTop() > 300) {
+    //         $('.back-to-top').fadeIn('slow');
+    //     } else {
+    //         $('.back-to-top').fadeOut('slow');
+    //     }
+    // });
+    // $('.back-to-top').click(function () {
+    //     $('html, body').animate({scrollTop: 0}, 100, 'easeInOutExpo');
+    //     return false;
+    // });
 
     
 
@@ -64,62 +99,39 @@
 
 
 //Boton de carga
-var $loader = document.querySelector('.loader')
+window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      const mainContent = document.querySelector("main");
 
-window.onload = function() {
-  $loader.classList.remove('loader--active')
-};
-
-document.querySelector('.btn').addEventListener('click', function () {
-  $loader.classList.add('loader--active')
-  
-  window.setTimeout(function () {
-    $loader.classList.remove('loader--active')
-  }, 5000)
-})
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    const customCursor = document.getElementById("custom-cursor");
-  
-    // Mover el cursor personalizado con el mouse
-    document.addEventListener("mousemove", (e) => {
-      customCursor.style.top = `${e.clientY}px`;
-      customCursor.style.left = `${e.clientX}px`;
+      setTimeout(() => {
+        loader.classList.add("hidden");
+        setTimeout(() => {
+          loader.style.display = "none";
+          mainContent.style.display = "block";
+        }, 500); // Tiempo para que se complete la transición de difuminado
+      }, 1500); // Duración de la pantalla de carga (1.5 segundos)
     });
-  
-    // Cambiar estilos al interactuar con enlaces u otros elementos
-    document.querySelectorAll("a, button").forEach(el => {
-      el.addEventListener("mouseenter", () => {
-        customCursor.style.transform = "scale(1.5)"; // Agrandar el cursor
-        customCursor.style.backgroundColor = "rgba(255, 126, 179, 0.3)"; // Color de fondo
-      });
-      el.addEventListener("mouseleave", () => {
-        customCursor.style.transform = "scale(1)";
-        customCursor.style.backgroundColor = "transparent";
-      });
+
+    window.addEventListener("pageshow", (event) => {
+      if (event.persisted) {
+        const loader = document.getElementById("loader");
+        const mainContent = document.querySelector("main");
+
+        loader.style.display = "flex";
+        mainContent.style.display = "none";
+        loader.classList.remove("hidden");
+
+        setTimeout(() => {
+          loader.classList.add("hidden");
+          setTimeout(() => {
+            loader.style.display = "none";
+            mainContent.style.display = "block";
+          }, 500);
+        }, 1500);
+      }
     });
-  });
 
-  let cursorX = 0, cursorY = 0;
-let posX = 0, posY = 0;
 
-document.addEventListener("mousemove", (e) => {
-  cursorX = e.clientX;
-  cursorY = e.clientY;
-});
-
-function animateCursor() {
-  posX += (cursorX - posX) * 0.1; // Interpolación suave
-  posY += (cursorY - posY) * 0.1;
-
-  customCursor.style.top = `${posY}px`;
-  customCursor.style.left = `${posX}px`;
-
-  requestAnimationFrame(animateCursor); // Loop continuo
-}
-
-animateCursor();
 
 
 // //header img Prueba

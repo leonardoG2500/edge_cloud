@@ -6,10 +6,9 @@
     <title>Edge & Cloud | Contactanos</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
-    <meta
-        content="Somos una organización, que ofrece servicios de consultoría y soluciones integrales en tecnologías de la información y 
+    <meta content="Somos una organización, que ofrece servicios de consultoría y soluciones integrales en tecnologías de la información y 
     transformación digital con personal altamente calificado, generando mayor rentabilidad a nuestros clientes actuales y futuros"
-        name="description">
+    name="description">
 
     <!-- Favicon -->
     <link href="../img/favicon.png" rel="icon" type="image/x-icon">
@@ -17,9 +16,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -35,25 +32,27 @@
 
     <!-- Template Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
-</head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0XDQFMG7Q1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
 
-    gtag('config', 'G-0XDQFMG7Q1');
-</script>
+    </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0XDQFMG7Q1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0XDQFMG7Q1');
+    </script>
 
 <body>
+
     <!-- Spinner Start -->
-    <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    <!-- <div id="loader">
+        <div class="spinner"></div>
     </div> -->
 
-    <div class="loader loader--active">
+    <!-- <div class="loader loader--active">
         <div class="loader__icon">
             <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px"
@@ -73,7 +72,7 @@
         <div class="loader__tile"></div>
         <div class="loader__tile"></div>
         <div class="loader__tile"></div>
-    </div>
+    </div> -->
     <!-- Spinner End -->
 
 
@@ -110,24 +109,22 @@
     <!-- Navbar Start -->
     <div class="container-fluid bg-white sticky-top">
         <div class="container">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0 justify-content-center">
                 <a href="../" class="navbar-brand d-lg-none">
-                    <img src="../img/Logo_E&C_.png" style="width: 95px; height: 45px;"></img>
+                    <img src="../img/Logo_E&C_.png"  alt="Logo_E&C" style="width: 95px; height: 45px;"></img>
                 </a>
-                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
+                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav">
-                        <a href="../" class="nav-item nav-link  ">Inicio</a>
-                        <a href="../nosotros/" class="nav-item nav-link">Nosotros</a>
-                        <a href="../servicio/equipamiento-industrial/" class="nav-item nav-link">Equipamiento
-                            Industrial</a>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+                    <div class="navbar-nav" >
+                        <a href="../" class="nav-item nav-link">Inicio</a>
+                        <a href="../" class="nav-item nav-link">Nosotros</a>
+                        <!-- <a href="../servicio/equipamiento-industrial/" class="nav-item nav-link">Equipamiento Industrial</a> -->
                         <!-- <div class="nav-item dropdown">
-                            <a href="../servicio/" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Servicios</a>
-                            <div class="dropdown-menu rounded-0 rounded-bottom m-0">
-                                <a href="../servicios/servicios.html" class="dropdown-item">Consultoría en transformación digital</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Servicios</a>
+                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
+                                <a href="feature.html" class="dropdown-item">Consultoría en transformación digital</a>
                                 <a href="team.html" class="dropdown-item">Soluciones de software y hardware</a>
                                 <a href="testimonial.html" class="dropdown-item">Consultoría de proyectos de nueva generación</a>
                                 <a href="quote.html" class="dropdown-item">Diseño e integración de sistemas de seguridad</a>
@@ -138,7 +135,8 @@
                                 <a href="404.html" class="dropdown-item">Sistemas de seguridad</a>
                             </div>
                         </div> -->
-                        <a href="./" class="nav-item nav-link active">Contactos</a>
+                       
+                        <a href="../contacto/" class="nav-item nav-link active">Contactos</a>
                     </div>
                 </div>
             </nav>
@@ -343,7 +341,7 @@
                 </div>
             </div>
         </div>
-        <div class="text-center"><img id="gto" src="img/marca_gto.png" alt="Marca_GTO"
+        <div class="text-center"><img id="gto" src="../img/marca_gto.png" alt="Marca_GTO"
                 style="max-width: 100%; width: 75px;"></img></div>
     </div>
     <!-- Footer End -->

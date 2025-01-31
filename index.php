@@ -46,10 +46,13 @@
 
 <body>
     
-    <div id="custom-cursor"></div>
 
     <!--Loader star-->
-    <div class="loader loader--active">
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- <div class="loader loader--active">
         <div class="loader__icon">
             <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px"
@@ -69,7 +72,7 @@
         <div class="loader__tile"></div>
         <div class="loader__tile"></div>
         <div class="loader__tile"></div>
-    </div>
+    </div> -->
     <!--Loader end-->
 
 
@@ -106,7 +109,7 @@
     <!-- Navbar Start -->
     <div class="container-fluid bg-white sticky-top">
         <div class="container">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0 justify-content-center">
                 <a href="./" class="navbar-brand d-lg-none">
                     <img src="img/Logo_E&C_.png" alt="Logo_E&C" style="width: 95px; height: 45px;"></img>
                 </a>
@@ -114,26 +117,10 @@
                     data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
                     <div class="navbar-nav">
                         <a href="./" class="nav-item nav-link active">Inicio</a>
                         <a href="./nosotros/" class="nav-item nav-link">Nosotros</a>
-                        <a href="./servicio/equipamiento-industrial/" class="nav-item nav-link">Equipamiento
-                            Industrial</a>
-                        <div class="nav-item dropdown">
-                            <a href="../servicio/" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Servicios</a>
-                            <div class="dropdown-menu rounded-0 rounded-bottom m-0">
-                                <a href="../servicios/servicios.html" class="dropdown-item">Consultoría en transformación digital</a>
-                                <a href="team.html" class="dropdown-item">Soluciones de software y hardware</a>
-                                <a href="testimonial.html" class="dropdown-item">Consultoría de proyectos de nueva generación</a>
-                                <a href="quote.html" class="dropdown-item">Diseño e integración de sistemas de seguridad</a>
-                                <a href="404.html" class="dropdown-item">Remodelación y mantenimiento industrial</a>
-                                <a href="404.html" class="dropdown-item">Electromecánica</a>
-                                <a href="404.html" class="dropdown-item">Soluciones inalambricas</a>
-                                <a href="404.html" class="dropdown-item">Fibra óptica y cableado estructural</a>
-                                <a href="404.html" class="dropdown-item">Sistemas de seguridad</a>
-                            </div>
-                        </div>
                         <a href="./contacto/" class="nav-item nav-link">Contactos</a>
                     </div>
                 </div>
@@ -189,9 +176,8 @@
             </div>
             <div class="col-lg-5 d-flex align-items-center px-4 py-3">
                 <p class="fs-5 text-center">
-                    Somos una organización, que ofrece servicios de consultoría y soluciones integrales en
-                    tecnologías de la información y transformación digital con personal altamente calificado,
-                    generando mayor rentabilidad a nuestros clientes.
+                Somos corporativo empresarial que conecta empresas de distintos sectores
+                para ofrecer soluciones integrales y crear oportunidades de colaboración únicas.
                 </p>
             </div>
         </div>
@@ -200,14 +186,14 @@
 
 
     <!-- Service Start-->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <h2 id="titleText" class="display-3 mb-5">Nuestros Aliados</h2>
             </div>
-            <div class="row g-4 justify-content-around">
+            <div class="row g-4 justify-content-around"> -->
                 <!-- Servicio 1 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
@@ -225,9 +211,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- Servicio 2 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
@@ -245,9 +231,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- Servicio 3 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
@@ -265,9 +251,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- Servicio 4 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
@@ -285,9 +271,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- Servicio 5 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
@@ -306,9 +292,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- Servicio 6 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
@@ -326,9 +312,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- Servicio 7 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
@@ -346,9 +332,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- Servicio 8 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
@@ -366,9 +352,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- Servicio 9 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
@@ -386,9 +372,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- Servicio 10 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 150px; height: 150px;">
@@ -410,7 +396,7 @@
 
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Service End -->
 
 
@@ -539,6 +525,19 @@
                         </div> -->
                     </div>
                 </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp card" data-wow-delay="0.1s">
+                    <div class="service-item position-relative h-100">
+                        <div class="service-text rounded p-5" >
+                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                                <img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
+                            </div>
+                            <h3 class="mb-3">Consultoria en transformación digital</h3>
+                        </div>
+                        <!-- <div class="service-btn rounded-0 rounded-bottom">
+                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
+                        </div> -->
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -555,11 +554,10 @@
             <div class="col-lg-5 d-flex align-items-center px-4 py-3">
                 <div class="row">
                     <div class="text-center text-lg-start py-4 pt-lg-0">
-                        <P class="text-center display-6">Profesionales comprometidos, resultados impecables.</hP>
+                        <P class="text-center text-primary display-6">En Edge & Cloud</hP>
                         <p class="text-center fs-5">
-                            Edge & Cloud destaca por su amplio conocimiento en el sector y nuestra dedicación a la
-                            calidad nos sitúa como referentes en soluciones tecnológicas, centrando nuestra atención en
-                            la plena satisfacción de nuestros clientes.
+                        Contamos con una alianza estratégica empresarial de diversas áreas, ofreciendo 
+                        soluciones integrales y personalizadas para satisfacer las necesidades de nuestros clientes con innovación y excelencia.
                         </p>
                     </div>
                 </div>
@@ -601,7 +599,7 @@
                 <!-- Proyecto 3 -->
                 <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/img_test_3.jpg" alt="servicio">
+                        <img class="img-fluid" src="img/img_test_6.jpg" alt="servicio">
                     </div>
                     <div class="p-4">
                         <h3 class="text-center d-block" style="color: #00296b;">Tipo de servicio</h3>
@@ -621,13 +619,24 @@
                 <!-- Proyecto 5 -->
                 <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/proyect/project-5.jpg" alt="servicio">
+                        <img class="img-fluid" src="img/img_test_3.jpg" alt="servicio">
                     </div>
                     <div class="p-4">
                         <h3 class="text-center d-block" style="color: #00296b;">Tipo de servicio</h3>
                         <!-- <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span> -->
                     </div>
                 </div>
+                <!-- Proyecto 6 -->
+                <div class="project-item mb-5">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="img/img_test_5.jpg" alt="servicio">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-center d-block" style="color: #00296b;">Tipo de servicio</h3>
+                        <!-- <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span> -->
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -914,8 +923,8 @@
     <!-- Copyright End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top"><i class="fa fa-arrow-up"></i></button>
 
 
     <!-- JavaScript Libraries -->
