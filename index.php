@@ -135,7 +135,7 @@
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" id="bg">
-                    <img class="w-100" src="img/carousel-6.jpg" alt="Image">
+                    <img class="w-100" src="img/carousel-6.png" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-start">
@@ -548,7 +548,7 @@
     <div class="container-xxl wow fadeInUp d-flex py-5" style="padding: 5% 0;">
         <div class="row">
             <div class="col-lg-6 d-flex align-items-center">
-                <img class="img-fluid" src="img/proyect/work.jpg" alt=""
+                <img class="img-fluid" src="img/proyect/work.png" alt=""
                     style="width: 90%; margin: auto; border-radius: 10px;">
             </div>
             <div class="col-lg-5 d-flex align-items-center px-4 py-3">
@@ -581,60 +581,60 @@
                     <div class="position-relative">
                         <img class="img-fluid" src="img/img_test_1.jpg" alt="">
                     </div>
-                    <div class="p-4">
+                    <!-- <div class="p-4">
                         <h3 class="text-center d-block" style="color: #00296b;">Tipo de servicio</h3>
                         <span><a href="" class="text-center d-block" style="border-bottom: 2px solid blue;">Sabes más de Yavar</a></span>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- Proyecto 2 -->
                 <div class="project-item mb-5">
                     <div class="position-relative">
                         <img class="img-fluid" src="img/img_test_2.jpg" alt="servicio">
                     </div>
-                    <div class="p-4">
+                    <!-- <div class="p-4">
                         <h3 class="text-center d-block" style="color: #00296b;">Tipo de servicio</h3>
-                        <!-- <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span> -->
-                    </div>
+                        <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span>
+                    </div> -->
                 </div>
                 <!-- Proyecto 3 -->
                 <div class="project-item mb-5">
                     <div class="position-relative">
                         <img class="img-fluid" src="img/img_test_6.jpg" alt="servicio">
                     </div>
-                    <div class="p-4">
+                    <!-- <div class="p-4">
                         <h3 class="text-center d-block" style="color: #00296b;">Tipo de servicio</h3>
-                        <!-- <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span> -->
-                    </div>
+                        <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span>
+                    </div> -->
                 </div>
                 <!-- Proyecto 4 -->
                 <div class="project-item mb-5">
                     <div class="position-relative">
                         <img class="img-fluid" src="img/img_test_4.jpg" alt="servicio">
                     </div>
-                    <div class="p-4">
+                    <!-- <div class="p-4">
                         <h3 class="text-center d-block" style="color: #00296b;">Tipo de servicio</h3>
-                        <!-- <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span> -->
-                    </div>
+                        <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span>
+                    </div> -->
                 </div>
                 <!-- Proyecto 5 -->
                 <div class="project-item mb-5">
                     <div class="position-relative">
                         <img class="img-fluid" src="img/img_test_3.jpg" alt="servicio">
                     </div>
-                    <div class="p-4">
+                    <!-- <div class="p-4">
                         <h3 class="text-center d-block" style="color: #00296b;">Tipo de servicio</h3>
-                        <!-- <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span> -->
-                    </div>
+                        <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span>
+                    </div> -->
                 </div>
                 <!-- Proyecto 6 -->
                 <div class="project-item mb-5">
                     <div class="position-relative">
                         <img class="img-fluid" src="img/img_test_5.jpg" alt="servicio">
                     </div>
-                    <div class="p-4">
+                    <!-- <div class="p-4">
                         <h3 class="text-center d-block" style="color: #00296b;">Tipo de servicio</h3>
-                        <!-- <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span> -->
-                    </div>
+                        <span>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem</span>
+                    </div> -->
                 </div>
 
             </div>
