@@ -176,7 +176,7 @@
             </div>
             <div class="col-lg-5 d-flex align-items-center px-4 py-3">
                 <p class="fs-5 text-center">
-                Somos corporativo empresarial que conecta empresas de distintos sectores
+                Somos un corporativo empresarial que conecta empresas de distintos sectores
                 para ofrecer soluciones integrales y crear oportunidades de colaboración únicas.
                 </p>
             </div>
@@ -408,124 +408,118 @@
                 <h2 id="titleText" class="display-3 mb-5">Nuestros Aliados</h2>
             </div>
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp card" data-wow-delay="0.1s">
-                    <div class="service-item position-relative h-100">
-                        <div class="service-text rounded p-5" >
-                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" id="img_serv" src="img/icon/icon-1.png" alt="Icon">
+                <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
+                    <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
+                        <div class="service-text-contact rounded text-center">
+                            <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
+                                <img class="img-fluid" src="/img/los_diez/business_view.png" alt="Icon">
                             </div>
-                            <h3 class="mb-3">Consultoria en transformación digital</h3>
+                            <!-- <h3 class="mb-3">México Business View</h3>
+                            <p class="mb-2">staff@mexicobusinessview.com</p> -->
                         </div>
-                        <!-- <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div> -->
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp card" data-wow-delay="0.1s">
-                    <div class="service-item position-relative h-100">
-                        <div class="service-text rounded p-5" >
-                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
+                <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
+                    <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
+                        <div class="service-text-contact rounded text-center">
+                            <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
+                                <img class="img-fluid" src="/img/los_diez/famco.png" alt="Icon">
                             </div>
-                            <h3 class="mb-3">Consultoria en transformación digital</h3>
+                            <!-- <h3 class="mb-3">México Business View</h3>
+                            <p class="mb-2">staff@mexicobusinessview.com</p> -->
                         </div>
-                        <!-- <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div> -->
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp card" data-wow-delay="0.1s">
-                    <div class="service-item position-relative h-100">
-                        <div class="service-text rounded p-5" >
-                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
+                <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
+                    <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
+                        <div class="service-text-contact rounded text-center">
+                            <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
+                                <img class="img-fluid" src="/img/los_diez/grupo_vetro.png" alt="Icon">
                             </div>
-                            <h3 class="mb-3">Consultoria en transformación digital</h3>
+                            <!-- <h3 class="mb-3">México Business View</h3>
+                            <p class="mb-2">staff@mexicobusinessview.com</p> -->
                         </div>
-                        <!-- <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div> -->
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp card" data-wow-delay="0.1s">
-                    <div class="service-item position-relative h-100">
-                        <div class="service-text rounded p-5" >
-                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
+                <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
+                    <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
+                        <div class="service-text-contact rounded text-center">
+                            <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
+                                <img class="img-fluid" src="/img/los_diez/grupo_yavar.png" alt="Icon">
                             </div>
-                            <h3 class="mb-3">Consultoria en transformación digital</h3>
+                            <!-- <h3 class="mb-3">México Business View</h3>
+                            <p class="mb-2">staff@mexicobusinessview.com</p> -->
                         </div>
-                        <!-- <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div> -->
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp card" data-wow-delay="0.1s">
-                    <div class="service-item position-relative h-90">
-                        <div class="service-text rounded p-5" >
-                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
+                <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
+                    <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
+                        <div class="service-text-contact rounded text-center">
+                            <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
+                                <img class="img-fluid" src="/img/los_diez/itbsa.png" alt="Icon">
                             </div>
-                            <h3 class="mb-3">Consultoria en transformación digital</h3>
+                            <!-- <h3 class="mb-3">México Business View</h3>
+                            <p class="mb-2">staff@mexicobusinessview.com</p> -->
                         </div>
-                        <!-- <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div> -->
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp card" data-wow-delay="0.1s">
-                    <div class="service-item position-relative h-100">
-                        <div class="service-text rounded p-5" >
-                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
+                <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
+                    <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
+                        <div class="service-text-contact rounded text-center">
+                            <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
+                                <img class="img-fluid" src="/img/los_diez/pt.png" alt="Icon">
                             </div>
-                            <h3 class="mb-3">Consultoria en transformación digital</h3>
+                            <!-- <h3 class="mb-3">México Business View</h3>
+                            <p class="mb-2">staff@mexicobusinessview.com</p> -->
                         </div>
-                        <!-- <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div> -->
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp card" data-wow-delay="0.1s">
-                    <div class="service-item position-relative h-100">
-                        <div class="service-text rounded p-5" >
-                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
+                <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
+                    <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
+                        <div class="service-text-contact rounded text-center">
+                            <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
+                                <img class="img-fluid" src="/img/los_diez/rama.png" alt="Icon">
                             </div>
-                            <h3 class="mb-3">Consultoria en transformación digital</h3>
+                            <!-- <h3 class="mb-3">México Business View</h3>
+                            <p class="mb-2">staff@mexicobusinessview.com</p> -->
                         </div>
-                        <!-- <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div> -->
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp card" data-wow-delay="0.1s">
-                    <div class="service-item position-relative h-100">
-                        <div class="service-text rounded p-5" >
-                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
+                <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
+                    <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
+                        <div class="service-text-contact rounded text-center">
+                            <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
+                                <img class="img-fluid" src="/img/los_diez/seem.png" alt="Icon">
                             </div>
-                            <h3 class="mb-3">Consultoria en transformación digital</h3>
+                            <!-- <h3 class="mb-3">México Business View</h3>
+                            <p class="mb-2">staff@mexicobusinessview.com</p> -->
                         </div>
-                        <!-- <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div> -->
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp card" data-wow-delay="0.1s">
-                    <div class="service-item position-relative h-100">
-                        <div class="service-text rounded p-5" >
-                            <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
+                <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
+                    <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
+                        <div class="service-text-contact rounded text-center">
+                            <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
+                                <img class="img-fluid" src="/img/los_diez/siprom.png" alt="Icon">
                             </div>
-                            <h3 class="mb-3">Consultoria en transformación digital</h3>
+                            <!-- <h3 class="mb-3">México Business View</h3>
+                            <p class="mb-2">staff@mexicobusinessview.com</p> -->
                         </div>
-                        <!-- <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div> -->
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp card" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
+                    <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
+                        <div class="service-text-contact rounded text-center">
+                            <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
+                                <img class="img-fluid" src="/img/los_diez/tecnolep.png" alt="Icon">
+                            </div>
+                            <!-- <h3 class="mb-3">México Business View</h3>
+                            <p class="mb-2">staff@mexicobusinessview.com</p> -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp card" data-wow-delay="0.1s">
                     <div class="service-item position-relative h-100">
                         <div class="service-text rounded p-5" >
                             <div class="btn-square rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
@@ -533,11 +527,11 @@
                             </div>
                             <h3 class="mb-3">Consultoria en transformación digital</h3>
                         </div>
-                        <!-- <div class="service-btn rounded-0 rounded-bottom">
+                        <!- <div class="service-btn rounded-0 rounded-bottom">
                             <a class="fw-medium" style="color: #00296b;" href="">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div> -->
+                        </div> ->
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -545,7 +539,7 @@
 
 
     <!--Work Us Start-->
-    <div class="container-xxl wow fadeInUp d-flex py-5" style="padding: 5% 0;">
+    <!-- <div class="container-xxl wow fadeInUp d-flex py-5" style="padding: 5% 0;">
         <div class="row">
             <div class="col-lg-6 d-flex align-items-center">
                 <img class="img-fluid" src="img/proyect/work.png" alt=""
@@ -561,6 +555,21 @@
                         </p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div> -->
+    <!--Work Us Start-->
+
+
+    <!--Work Us Start-->
+    <div class="container-fluid wow fadeInUp d-flex py-5" style="padding: 0; background: url('img/e&c.jpg') no-repeat center center; background-size: cover; width: 100%; height: 500px;">
+        <div class="row justify-content-center align-items-center" style="height: 100%; margin: 0; width: 100%;">
+            <div class="col-lg-8 text-center" style="background: rgba(0, 41, 107, 0.56); padding: 20px; border-radius: 15px;">
+                <h2 class="display-6 text-light">En Edge & Cloud</h2>
+                <p class="fs-5 fw-medium text-light">
+                    Contamos con una alianza estratégica empresarial de diversas áreas, ofreciendo 
+                    soluciones integrales y personalizadas para satisfacer las necesidades de nuestros clientes con innovación y excelencia.
+                </p>
             </div>
         </div>
     </div>
@@ -820,7 +829,7 @@
                     alert('Hubo un problema al enviar el formulario. Inténtalo de nuevo más tarde.');
                 });
         });
-    </script> -->
+    </script> 
 
 
     <!-- Contacts Start -->

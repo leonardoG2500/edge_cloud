@@ -48,9 +48,9 @@
 <body>
 
     <!-- Spinner Start -->
-    <!-- <div id="loader">
+    <div id="loader">
         <div class="spinner"></div>
-    </div> -->
+    </div>
 
     <!-- <div class="loader loader--active">
         <div class="loader__icon">
