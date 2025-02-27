@@ -101,37 +101,19 @@
 
 
 //Boton de carga
-window.addEventListener("load", () => {
-      const loader = document.getElementById("loader");
-      const mainContent = document.querySelector("main");
+// Show loader on page load
+document.addEventListener("DOMContentLoaded", function() {
+  document.body.classList.add('loading');
+});
 
-      setTimeout(() => {
-        loader.classList.add("hidden");
-        setTimeout(() => {
-          loader.style.display = "none";
-          mainContent.style.display = "block";
-        }, 500); // Tiempo para que se complete la transición de difuminado
-      }, 1500); // Duración de la pantalla de carga (1.5 segundos)
-    });
-
-    window.addEventListener("pageshow", (event) => {
-      if (event.persisted) {
-        const loader = document.getElementById("loader");
-        const mainContent = document.querySelector("main");
-
-        loader.style.display = "flex";
-        mainContent.style.display = "none";
-        loader.classList.remove("hidden");
-
-        setTimeout(() => {
-          loader.classList.add("hidden");
-          setTimeout(() => {
-            loader.style.display = "none";
-            mainContent.style.display = "block";
-          }, 500);
-        }, 1500);
-      }
-    });
+// Hide loader when page is fully loaded
+window.addEventListener("load", function() {
+  document.body.classList.remove('loading');
+  document.body.classList.add('loaded');
+  setTimeout(function() {
+      document.getElementById('loader-wrapper').style.display = 'none';
+  }, 500); // Wait for the fade-out transition to complete
+});
 
 
 

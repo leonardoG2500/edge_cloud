@@ -48,8 +48,8 @@
     
 
     <!--Loader star-->
-    <div id="loader">
-        <div class="spinner"></div>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
     </div>
 
     <!-- <div class="loader loader--active">
