@@ -31,8 +31,6 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-
-
     </head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0XDQFMG7Q1"></script>
@@ -45,34 +43,24 @@
     </script>
 
 <body>
-    
 
-    <!--Loader star-->
+    <!--Loader start-->
     <div id="loader-wrapper">
-        <div id="loader"></div>
-    </div>
-
-    <!-- <div class="loader loader--active">
-        <div class="loader__icon">
-            <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px"
-                viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
-                <path opacity="0.2" fill="#000"
-                    d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z">
-                </path>
-                <path fill="#000"
-                    d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0C22.32,8.481,24.301,9.057,26.013,10.047z">
-                </path>
-                <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20"
-                    to="360 20 20" dur="0.5s" repeatCount="indefinite"></animateTransform>
-            </svg>
+        <div class="spinner-lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
-        <div class="loader__tile"></div>
-        <div class="loader__tile"></div>
-        <div class="loader__tile"></div>
-        <div class="loader__tile"></div>
-        <div class="loader__tile"></div>
-    </div> -->
+    </div>
     <!--Loader end-->
 
 
@@ -408,6 +396,7 @@
                 <h2 id="titleText" class="display-3 mb-5">Nuestros Aliados</h2>
             </div>
             <div class="row g-4">
+                <!-- empresa 1 -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
                     <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
                         <div class="service-text-contact rounded text-center">
@@ -419,6 +408,8 @@
                         </div>
                     </div>
                 </div>
+                <!-- empresa 1 -->
+
                 <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
                     <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
                         <div class="service-text-contact rounded text-center">
@@ -432,7 +423,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
                     <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
-                        <div class="service-text-contact rounded text-center">
+                        <div class="service-text_contact rounded text-center">
                             <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
                                 <img class="img-fluid" src="/img/los_diez/grupo_vetro.png" alt="Icon">
                             </div>
@@ -443,7 +434,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
                     <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
-                        <div class="service-text-contact rounded text-center">
+                        <div class="service-text_contact rounded text-center">
                             <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
                                 <img class="img-fluid" src="/img/los_diez/grupo_yavar.png" alt="Icon">
                             </div>
@@ -454,7 +445,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
                     <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
-                        <div class="service-text-contact rounded text-center">
+                        <div class="service-text_contact rounded text-center">
                             <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
                                 <img class="img-fluid" src="/img/los_diez/itbsa.png" alt="Icon">
                             </div>
@@ -465,7 +456,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
                     <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
-                        <div class="service-text-contact rounded text-center">
+                        <div class="service-text_contact rounded text-center">
                             <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
                                 <img class="img-fluid" src="/img/los_diez/pt.png" alt="Icon">
                             </div>
@@ -476,7 +467,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
                     <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
-                        <div class="service-text-contact rounded text-center">
+                        <div class="service-text_contact rounded text-center">
                             <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
                                 <img class="img-fluid" src="/img/los_diez/rama.png" alt="Icon">
                             </div>
@@ -487,7 +478,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
                     <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
-                        <div class="service-text-contact rounded text-center">
+                        <div class="service-text_contact rounded text-center">
                             <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
                                 <img class="img-fluid" src="/img/los_diez/seem.png" alt="Icon">
                             </div>
@@ -498,7 +489,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
                     <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
-                        <div class="service-text-contact rounded text-center">
+                        <div class="service-text_contact rounded text-center">
                             <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
                                 <img class="img-fluid" src="/img/los_diez/siprom.png" alt="Icon">
                             </div>
@@ -509,7 +500,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
                     <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
-                        <div class="service-text-contact rounded text-center">
+                        <div class="service-text_contact rounded text-center">
                             <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
                                 <img class="img-fluid" src="/img/los_diez/tecnolep.png" alt="Icon">
                             </div>
@@ -588,7 +579,7 @@
                 <!-- proyect 1 -->
                 <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/img_test_1.jpg" alt="">
+                        <img class="img-fluid" src="img/colab/1.jpg" alt="" style="width:100%; height:350px; object-fit:cover;">
                     </div>
                     <!-- <div class="p-4">
                         <h3 class="text-center d-block" style="color: #00296b;">Tipo de servicio</h3>
@@ -598,7 +589,7 @@
                 <!-- Proyecto 2 -->
                 <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/img_test_2.jpg" alt="servicio">
+                        <img class="img-fluid" src="img/colab/2.jpg" alt="servicio" style="width:100%; height:350px; object-fit:cover;">
                     </div>
                     <!-- <div class="p-4">
                         <h3 class="text-center d-block" style="color: #00296b;">Tipo de servicio</h3>
@@ -608,7 +599,7 @@
                 <!-- Proyecto 3 -->
                 <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/img_test_6.jpg" alt="servicio">
+                        <img class="img-fluid" src="img/colab/5.jpg" alt="servicio" style="width:100%; height:350px; object-fit:cover;">
                     </div>
                     <!-- <div class="p-4">
                         <h3 class="text-center d-block" style="color: #00296b;">Tipo de servicio</h3>
@@ -618,7 +609,7 @@
                 <!-- Proyecto 4 -->
                 <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/img_test_4.jpg" alt="servicio">
+                        <img class="img-fluid" src="img/colab/4.jpg" alt="servicio" style="width:100%; height:350px; object-fit:cover;">
                     </div>
                     <!-- <div class="p-4">
                         <h3 class="text-center d-block" style="color: #00296b;">Tipo de servicio</h3>
@@ -628,7 +619,7 @@
                 <!-- Proyecto 5 -->
                 <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/img_test_3.jpg" alt="servicio">
+                        <img class="img-fluid" src="img/colab/3.jpg" alt="servicio" style="width:100%; height:350px; object-fit:cover;">
                     </div>
                     <!-- <div class="p-4">
                         <h3 class="text-center d-block" style="color: #00296b;">Tipo de servicio</h3>
@@ -638,7 +629,7 @@
                 <!-- Proyecto 6 -->
                 <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/img_test_5.jpg" alt="servicio">
+                        <img class="img-fluid" src="img/colab/6.jpg" alt="servicio" style="width:100%; height:350px; object-fit:cover;">
                     </div>
                     <!-- <div class="p-4">
                         <h3 class="text-center d-block" style="color: #00296b;">Tipo de servicio</h3>
@@ -838,7 +829,7 @@
             <h2 id="titleText" class="display-6 mb-5 text-center">Visitanos</h2>
         </div>
         <div class="row wow fadeInUp" data-wow-delay="0.5s">
-            <div class="col-lg-4" style="margin: auto;">
+            <!-- <div class="col-lg-4" style="margin: auto;">
                 <div class="d-flex border-bottom pb-3 mb-3">
                     <div class="flex-shrink-0 btn-square rounded-circle" style="background-color: #00296b;">
                         <i class="fa fa-map-marker-alt text-white"></i>
@@ -866,8 +857,8 @@
                         <span>477 754 7672</span>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-8">
+            </div> -->
+            <div class="col-lg-12">
                 <iframe class="w-100 rounded"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.986615566465!2d-101.67117498301896!3d21.1529309330841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bbf0060730683%3A0x98f03d83532e0166!2sEdge%20%26%20Cloud!5e0!3m2!1ses-419!2smx!4v1709665050140!5m2!1ses-419!2smx"
                     frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
@@ -881,12 +872,14 @@
     <!-- Footer -->
     <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
-            <h2 class="mb-5 text-white text-center">Contactanos</h2>
+                <div class="d-flex justify-content-center align-items-center mb-4">
+                    <a href="./" class="d-flex justify-content-center align-items-center w-100">
+                        <img src="img/Logo_E&C.png" alt="Logo_E&C" style="width: 150px; display: block; margin: 0 auto;">
+                    </a>
+                </div>
             <div class="row">
                 <div class="col-lg mb-3">
-                    <h3 class="text-white text-center">Ubicación</h3>
-                    <p class="text-center"><i class="fa fa-map-marker-alt me-3"></i>Benedicto XV #144 San Jeronimo ll.
-                        C.P. 37148 León, Guanajuato. MX</p>
+                    <h3 class="text-white text-center">Contactos</h3>
                     <p class="text-center"><i class="fa fa-envelope me-3"></i>contacto@edgecloud.com.mx</p>
                     <p class="text-center"><i class="fab fa-whatsapp me-3"></i>477 754 7672</p>
                 </div>
@@ -900,20 +893,14 @@
                 <div class="col-lg mb-3">
                     <h3 class="text-white text-center">Redes Sociales</h3>
                     <div class="d-flex justify-content-center">
-                        <a class="btn btn-square btn-light rounded-circle me-2"
-                            href="https://www.facebook.com/profile.php?id=61553718295104"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2"
-                            href="https://www.instagram.com/edgecloud_/"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2"
-                            href="https://www.linkedin.com/company/edge-cloud/about/?viewAsMember=true"><i
-                                class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-light rounded-circle me-2" href="https://www.facebook.com/profile.php?id=61553718295104"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-light rounded-circle me-2" href="https://www.instagram.com/edgecloud_/"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square btn-light rounded-circle me-2" href="https://www.linkedin.com/company/edge-cloud/about/?viewAsMember=true"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="text-center"><img id="gto" src="img/marca_gto.png" alt="Marca_GTO"
-                style="max-width: 100%; width: 75px;"></img></div>
+        <div class="text-center"><img id="gto" src="../img/marca_gto.png" alt="Marca_GTO" style="max-width: 100%; width: 75px;"></img></div>
     </div>
     <!-- Footer End -->
 
@@ -946,8 +933,24 @@
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
 
+    <!-- Loading -->
+    <script src="https://cdn.jsdelivr.net/npm/ldrs/dist/ldrs.min.js"></script>
+
+
+
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+        const loader = document.getElementById('loader-wrapper');
+        if (loader) {
+            loader.classList.add('fade-out');
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 700); // Tiempo igual al de la transición CSS
+        }
+    });
+    </script>
 </body>
 
 </html>

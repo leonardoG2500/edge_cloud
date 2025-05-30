@@ -46,7 +46,20 @@
 <body>
     <!-- Loader Sart -->
     <div id="loader-wrapper">
-        <div id="loader"></div>
+        <div class="spinner-lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
     </div>
     <!-- Loader End -->
 
@@ -383,10 +396,7 @@
     </div>
     <!-- Zona prueba End -->
 
-
-
-
-
+    
     <!--Clients Star-->
     <!-- <div class="container-xxl py-6">
         <div class="container">
@@ -423,11 +433,14 @@
     <!-- Footer -->
     <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
-            <h2 class="mb-5 text-white text-center">Contactanos</h2>
+                <div class="d-flex justify-content-center align-items-center mb-4">
+                    <a href="../" class="d-flex justify-content-center align-items-center w-100">
+                        <img src="../img/Logo_E&C.png" alt="Logo_E&C" style="width: 150px; display: block; margin: 0 auto;">
+                    </a>
+                </div>
             <div class="row">
                 <div class="col-lg mb-3">
-                    <h3 class="text-white text-center">Ubicación</h3>
-                    <p class="text-center"><i class="fa fa-map-marker-alt me-3"></i>Benedicto XV #144 San Jeronimo ll. C.P. 37148 León, Guanajuato. MX</p>
+                    <h3 class="text-white text-center">Contactos</h3>
                     <p class="text-center"><i class="fa fa-envelope me-3"></i>contacto@edgecloud.com.mx</p>
                     <p class="text-center"><i class="fab fa-whatsapp me-3"></i>477 754 7672</p>
                 </div>
@@ -482,6 +495,18 @@
 
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            const loader = document.getElementById('loader-wrapper');
+            if (loader) {
+                loader.classList.add('fade-out');
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 700); // Tiempo igual al de la transición CSS
+            }
+        });
+    </script>
 </body>
 
 </html>

@@ -49,32 +49,23 @@
 
     <!-- Spinner Start -->
     <div id="loader-wrapper">
-        <div id="loader"></div>
-    </div>
-
-    <!-- <div class="loader loader--active">
-        <div class="loader__icon">
-            <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px"
-                viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
-                <path opacity="0.2" fill="#000"
-                    d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z">
-                </path>
-                <path fill="#000"
-                    d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0C22.32,8.481,24.301,9.057,26.013,10.047z">
-                </path>
-                <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20"
-                    to="360 20 20" dur="0.5s" repeatCount="indefinite"></animateTransform>
-            </svg>
+        <div class="spinner-lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
-        <div class="loader__tile"></div>
-        <div class="loader__tile"></div>
-        <div class="loader__tile"></div>
-        <div class="loader__tile"></div>
-        <div class="loader__tile"></div>
-    </div> -->
+    </div>
     <!-- Spinner End -->
-
+     
 
     <!-- Topbar Start -->
     <div class="container-fluid text-white d-none d-lg-flex" style="background-color:#00296b;">
@@ -310,12 +301,14 @@
     <!-- Footer Start -->
     <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
-            <h2 class="mb-5 text-white text-center">Contactanos</h2>
+                <div class="d-flex justify-content-center align-items-center mb-4">
+                    <a href="../" class="d-flex justify-content-center align-items-center w-100">
+                        <img src="../img/Logo_E&C.png" alt="Logo_E&C" style="width: 150px; display: block; margin: 0 auto;">
+                    </a>
+                </div>
             <div class="row">
                 <div class="col-lg mb-3">
-                    <h3 class="text-white text-center">Ubicación</h3>
-                    <p class="text-center"><i class="fa fa-map-marker-alt me-3"></i>Benedicto XV #144 San Jeronimo ll.
-                        C.P. 37148 León, Guanajuato. MX</p>
+                    <h3 class="text-white text-center">Contactos</h3>
                     <p class="text-center"><i class="fa fa-envelope me-3"></i>contacto@edgecloud.com.mx</p>
                     <p class="text-center"><i class="fab fa-whatsapp me-3"></i>477 754 7672</p>
                 </div>
@@ -329,20 +322,14 @@
                 <div class="col-lg mb-3">
                     <h3 class="text-white text-center">Redes Sociales</h3>
                     <div class="d-flex justify-content-center">
-                        <a class="btn btn-square btn-light rounded-circle me-2"
-                            href="https://www.facebook.com/profile.php?id=61553718295104"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2"
-                            href="https://www.instagram.com/edgecloud_/"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2"
-                            href="https://www.linkedin.com/company/edge-cloud/about/?viewAsMember=true"><i
-                                class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-light rounded-circle me-2" href="https://www.facebook.com/profile.php?id=61553718295104"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-light rounded-circle me-2" href="https://www.instagram.com/edgecloud_/"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square btn-light rounded-circle me-2" href="https://www.linkedin.com/company/edge-cloud/about/?viewAsMember=true"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="text-center"><img id="gto" src="../img/marca_gto.png" alt="Marca_GTO"
-                style="max-width: 100%; width: 75px;"></img></div>
+        <div class="text-center"><img id="gto" src="../img/marca_gto.png" alt="Marca_GTO" style="max-width: 100%; width: 75px;"></img></div>
     </div>
     <!-- Footer End -->
 
@@ -376,6 +363,19 @@
 
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            const loader = document.getElementById('loader-wrapper');
+            if (loader) {
+                loader.classList.add('fade-out');
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 700); // Tiempo igual al de la transición CSS
+            }
+        });
+    </script>
+    
 </body>
 
 </html>
