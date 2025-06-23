@@ -29,6 +29,9 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     </head>
@@ -72,18 +75,17 @@
                     <img src="img/Logo_E&C.png" alt="Logo_E&C" style="width: 95px; height: 45px;"></img>
                 </a>
                 <div class="ms-auto d-flex align-items-center">
-                    <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>Benedicto XV #144 San Jeronimo
-                        ll</small>
-                    <small class="ms-4"><i class="fa fa-envelope me-3"></i>contacto@edgecloud.com.mx</small>
-                    <small class="ms-4"><i class="fab fa-whatsapp me-3"></i>477 754 7672</small>
+                    <a href="" class="text-white"><small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>Benedicto XV #144 San Jeronimoll</small></a>
+                    <a href="" class="text-white"><small class="ms-4"><i class="fa fa-envelope me-3"></i>contacto@edgecloud.com.mx</small></a>
+                    <a href="" class="text-white"><small class="ms-4"><i class="fab fa-whatsapp me-3"></i>477 754 7672</small></a>
                     <div class="ms-3 d-flex">
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2"
+                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-0"
                             href="https://www.facebook.com/profile.php?id=61553718295104"><i class="fab fa-facebook-f"
                                 style="color: #00296b;"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2"
+                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-3"
                             href="https://www.instagram.com/edgecloud_/"><i class="fab fa-instagram"
                                 style="color: #00296b;"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2"
+                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-3"
                             href="https://www.linkedin.com/company/edge-cloud/about/?viewAsMember=true"><i
                                 class="fab fa-linkedin-in" style="color: #00296b;"></i></a>
                     </div>
@@ -159,10 +161,10 @@
     <!--About Us Start-->
     <div class="container-xxl pt-5 mb-5">
         <div class="row">
-            <div class="col-md-6" style="align-items: center;">
+            <div class="col-md-6" style="align-items: center;" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
                 <img id="about" src="img/Logo_E&C_.png" alt="" style="height: 100%;">
             </div>
-            <div class="col-lg-5 d-flex align-items-center px-4 py-3">
+            <div class="col-lg-5 d-flex align-items-center px-4 py-3" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
                 <p class="fs-5 text-center">
                 Somos un corporativo empresarial que conecta empresas de distintos sectores
                 para ofrecer soluciones integrales y crear oportunidades de colaboración únicas.
@@ -392,12 +394,12 @@
     <!-- Service prueba Start-->
     <div class="container-xxl py-5">
         <div class="container">
-        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+        <div class="text-center mx-auto" style="max-width: 500px;"  data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true" data-aos-anchor-placement="top-center">
                 <h2 id="titleText" class="display-3 mb-5">Nuestros Aliados</h2>
             </div>
             <div class="row g-4">
                 <!-- empresa 1 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 card-contact" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
                     <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
                         <div class="service-text-contact rounded text-center">
                             <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
@@ -410,7 +412,7 @@
                 </div>
                 <!-- empresa 1 -->
 
-                <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 card-contact" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000" data-aos-once="true">
                     <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
                         <div class="service-text-contact rounded text-center">
                             <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
@@ -421,7 +423,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 card-contact" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" data-aos-once="true">
                     <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
                         <div class="service-text_contact rounded text-center">
                             <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
@@ -432,7 +434,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 card-contact" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
                     <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
                         <div class="service-text_contact rounded text-center">
                             <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
@@ -443,7 +445,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 card-contact" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000" data-aos-once="true">
                     <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
                         <div class="service-text_contact rounded text-center">
                             <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
@@ -454,7 +456,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 card-contact" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" data-aos-once="true">
                     <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
                         <div class="service-text_contact rounded text-center">
                             <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
@@ -465,7 +467,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 card-contact" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
                     <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
                         <div class="service-text_contact rounded text-center">
                             <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
@@ -476,7 +478,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 card-contact" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000" data-aos-once="true">
                     <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
                         <div class="service-text_contact rounded text-center">
                             <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
@@ -487,7 +489,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 card-contact" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" data-aos-once="true">
                     <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
                         <div class="service-text_contact rounded text-center">
                             <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
@@ -498,7 +500,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp card-contact" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 card-contact" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
                     <div class="service-item-contact position-relative h-100 d-flex justify-content-center align-items-center">
                         <div class="service-text_contact rounded text-center">
                             <div class="btn-square rounded-circle mx-auto" style="width: 150px; height: 150px;">
@@ -553,7 +555,7 @@
 
 
     <!--Work Us Start-->
-    <div class="container-fluid wow fadeInUp d-flex py-5" style="padding: 0; background: url('img/e&c.jpg') no-repeat center center; background-size: cover; width: 100%; height: 500px;">
+    <div class="container-fluid wow fadeInUp d-flex py-4 my-4" style="padding: 0; background: url('img/e&c.jpg') no-repeat center center; background-size: cover; width: 100%; height: 500px;">
         <div class="row justify-content-center align-items-center" style="height: 100%; margin: 0; width: 100%;">
             <div class="col-lg-8 text-center" style="background: rgba(0, 41, 107, 0.56); padding: 20px; border-radius: 15px;">
                 <h2 class="display-6 text-light">En Edge & Cloud</h2>
@@ -890,12 +892,12 @@
                     <p class="text-center">09:00 am - 06:00 pm</p>
                 </div>
                 <br>
-                <div class="col-lg mb-3">
+                <div class="col-lg mb-3 text-center">
                     <h3 class="text-white text-center">Redes Sociales</h3>
                     <div class="d-flex justify-content-center">
-                        <a class="btn btn-square btn-light rounded-circle me-2" href="https://www.facebook.com/profile.php?id=61553718295104"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2" href="https://www.instagram.com/edgecloud_/"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2" href="https://www.linkedin.com/company/edge-cloud/about/?viewAsMember=true"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-light rounded-circle me-3" href="https://www.facebook.com/profile.php?id=61553718295104"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-light rounded-circle me-3" href="https://www.instagram.com/edgecloud_/"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square btn-light rounded-circle me-0" href="https://www.linkedin.com/company/edge-cloud/about/?viewAsMember=true"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
@@ -936,6 +938,11 @@
     <!-- Loading -->
     <script src="https://cdn.jsdelivr.net/npm/ldrs/dist/ldrs.min.js"></script>
 
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 
     <!-- Template Javascript -->
