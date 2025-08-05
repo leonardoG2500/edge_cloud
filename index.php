@@ -165,7 +165,7 @@
                 <img id="about" src="img/Logo_E&C_.png" alt="" style="height: 100%;">
             </div>
             <div class="col-lg-5 d-flex align-items-center px-4 py-3" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
-                <p class="fs-5 text-center">
+                <p class="fs-5" style="text-align: justify;">
                 Somos un corporativo empresarial que conecta empresas de distintos sectores
                 para ofrecer soluciones integrales y crear oportunidades de colaboración únicas.
                 </p>
@@ -557,7 +557,7 @@
     <!--Work Us Start-->
     <div class="container-fluid wow fadeInUp d-flex py-4 my-4" style="padding: 0; background: url('img/e&c.jpg') no-repeat center center; background-size: cover; width: 100%; height: 500px;">
         <div class="row justify-content-center align-items-center" style="height: 100%; margin: 0; width: 100%;">
-            <div class="col-lg-8 text-center" style="background: rgba(0, 41, 107, 0.56); padding: 20px; border-radius: 15px;">
+            <div class="col-lg-8 text-center" style="background: rgb(0, 41, 107); padding: 20px; border-radius: 15px;">
                 <h2 class="display-6 text-light">En Edge & Cloud</h2>
                 <p class="fs-5 fw-medium text-light">
                     Contamos con una alianza estratégica empresarial de diversas áreas, ofreciendo 
@@ -574,7 +574,7 @@
         <div class="container">
             <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
                 style="max-width: 500px;">
-                <p class="fs-5 fw-medium">Nuestros Proyectos</p>
+                <!-- <p class="fs-5 fw-medium">Nuestros Proyectos</p> -->
                 <h2 id="titleText" class="display-6 mb-5">Hemos realizado muchos proyectos increíbles</h2>
             </div>
             <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
@@ -650,7 +650,7 @@
         <div class="container">
             <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
                 style="max-width: 500px;">
-                <p class="fs-5 fw-medium">Clientes</p>
+                <!-- <p class="fs-5 fw-medium">Clientes</p> -->
                 <h2 id="titleText" class="display-6 mb-5">Ellos han confiado en nosotros</h2>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.5s">
