@@ -11,7 +11,7 @@
     name="description">
 
     <!-- Favicon -->
-    <link href="../img/favicon.png" rel="icon" type="image/x-icon">
+    <link href="../img/favicon.webp" rel="icon" type="image/x-icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,20 +48,10 @@
 <body>
 
     <!-- Spinner Start -->
-    <div id="loader-wrapper">
-        <div class="spinner-lines">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+    <div id="loader">
+        <div class="loader-content">
+            <!-- <lottie-player src="img/loading_prueba.json" background="transparent" speed="1" loop autoplay>
+            </lottie-player> -->
         </div>
     </div>
     <!-- Spinner End -->
@@ -71,22 +61,26 @@
     <div class="container-fluid text-white d-none d-lg-flex" style="background-color:#00296b;">
         <div class="container py-1">
             <div class="d-flex align-items-center">
-                <a href="../">
-                    <img src="../img/Logo_E&C.png" style="width: 95px; height: 45px;"></img>
+                <a href="./">
+                    <img src="img/Logo_E&C.png" alt="Logo_E&C" style="width: 95px; height: 45px;"></img>
                 </a>
                 <div class="ms-auto d-flex align-items-center">
-                    <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>Benedicto XV #144 San Jeronimo
-                        ll</small>
-                    <small class="ms-4"><i class="fa fa-envelope me-3"></i>contacto@edgecloud.com.mx</small>
-                    <small class="ms-4"><i class="fab fa-whatsapp me-3"></i>477 754 7672</small>
+                    <a href="https://maps.app.goo.gl/zkcrLbU2Kr9YPJ746" class="text-white"><small class="ms-4"><i
+                                class="fa fa-map-marker-alt me-3"></i>Benedicto
+                            XV #144 San Jeronimoll</small></a>
+                    <a href="mailto:contacto@edgecloud.com.mx" class="text-white"><small class="ms-4"><i
+                                class="fa fa-envelope me-3"></i>contacto@edgecloud.com.mx</small></a>
+                    <a href="https://wa.me/524777547672?" class="text-white"><small class="ms-4"><i
+                                class="fab fa-whatsapp me-3"></i>477 754
+                            7672</small></a>
                     <div class="ms-3 d-flex">
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2"
+                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-0"
                             href="https://www.facebook.com/profile.php?id=61553718295104"><i class="fab fa-facebook-f"
                                 style="color: #00296b;"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2"
+                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-3"
                             href="https://www.instagram.com/edgecloud_/"><i class="fab fa-instagram"
                                 style="color: #00296b;"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2"
+                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-3"
                             href="https://www.linkedin.com/company/edge-cloud/about/?viewAsMember=true"><i
                                 class="fab fa-linkedin-in" style="color: #00296b;"></i></a>
                     </div>
@@ -361,20 +355,11 @@
     <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="../lib/lightbox/js/lightbox.min.js"></script>
 
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
 
-    <script>
-        window.addEventListener('load', function () {
-            const loader = document.getElementById('loader-wrapper');
-            if (loader) {
-                loader.classList.add('fade-out');
-                setTimeout(() => {
-                    loader.style.display = 'none';
-                }, 700); // Tiempo igual al de la transición CSS
-            }
-        });
-    </script>
     
 </body>
 
