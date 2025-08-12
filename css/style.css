@@ -1,7 +1,10 @@
 /********** Template CSS **********/
 body{
     background-color: #EEEEEE;
+}
 
+html, body {
+  overflow-x: hidden;
 }
 
 :root {

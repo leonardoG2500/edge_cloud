@@ -50,19 +50,19 @@
     <!-- Spinner Start -->
     <div id="loader">
         <div class="loader-content">
-            <!-- <lottie-player src="img/loading_prueba.json" background="transparent" speed="1" loop autoplay>
-            </lottie-player> -->
+            <lottie-player src="../img/loading.json" background="transparent" speed="1" loop autoplay>
+            </lottie-player>
         </div>
     </div>
     <!-- Spinner End -->
-     
-
+      
+    
     <!-- Topbar Start -->
     <div class="container-fluid text-white d-none d-lg-flex" style="background-color:#00296b;">
         <div class="container py-1">
             <div class="d-flex align-items-center">
                 <a href="./">
-                    <img src="img/Logo_E&C.png" alt="Logo_E&C" style="width: 95px; height: 45px;"></img>
+                    <img src="../img/Logo_E&C.png" alt="Logo_E&C" style="width: 95px; height: 45px;"></img>
                 </a>
                 <div class="ms-auto d-flex align-items-center">
                     <a href="https://maps.app.goo.gl/zkcrLbU2Kr9YPJ746" class="text-white"><small class="ms-4"><i
