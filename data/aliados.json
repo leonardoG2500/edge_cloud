@@ -1,0 +1,14 @@
+[
+  {
+    "nombre": "Mexico Business View",
+    "logo": "/img/los_diez/business_view.png",
+    "preview": "/img/previews/business_view_preview.webp",
+    "url": "https://mexicobusinessview.com"
+  },
+  {
+    "nombre": "Aliado 2",
+    "logo": "/img/los_diez/aliado2.png",
+    "preview": "/img/previews/aliado2_preview.webp",
+    "url": "https://aliado2.com"
+  }
+]

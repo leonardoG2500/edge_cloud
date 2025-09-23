@@ -327,38 +327,118 @@ body.loading {
     }
 }
 
+.page-header {
+    background: url(../img/carousel-1.jpg) center center no-repeat;
+    background-size: cover;
+}
 
+
+
+.page-header .breadcrumb-item+.breadcrumb-item::before {
+    color: var(--light);
+}
+
+.page-header .breadcrumb-item,
+.page-header .breadcrumb-item a {
+    font-size: 18px;
+    color: var(--light);
+}
+
+
+.page-header-ei {
+  background: url(../img/carousel-3.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.page-header-ei .breadcrumb-item+.breadcrumb-item::before {
+  color: var(--light);
+}
+
+.page-header-ei .breadcrumb-item,
+.page-header-ei .breadcrumb-item a {
+  font-size: 18px;
+  color: var(--light);
+}
 
 /*** Service ***/
 
-
-
-
-.card-contact {
+.card {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  width: 100%;
-  max-width: 300px;
-  min-height: 200px;
-  margin: 20px auto;
+  width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+  max-width: 300px; /* Define el ancho máximo del card */
+  min-height: 200px; /* Establece una altura mínima */
+  margin: 15px auto; /* Centra el card horizontalmente */
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
   background: linear-gradient(135deg, #ffffff, #f0f0f0);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%; /* Ocupa todo el ancho disponible en pantallas pequeñas */
+    min-height: 150px; /* Reduce la altura mínima en pantallas pequeñas */
+  }
+}
+
+@media (min-width: 1200px) {
+  .card {
+    max-width: 380px; /* Amplía el tamaño en pantallas grandes */
+    min-height: 250px;
+  }
+}
+
+.card:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #00296b7e, #00378f);
+  
+}
+
+.card img {
+  transition: filter 0.4s ease;
+}
+
+.card:hover img {
+  filter: brightness(0) invert(1); /* Cambia el color a blanco */
+}
+
+.card h3 {
+  transition: 0.4s ease;
+  color: #00296b;
+}
+
+.card:hover h3{
+  color: #fff;
+}
+
+
+/* cards contact start */
+.card-contact {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+  max-width: 300px; /* Define el ancho máximo del card */
+  min-height: 200px; /* Establece una altura mínima */
+  margin: 20px auto; /* Centra el card horizontalmente */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 @media (max-width: 768px) {
   .card-contact {
-    max-width: 100%;
-    min-height: 200px;
+    max-width: 100%; /* Ocupa todo el ancho disponible en pantallas pequeñas */
+    min-height: 200px; /* Reduce la altura mínima en pantallas pequeñas */
   }
 }
 
 @media (min-width: 1200px) {
   .card-contact {
-    max-width: 400px;
+    max-width: 400px; /* Amplía el tamaño en pantallas grandes */
     min-height: 250px;
   }
 }
@@ -366,31 +446,9 @@ body.loading {
 .card-contact:hover {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   background: linear-gradient(135deg, #ffffffda, #c9c9c9);
-  border: 2px solid #8eb9ff;
-  transition: border-color 0.5s ease;
-}
-
-/* Imagen de preview */
-.preview-img {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  z-index: 1;
-  border-radius: 10px;
-}
-
-.card-contact:hover .preview-img {
-  opacity: 1;
-}
-
-/* Asegura que el contenido se mantenga encima de la preview */
-.service-item-contact {
-  position: relative;
-  z-index: 2;
+  border: 2px solid #8eb9ff; /* Añade un borde de color alrededor de la card */
+  transition: border-color 0.5s ease; /* Añade una transición suave para el cambio de color del borde */
+  
 }
 
 .card-contact img {
@@ -402,19 +460,41 @@ body.loading {
   color: #00296b;
 }
 
-.card-contact:hover h3 {
+.card-contact:hover h3{
   color: #050505;
 }
 
-.card-contact:hover p {
+.card-contact:hover p{
   color: #050505;
 }
 
-.card-contact:hover a {
+.card-contact:hover a{
   color: #050505;
 }
 
 
+
+/* Cards contact End */
+
+
+/* Efecto de brillo */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.5), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.5s ease;
+  transform: scale(1.5) rotate(45deg);
+}
+
+.card:hover::before {
+  opacity: 0.7;
+  transform: scale(1) rotate(45deg);
+}
 
 /* Efecto en el texto */
 .card-content {
@@ -429,6 +509,90 @@ body.loading {
   color: #fff;
 }
 
+
+.service-item .service-text h5 {
+    transition: .5s;
+}
+
+.service-item:hover .service-text h5 {
+    color: var(--primary);
+}
+
+
+
+
+/*** Project ***/
+.project-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+}
+
+.project-item .project-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .5);
+    opacity: 0;
+    padding-top: 60px;
+    transition: .5s;
+}
+
+.project-item:hover .project-overlay {
+    opacity: 1;
+    padding-top: 0;
+}
+
+.project-carousel .owl-nav {
+    position: absolute;
+    top: -100px;
+    right: 0;
+    display: flex;
+}
+
+.project-carousel .owl-nav .owl-prev,
+.project-carousel .owl-nav .owl-next {
+    margin-left: 15px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    border-radius: 55px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.15);
+    font-size: 25px;
+    transition: .5s;
+}
+
+.project-carousel .owl-nav .owl-prev:hover,
+.project-carousel .owl-nav .owl-next:hover {
+    background: var(--primary);
+    color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+    .project-carousel .owl-nav {
+        top: -70px;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .project-carousel .owl-nav .owl-prev,
+    .project-carousel .owl-nav .owl-next {
+        margin: 0 7px;
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
 
 
 /*** Mision, vision y valores ***/
@@ -611,7 +775,77 @@ border-color: transparent #dddddd transparent transparent;
 /*** Mision, vision y valores ***/
 
 
+/*** Testimonial ***/
+.testimonial-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+    transition: .5s;
+}
 
+.owl-item .testimonial-item,
+.testimonial-item * {
+    transition: .5s;
+}
+
+.owl-item.center .testimonial-item,
+.testimonial-item:hover {
+    background: var(--primary);
+}
+
+.owl-item.center .testimonial-item *,
+.testimonial-item:hover * {
+    color: #FFFFFF !important;
+}
+
+.testimonial-item img {
+    width: 100px !important;
+    height: 100px !important;
+    border-radius: 100px;
+}
+
+.testimonial-carousel .owl-nav {
+    position: absolute;
+    top: -100px;
+    right: 0;
+    display: flex;
+}
+
+.testimonial-carousel .owl-nav .owl-prev,
+.testimonial-carousel .owl-nav .owl-next {
+    margin-left: 15px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#00296b;
+    border-radius: 55px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .15);
+    font-size: 25px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-nav .owl-prev:hover,
+.testimonial-carousel .owl-nav .owl-next:hover {
+    background: var(--primary);
+    color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+    .testimonial-carousel .owl-nav {
+        top: -70px;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .testimonial-carousel .owl-nav .owl-prev,
+    .testimonial-carousel .owl-nav .owl-next {
+        margin: 0 7px;
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
 
 #gto{
   height: 10%;
