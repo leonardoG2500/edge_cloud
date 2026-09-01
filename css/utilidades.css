@@ -1,0 +1,331 @@
+/* ============================================================
+   SISTEMA DE UTILIDADES CSS PROPIO
+   Reemplazo ligero de Bootstrap, hecho a la medida.
+   Úsalo junto a tu styles.css principal:
+
+   <link rel="stylesheet" href="css/utilidades.css">
+   <link rel="stylesheet" href="css/styles.css">
+
+   (utilidades.css primero, styles.css después,
+   así tus estilos propios pueden sobreescribir si hace falta)
+   ============================================================ */
+
+/* ============================================================
+   1. VARIABLES GLOBALES (CSS Custom Properties)
+   ------------------------------------------------------------
+   Son como "cajitas" donde guardas valores que usarás muchas
+   veces (colores, espaciados, tamaños). Si mañana quieres
+   cambiar el color principal de todo el sitio, solo lo cambias
+   AQUÍ una vez, y se actualiza en todos lados donde lo uses.
+
+   Se usan así en cualquier parte de tu CSS:
+   color: var(--color-primario);
+   ============================================================ */
+:root {
+    /* Colores - cámbialos por la paleta de tu proyecto */
+    --color-primario: #2563eb;
+    --color-secundario: #1e293b;
+    --color-texto: #1f2937;
+    --color-texto-claro: #ffffff;
+    --color-fondo: #031b41;
+    --color-fondo-alterno: #f9fafb;
+    --color-borde: #e5e7eb;
+
+    /* Espaciados - basados en múltiplos de 8px (estándar de diseño) */
+    --espacio-xs: 0.5rem; /* 8px  */
+    --espacio-sm: 1rem; /* 16px */
+    --espacio-md: 1.5rem; /* 24px */
+    --espacio-lg: 2.5rem; /* 40px */
+    --espacio-xl: 4rem; /* 64px */
+
+    /* Ancho máximo del contenido (como el .container de Bootstrap) */
+    --container-max: 1200px;
+    --container-padding: 1rem;
+
+    /* Bordes redondeados, para reutilizar el mismo estilo siempre */
+    --radio-sm: 6px;
+    --radio-md: 12px;
+    --radio-lg: 20px;
+
+    /* Transición estándar, para que todo se sienta consistente */
+    --transicion: all 0.3s ease;
+}
+
+/* ============================================================
+   2. RESET BÁSICO
+   ------------------------------------------------------------
+   Cada navegador trae márgenes y estilos por defecto distintos
+   (títulos, listas, etc). Este reset "empareja la cancha" para
+   que tu diseño se vea igual en todos los navegadores.
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* box-sizing: border-box evita que el padding/border
+     "agranden" el tamaño real de un elemento. Sin esto,
+     un div de 300px con padding de 20px termina midiendo
+     340px real, lo cual rompe layouts constantemente. */
+}
+
+body {
+    font-family:
+        system-ui,
+        -apple-system,
+        "Segoe UI",
+        sans-serif;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    line-height: 1.6; /* mejora la legibilidad de los párrafos */
+    -webkit-font-smoothing: antialiased; /* texto más suave en Mac/iOS */
+}
+
+img {
+    max-width: 100%; /* evita que una imagen se salga de su contenedor */
+    display: block; /* quita el espacio fantasma que dejan las imágenes */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* ============================================================
+   3. CONTAINER (el reemplazo directo de .container de Bootstrap)
+   ------------------------------------------------------------
+   Centra el contenido y le pone un ancho máximo, para que en
+   pantallas grandes el texto/contenido no se estire de borde
+   a borde de la pantalla.
+   ============================================================ */
+.container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin-inline: auto; /* margin-inline = margin-left + margin-right en automático (centra) */
+    padding-inline: var(--container-padding); /* espacio a los lados en móvil */
+}
+
+/* Versión más angosta, útil para secciones de texto largo
+   (como un blog o artículo, donde no quieres líneas muy anchas) */
+.container-angosto {
+    width: 100%;
+    max-width: 800px;
+    margin-inline: auto;
+    padding-inline: var(--container-padding);
+}
+
+/* ============================================================
+   4. SISTEMA DE GRID RESPONSIVE (sin escribir media queries)
+   ------------------------------------------------------------
+   Esto reemplaza el sistema de columnas de Bootstrap (row/col-*)
+   pero de forma más simple y 100% automática.
+
+   auto-fit + minmax() le dice al navegador:
+   "acomoda tantas columnas como quepan, y cada una debe medir
+   al menos X, pero puede crecer para llenar el espacio"
+
+   Resultado: en pantalla grande caben 4 columnas, en tablet 2,
+   en celular 1... TODO sin que tú escribas un solo @media.
+   ============================================================ */
+.grid {
+    display: grid;
+    gap: var(--espacio-md); /* espacio entre elementos del grid */
+}
+
+.grid-auto {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* minmax(250px, 1fr):
+     - 250px = ancho mínimo antes de saltar a la siguiente fila
+     - 1fr   = pero que crezca y reparta el espacio sobrante */
+}
+
+/* Variantes por si quieres controlar el mínimo de ancho */
+.grid-auto-sm {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.grid-auto-lg {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* Grids de columnas fijas, para cuando SÍ sabes cuántas quieres
+   (ej: siempre 2 columnas en escritorio, 1 en móvil) */
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Estas SÍ necesitan un media query, porque forzar columnas
+   fijas no se adapta solo como auto-fit */
+@media (max-width: 768px) {
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr; /* en móvil, todo se apila en una columna */
+    }
+}
+
+/* ============================================================
+   5. UTILIDADES DE FLEXBOX (para alinear cosas rápido)
+   ------------------------------------------------------------
+   Estas son como las clases "d-flex", "justify-content-*" y
+   "align-items-*" de Bootstrap, pero abreviadas.
+   ============================================================ */
+.flex {
+    display: flex;
+}
+
+.flex-columna {
+    display: flex;
+    flex-direction: column; /* apila los elementos verticalmente */
+}
+
+.flex-centrado {
+    display: flex;
+    align-items: center; /* centra verticalmente */
+    justify-content: center; /* centra horizontalmente */
+}
+
+.flex-entre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* separa elementos a los extremos
+                                      (típico en navbars: logo a la
+                                      izquierda, menú a la derecha) */
+}
+
+.flex-wrap {
+    flex-wrap: wrap; /* permite que los elementos "bajen de línea"
+                       si no caben, en vez de desbordarse */
+}
+
+.gap-xs {
+    gap: var(--espacio-xs);
+}
+.gap-sm {
+    gap: var(--espacio-sm);
+}
+.gap-md {
+    gap: var(--espacio-md);
+}
+.gap-lg {
+    gap: var(--espacio-lg);
+}
+.gap-xl {
+    gap: var(--espacio-xl);
+}
+
+/* ============================================================
+   6. UTILIDADES DE ESPACIADO (margin / padding rápidos)
+   ------------------------------------------------------------
+   En vez de escribir "margin-bottom: 24px" cada vez en tu CSS,
+   usas la clase directo en el HTML: <div class="mb-md">
+   Esto es el mismo concepto que usan Bootstrap y Tailwind.
+   ============================================================ */
+
+/* Margin bottom (mb) - muy usado para separar secciones/elementos */
+.mb-xs {
+    margin-bottom: var(--espacio-xs);
+}
+.mb-sm {
+    margin-bottom: var(--espacio-sm);
+}
+.mb-md {
+    margin-bottom: var(--espacio-md);
+}
+.mb-lg {
+    margin-bottom: var(--espacio-lg);
+}
+.mb-xl {
+    margin-bottom: var(--espacio-xl);
+}
+
+/* Padding en secciones completas (ej: <section class="py-lg">) */
+.py-sm {
+    padding-block: var(--espacio-sm);
+} /* padding-block = arriba y abajo */
+.py-md {
+    padding-block: var(--espacio-md);
+}
+.py-lg {
+    padding-block: var(--espacio-lg);
+}
+.py-xl {
+    padding-block: var(--espacio-xl);
+}
+
+/* ============================================================
+   7. UTILIDADES DE TEXTO
+   ============================================================ */
+.text-centro {
+    text-align: center;
+}
+.text-claro {
+    color: var(--color-texto-claro);
+}
+
+/* Tamaños de texto responsive automáticos con clamp():
+   clamp(mínimo, preferido, máximo)
+   El texto crece/decrece solo según el ancho de pantalla,
+   SIN necesidad de un media query por cada tamaño. */
+.titulo-hero {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--color-texto-claro);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.titulo-seccion {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 700;
+}
+
+/* ============================================================
+   8. BREAKPOINTS DE REFERENCIA (para cuando SÍ necesites
+      escribir tus propios media queries personalizados)
+   ------------------------------------------------------------
+   Estos son los tamaños estándar más usados en la industria.
+   Cópialos y pégalos cuando necesites ajustar algo específico
+   que estas utilidades no cubran.
+
+   @media (max-width: 1024px) { ... }   -> Tablets grandes / laptops chicas
+   @media (max-width: 768px)  { ... }   -> Tablets
+   @media (max-width: 480px)  { ... }   -> Celulares
+   ============================================================ */
+
+/* ============================================================
+   9. BOTÓN BASE (ejemplo de componente reutilizable)
+   ------------------------------------------------------------
+   Un ejemplo de cómo construir tus propios "componentes",
+   igual que Bootstrap tiene su .btn.
+   ============================================================ */
+.boton {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    border-radius: var(--radio-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transicion); /* usa la variable de transición global */
+}
+
+.boton:hover {
+    transform: translateY(-2px); /* sube ligeramente al pasar el mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.boton-outline {
+    background-color: transparent;
+    color: var(--color-primario);
+    border: 2px solid var(--color-primario);
+}
