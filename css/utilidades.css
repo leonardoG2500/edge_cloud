@@ -23,11 +23,11 @@
    ============================================================ */
 :root {
     /* Colores - cámbialos por la paleta de tu proyecto */
-    --color-primario: #2563eb;
+    --color-primario: #0aa0ff;
     --color-secundario: #1e293b;
     --color-texto: #1f2937;
-    --color-texto-claro: #ffffff;
-    --color-fondo: #031b41;
+    --color-texto-claro: #e9e9e9;
+    --color-fondo: #00296b;
     --color-fondo-alterno: #f9fafb;
     --color-borde: #e5e7eb;
 
@@ -96,85 +96,906 @@ ol {
 }
 
 /* ============================================================
-   3. CONTAINER (el reemplazo directo de .container de Bootstrap)
+   3. VARIABLES DEL SISTEMA DE GRID
    ------------------------------------------------------------
-   Centra el contenido y le pone un ancho máximo, para que en
-   pantallas grandes el texto/contenido no se estire de borde
-   a borde de la pantalla.
-   ============================================================ */
-.container {
-    width: 100%;
-    max-width: var(--container-max);
-    margin-inline: auto; /* margin-inline = margin-left + margin-right en automático (centra) */
-    padding-inline: var(--container-padding); /* espacio a los lados en móvil */
-}
+   Aquí definimos los "breakpoints" (los anchos de pantalla donde
+   el diseño cambia) y el ancho máximo del container en cada uno.
+   Son los mismos valores que usa Bootstrap por defecto, para que
+   si ya tienes experiencia con Bootstrap, todo se comporte igual.
 
-/* Versión más angosta, útil para secciones de texto largo
-   (como un blog o artículo, donde no quieres líneas muy anchas) */
-.container-angosto {
-    width: 100%;
-    max-width: 800px;
-    margin-inline: auto;
-    padding-inline: var(--container-padding);
+   sm  = celulares en horizontal / tablets chicas   (>= 576px)
+   md  = tablets                                    (>= 768px)
+   lg  = laptops                                    (>= 992px)
+   xl  = pantallas grandes                          (>= 1200px)
+   xxl = pantallas muy grandes                       (>= 1400px)
+   ============================================================ */
+:root {
+    --bp-sm: 576px;
+    --bp-md: 768px;
+    --bp-lg: 992px;
+    --bp-xl: 1200px;
+    --bp-xxl: 1400px;
+
+    --grid-columnas: 12; /* el grid siempre se divide en 12 columnas */
+    --grid-gutter-x: 1.5rem; /* espacio horizontal entre columnas (24px) */
+    --grid-gutter-y: 0; /* espacio vertical entre filas cuando el row se envuelve */
 }
 
 /* ============================================================
-   4. SISTEMA DE GRID RESPONSIVE (sin escribir media queries)
+   4. CONTAINER
    ------------------------------------------------------------
-   Esto reemplaza el sistema de columnas de Bootstrap (row/col-*)
-   pero de forma más simple y 100% automática.
+   Igual que en Bootstrap, tienes 3 variantes:
 
-   auto-fit + minmax() le dice al navegador:
-   "acomoda tantas columnas como quepan, y cada una debe medir
-   al menos X, pero puede crecer para llenar el espacio"
-
-   Resultado: en pantalla grande caben 4 columnas, en tablet 2,
-   en celular 1... TODO sin que tú escribas un solo @media.
+   .container        -> ancho máximo fijo que cambia por breakpoint
+                         (el contenido "salta" de tamaño en cada
+                         breakpoint, no es fluido)
+   .container-fluid  -> siempre ocupa el 100% del ancho disponible
+   .container-{bp}   -> se vuelve fluido HASTA cierto breakpoint,
+                         y de ahí en adelante se limita
+                         (ej: .container-lg es 100% hasta lg,
+                         y de ahí en adelante tiene max-width fijo)
    ============================================================ */
-.grid {
-    display: grid;
-    gap: var(--espacio-md); /* espacio entre elementos del grid */
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: calc(var(--grid-gutter-x) * 0.5);
+    /* el padding es la mitad del gutter, porque el .row de adentro
+     le resta ese mismo espacio con márgenes negativos (ver abajo) */
 }
 
-.grid-auto {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    /* minmax(250px, 1fr):
-     - 250px = ancho mínimo antes de saltar a la siguiente fila
-     - 1fr   = pero que crezca y reparta el espacio sobrante */
+/* .container normal: va cambiando su max-width en cada breakpoint */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
 }
 
-/* Variantes por si quieres controlar el mínimo de ancho */
-.grid-auto-sm {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-}
-.grid-auto-lg {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+/* .container-fluid: siempre 100%, nunca se limita */
+.container-fluid {
+    max-width: 100%;
 }
 
-/* Grids de columnas fijas, para cuando SÍ sabes cuántas quieres
-   (ej: siempre 2 columnas en escritorio, 1 en móvil) */
-.grid-2 {
-    grid-template-columns: repeat(2, 1fr);
+/* .container-{bp}: fluido hasta ese breakpoint, luego se limita */
+@media (min-width: 576px) {
+    .container-sm {
+        max-width: 540px;
+    }
 }
-.grid-3 {
-    grid-template-columns: repeat(3, 1fr);
+@media (min-width: 768px) {
+    .container-md {
+        max-width: 720px;
+    }
 }
-.grid-4 {
-    grid-template-columns: repeat(4, 1fr);
+@media (min-width: 992px) {
+    .container-lg {
+        max-width: 960px;
+    }
 }
-
-/* Estas SÍ necesitan un media query, porque forzar columnas
-   fijas no se adapta solo como auto-fit */
-@media (max-width: 768px) {
-    .grid-2,
-    .grid-3,
-    .grid-4 {
-        grid-template-columns: 1fr; /* en móvil, todo se apila en una columna */
+@media (min-width: 1200px) {
+    .container-xl {
+        max-width: 1140px;
+    }
+}
+@media (min-width: 1400px) {
+    .container-xxl {
+        max-width: 1320px;
     }
 }
 
 /* ============================================================
-   5. UTILIDADES DE FLEXBOX (para alinear cosas rápido)
+   5. ROW Y COLUMNAS (el corazón del sistema de grid)
+   ------------------------------------------------------------
+   Funciona igual que Bootstrap: usas un .row como "fila", y
+   adentro pones .col-* para dividir el espacio en hasta 12
+   columnas.
+
+   Ejemplo:
+   <div class="row">
+     <div class="col-6">Mitad</div>
+     <div class="col-6">Mitad</div>
+   </div>
+
+   ¿Por qué margin negativo en .row y padding en .col?
+   Es el mismo truco que usa Bootstrap: así el primer y último
+   elemento de la fila quedan alineados con el .container,
+   y el "gutter" (espacio entre columnas) se reparte parejo.
+   ============================================================ */
+.row {
+    display: flex;
+    flex-wrap: wrap; /* si no caben las columnas, bajan de línea */
+    margin-inline: calc(var(--grid-gutter-x) * -0.5);
+    row-gap: var(--grid-gutter-y);
+}
+
+.row > * {
+    padding-inline: calc(var(--grid-gutter-x) * 0.5);
+}
+
+/* .col sin número = todas las columnas se reparten el espacio
+   disponible EN PARTES IGUALES automáticamente */
+.col {
+    flex: 1 0 0%; /* crece, no se encoge más de su base, base = 0 */
+}
+
+/* .col-auto = la columna solo ocupa el ancho de su contenido,
+   no se estira ni se encoge */
+.col-auto {
+    flex: 0 0 auto;
+    width: auto;
+}
+
+/* Columnas de ancho fijo (base, sin breakpoint) del 1 al 12.
+   El número indica cuántas de las 12 columnas ocupa.
+   Ej: .col-4 ocupa 4/12 = 33.33% del ancho de la fila. */
+.col-1 {
+    flex: 0 0 auto;
+    width: 8.333333%;
+}
+.col-2 {
+    flex: 0 0 auto;
+    width: 16.666667%;
+}
+.col-3 {
+    flex: 0 0 auto;
+    width: 25%;
+}
+.col-4 {
+    flex: 0 0 auto;
+    width: 33.333333%;
+}
+.col-5 {
+    flex: 0 0 auto;
+    width: 41.666667%;
+}
+.col-6 {
+    flex: 0 0 auto;
+    width: 50%;
+}
+.col-7 {
+    flex: 0 0 auto;
+    width: 58.333333%;
+}
+.col-8 {
+    flex: 0 0 auto;
+    width: 66.666667%;
+}
+.col-9 {
+    flex: 0 0 auto;
+    width: 75%;
+}
+.col-10 {
+    flex: 0 0 auto;
+    width: 83.333333%;
+}
+.col-11 {
+    flex: 0 0 auto;
+    width: 91.666667%;
+}
+.col-12 {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+/* Offsets base: empujan la columna hacia la derecha dejando
+   espacio vacío, sin necesidad de una columna vacía extra.
+   Ej: .offset-3 deja 3/12 columnas de espacio antes de empezar. */
+.offset-1 {
+    margin-left: 8.333333%;
+}
+.offset-2 {
+    margin-left: 16.666667%;
+}
+.offset-3 {
+    margin-left: 25%;
+}
+.offset-4 {
+    margin-left: 33.333333%;
+}
+.offset-5 {
+    margin-left: 41.666667%;
+}
+.offset-6 {
+    margin-left: 50%;
+}
+.offset-7 {
+    margin-left: 58.333333%;
+}
+.offset-8 {
+    margin-left: 66.666667%;
+}
+.offset-9 {
+    margin-left: 75%;
+}
+.offset-10 {
+    margin-left: 83.333333%;
+}
+.offset-11 {
+    margin-left: 91.666667%;
+}
+
+/* ============================================================
+   6. COLUMNAS RESPONSIVE (col-sm-*, col-md-*, col-lg-*, etc.)
+   ------------------------------------------------------------
+   Esto es lo que te permite decir cosas como:
+   "en móvil ocupa todo el ancho (col-12), pero desde tablet
+   (md) en adelante solo ocupa la mitad (col-md-6)".
+
+   Ejemplo real:
+   <div class="col-12 col-md-6 col-lg-4">
+     En móvil: 100% ancho
+     En tablet (md+): 50% ancho
+     En laptop (lg+): 33.33% ancho
+   </div>
+
+   Bootstrap usa "mobile-first": defines el diseño para móvil
+   primero (sin prefijo), y luego usas col-md-*, col-lg-*, etc.
+   para ir cambiando el layout en pantallas MÁS GRANDES.
+   ============================================================ */
+@media (min-width: 576px) {
+    .col-sm {
+        flex: 1 0 0%;
+    }
+    .col-sm-auto {
+        flex: 0 0 auto;
+        width: auto;
+    }
+    .col-sm-1 {
+        flex: 0 0 auto;
+        width: 8.333333%;
+    }
+    .col-sm-2 {
+        flex: 0 0 auto;
+        width: 16.666667%;
+    }
+    .col-sm-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .col-sm-4 {
+        flex: 0 0 auto;
+        width: 33.333333%;
+    }
+    .col-sm-5 {
+        flex: 0 0 auto;
+        width: 41.666667%;
+    }
+    .col-sm-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+    .col-sm-7 {
+        flex: 0 0 auto;
+        width: 58.333333%;
+    }
+    .col-sm-8 {
+        flex: 0 0 auto;
+        width: 66.666667%;
+    }
+    .col-sm-9 {
+        flex: 0 0 auto;
+        width: 75%;
+    }
+    .col-sm-10 {
+        flex: 0 0 auto;
+        width: 83.333333%;
+    }
+    .col-sm-11 {
+        flex: 0 0 auto;
+        width: 91.666667%;
+    }
+    .col-sm-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    .offset-sm-0 {
+        margin-left: 0%;
+    }
+    .offset-sm-1 {
+        margin-left: 8.333333%;
+    }
+    .offset-sm-2 {
+        margin-left: 16.666667%;
+    }
+    .offset-sm-3 {
+        margin-left: 25%;
+    }
+    .offset-sm-4 {
+        margin-left: 33.333333%;
+    }
+    .offset-sm-5 {
+        margin-left: 41.666667%;
+    }
+    .offset-sm-6 {
+        margin-left: 50%;
+    }
+    .offset-sm-7 {
+        margin-left: 58.333333%;
+    }
+    .offset-sm-8 {
+        margin-left: 66.666667%;
+    }
+    .offset-sm-9 {
+        margin-left: 75%;
+    }
+    .offset-sm-10 {
+        margin-left: 83.333333%;
+    }
+    .offset-sm-11 {
+        margin-left: 91.666667%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md {
+        flex: 1 0 0%;
+    }
+    .col-md-auto {
+        flex: 0 0 auto;
+        width: auto;
+    }
+    .col-md-1 {
+        flex: 0 0 auto;
+        width: 8.333333%;
+    }
+    .col-md-2 {
+        flex: 0 0 auto;
+        width: 16.666667%;
+    }
+    .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .col-md-4 {
+        flex: 0 0 auto;
+        width: 33.333333%;
+    }
+    .col-md-5 {
+        flex: 0 0 auto;
+        width: 41.666667%;
+    }
+    .col-md-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+    .col-md-7 {
+        flex: 0 0 auto;
+        width: 58.333333%;
+    }
+    .col-md-8 {
+        flex: 0 0 auto;
+        width: 66.666667%;
+    }
+    .col-md-9 {
+        flex: 0 0 auto;
+        width: 75%;
+    }
+    .col-md-10 {
+        flex: 0 0 auto;
+        width: 83.333333%;
+    }
+    .col-md-11 {
+        flex: 0 0 auto;
+        width: 91.666667%;
+    }
+    .col-md-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    .offset-md-0 {
+        margin-left: 0%;
+    }
+    .offset-md-1 {
+        margin-left: 8.333333%;
+    }
+    .offset-md-2 {
+        margin-left: 16.666667%;
+    }
+    .offset-md-3 {
+        margin-left: 25%;
+    }
+    .offset-md-4 {
+        margin-left: 33.333333%;
+    }
+    .offset-md-5 {
+        margin-left: 41.666667%;
+    }
+    .offset-md-6 {
+        margin-left: 50%;
+    }
+    .offset-md-7 {
+        margin-left: 58.333333%;
+    }
+    .offset-md-8 {
+        margin-left: 66.666667%;
+    }
+    .offset-md-9 {
+        margin-left: 75%;
+    }
+    .offset-md-10 {
+        margin-left: 83.333333%;
+    }
+    .offset-md-11 {
+        margin-left: 91.666667%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg {
+        flex: 1 0 0%;
+    }
+    .col-lg-auto {
+        flex: 0 0 auto;
+        width: auto;
+    }
+    .col-lg-1 {
+        flex: 0 0 auto;
+        width: 8.333333%;
+    }
+    .col-lg-2 {
+        flex: 0 0 auto;
+        width: 16.666667%;
+    }
+    .col-lg-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .col-lg-4 {
+        flex: 0 0 auto;
+        width: 33.333333%;
+    }
+    .col-lg-5 {
+        flex: 0 0 auto;
+        width: 41.666667%;
+    }
+    .col-lg-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+    .col-lg-7 {
+        flex: 0 0 auto;
+        width: 58.333333%;
+    }
+    .col-lg-8 {
+        flex: 0 0 auto;
+        width: 66.666667%;
+    }
+    .col-lg-9 {
+        flex: 0 0 auto;
+        width: 75%;
+    }
+    .col-lg-10 {
+        flex: 0 0 auto;
+        width: 83.333333%;
+    }
+    .col-lg-11 {
+        flex: 0 0 auto;
+        width: 91.666667%;
+    }
+    .col-lg-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    .offset-lg-0 {
+        margin-left: 0%;
+    }
+    .offset-lg-1 {
+        margin-left: 8.333333%;
+    }
+    .offset-lg-2 {
+        margin-left: 16.666667%;
+    }
+    .offset-lg-3 {
+        margin-left: 25%;
+    }
+    .offset-lg-4 {
+        margin-left: 33.333333%;
+    }
+    .offset-lg-5 {
+        margin-left: 41.666667%;
+    }
+    .offset-lg-6 {
+        margin-left: 50%;
+    }
+    .offset-lg-7 {
+        margin-left: 58.333333%;
+    }
+    .offset-lg-8 {
+        margin-left: 66.666667%;
+    }
+    .offset-lg-9 {
+        margin-left: 75%;
+    }
+    .offset-lg-10 {
+        margin-left: 83.333333%;
+    }
+    .offset-lg-11 {
+        margin-left: 91.666667%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-xl {
+        flex: 1 0 0%;
+    }
+    .col-xl-auto {
+        flex: 0 0 auto;
+        width: auto;
+    }
+    .col-xl-1 {
+        flex: 0 0 auto;
+        width: 8.333333%;
+    }
+    .col-xl-2 {
+        flex: 0 0 auto;
+        width: 16.666667%;
+    }
+    .col-xl-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .col-xl-4 {
+        flex: 0 0 auto;
+        width: 33.333333%;
+    }
+    .col-xl-5 {
+        flex: 0 0 auto;
+        width: 41.666667%;
+    }
+    .col-xl-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+    .col-xl-7 {
+        flex: 0 0 auto;
+        width: 58.333333%;
+    }
+    .col-xl-8 {
+        flex: 0 0 auto;
+        width: 66.666667%;
+    }
+    .col-xl-9 {
+        flex: 0 0 auto;
+        width: 75%;
+    }
+    .col-xl-10 {
+        flex: 0 0 auto;
+        width: 83.333333%;
+    }
+    .col-xl-11 {
+        flex: 0 0 auto;
+        width: 91.666667%;
+    }
+    .col-xl-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    .offset-xl-0 {
+        margin-left: 0%;
+    }
+    .offset-xl-1 {
+        margin-left: 8.333333%;
+    }
+    .offset-xl-2 {
+        margin-left: 16.666667%;
+    }
+    .offset-xl-3 {
+        margin-left: 25%;
+    }
+    .offset-xl-4 {
+        margin-left: 33.333333%;
+    }
+    .offset-xl-5 {
+        margin-left: 41.666667%;
+    }
+    .offset-xl-6 {
+        margin-left: 50%;
+    }
+    .offset-xl-7 {
+        margin-left: 58.333333%;
+    }
+    .offset-xl-8 {
+        margin-left: 66.666667%;
+    }
+    .offset-xl-9 {
+        margin-left: 75%;
+    }
+    .offset-xl-10 {
+        margin-left: 83.333333%;
+    }
+    .offset-xl-11 {
+        margin-left: 91.666667%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .col-xxl {
+        flex: 1 0 0%;
+    }
+    .col-xxl-auto {
+        flex: 0 0 auto;
+        width: auto;
+    }
+    .col-xxl-1 {
+        flex: 0 0 auto;
+        width: 8.333333%;
+    }
+    .col-xxl-2 {
+        flex: 0 0 auto;
+        width: 16.666667%;
+    }
+    .col-xxl-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .col-xxl-4 {
+        flex: 0 0 auto;
+        width: 33.333333%;
+    }
+    .col-xxl-5 {
+        flex: 0 0 auto;
+        width: 41.666667%;
+    }
+    .col-xxl-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+    .col-xxl-7 {
+        flex: 0 0 auto;
+        width: 58.333333%;
+    }
+    .col-xxl-8 {
+        flex: 0 0 auto;
+        width: 66.666667%;
+    }
+    .col-xxl-9 {
+        flex: 0 0 auto;
+        width: 75%;
+    }
+    .col-xxl-10 {
+        flex: 0 0 auto;
+        width: 83.333333%;
+    }
+    .col-xxl-11 {
+        flex: 0 0 auto;
+        width: 91.666667%;
+    }
+    .col-xxl-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    .offset-xxl-0 {
+        margin-left: 0%;
+    }
+    .offset-xxl-1 {
+        margin-left: 8.333333%;
+    }
+    .offset-xxl-2 {
+        margin-left: 16.666667%;
+    }
+    .offset-xxl-3 {
+        margin-left: 25%;
+    }
+    .offset-xxl-4 {
+        margin-left: 33.333333%;
+    }
+    .offset-xxl-5 {
+        margin-left: 41.666667%;
+    }
+    .offset-xxl-6 {
+        margin-left: 50%;
+    }
+    .offset-xxl-7 {
+        margin-left: 58.333333%;
+    }
+    .offset-xxl-8 {
+        margin-left: 66.666667%;
+    }
+    .offset-xxl-9 {
+        margin-left: 75%;
+    }
+    .offset-xxl-10 {
+        margin-left: 83.333333%;
+    }
+    .offset-xxl-11 {
+        margin-left: 91.666667%;
+    }
+}
+
+/* ============================================================
+   7. GUTTERS (espaciado entre columnas)
+   ------------------------------------------------------------
+   Por defecto el gutter es de 1.5rem, pero puedes cambiarlo
+   por fila con estas clases, igual que en Bootstrap:
+
+   .g-0     -> sin espacio entre columnas (pegadas)
+   .g-1..5  -> espacio horizontal Y vertical
+   .gx-*    -> solo espacio horizontal (entre columnas)
+   .gy-*    -> solo espacio vertical (entre filas cuando envuelve)
+   ============================================================ */
+.g-0 {
+    --grid-gutter-x: 0;
+    --grid-gutter-y: 0;
+}
+.gx-0 {
+    --grid-gutter-x: 0;
+}
+.gy-0 {
+    --grid-gutter-y: 0;
+}
+.g-1 {
+    --grid-gutter-x: 0.5rem;
+    --grid-gutter-y: 0.5rem;
+}
+.gx-1 {
+    --grid-gutter-x: 0.5rem;
+}
+.gy-1 {
+    --grid-gutter-y: 0.5rem;
+}
+.g-2 {
+    --grid-gutter-x: 1rem;
+    --grid-gutter-y: 1rem;
+}
+.gx-2 {
+    --grid-gutter-x: 1rem;
+}
+.gy-2 {
+    --grid-gutter-y: 1rem;
+}
+.g-3 {
+    --grid-gutter-x: 1.5rem;
+    --grid-gutter-y: 1.5rem;
+}
+.gx-3 {
+    --grid-gutter-x: 1.5rem;
+}
+.gy-3 {
+    --grid-gutter-y: 1.5rem;
+}
+.g-4 {
+    --grid-gutter-x: 2rem;
+    --grid-gutter-y: 2rem;
+}
+.gx-4 {
+    --grid-gutter-x: 2rem;
+}
+.gy-4 {
+    --grid-gutter-y: 2rem;
+}
+.g-5 {
+    --grid-gutter-x: 3rem;
+    --grid-gutter-y: 3rem;
+}
+.gx-5 {
+    --grid-gutter-x: 3rem;
+}
+.gy-5 {
+    --grid-gutter-y: 3rem;
+}
+
+/* ============================================================
+   8. ALINEACIÓN DENTRO DEL ROW
+   ------------------------------------------------------------
+   Controlan cómo se acomodan las columnas dentro de la fila,
+   igual que las clases de Bootstrap con el mismo nombre.
+   ============================================================ */
+
+/* Alineación vertical de las columnas dentro del row */
+.align-items-start {
+    align-items: flex-start;
+}
+.align-items-center {
+    align-items: center;
+}
+.align-items-end {
+    align-items: flex-end;
+}
+
+/* Alineación horizontal de las columnas dentro del row */
+.justify-content-start {
+    justify-content: flex-start;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.justify-content-end {
+    justify-content: flex-end;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.justify-content-around {
+    justify-content: space-around;
+}
+
+/* Alineación individual de UNA sola columna (sobreescribe al row) */
+.align-self-start {
+    align-self: flex-start;
+}
+.align-self-center {
+    align-self: center;
+}
+.align-self-end {
+    align-self: flex-end;
+}
+
+/* Orden visual de una columna, sin cambiar el orden en el HTML.
+   Útil por ejemplo si en móvil quieres que la imagen se vea
+   antes que el texto, aunque en el HTML esté después. */
+.order-first {
+    order: -1;
+}
+.order-last {
+    order: 999;
+}
+.order-0 {
+    order: 0;
+}
+.order-1 {
+    order: 1;
+}
+.order-2 {
+    order: 2;
+}
+.order-3 {
+    order: 3;
+}
+.order-4 {
+    order: 4;
+}
+.order-5 {
+    order: 5;
+}
+.order-6 {
+    order: 6;
+}
+.order-7 {
+    order: 7;
+}
+.order-8 {
+    order: 8;
+}
+.order-9 {
+    order: 9;
+}
+.order-10 {
+    order: 10;
+}
+.order-11 {
+    order: 11;
+}
+.order-12 {
+    order: 12;
+}
+
+/* ============================================================
+   9. UTILIDADES DE FLEXBOX (para alinear cosas rápido)
    ------------------------------------------------------------
    Estas son como las clases "d-flex", "justify-content-*" y
    "align-items-*" de Bootstrap, pero abreviadas.
@@ -219,12 +1040,9 @@ ol {
 .gap-lg {
     gap: var(--espacio-lg);
 }
-.gap-xl {
-    gap: var(--espacio-xl);
-}
 
 /* ============================================================
-   6. UTILIDADES DE ESPACIADO (margin / padding rápidos)
+   10. UTILIDADES DE ESPACIADO (margin / padding rápidos)
    ------------------------------------------------------------
    En vez de escribir "margin-bottom: 24px" cada vez en tu CSS,
    usas la clase directo en el HTML: <div class="mb-md">
@@ -263,7 +1081,7 @@ ol {
 }
 
 /* ============================================================
-   7. UTILIDADES DE TEXTO
+   11. UTILIDADES DE TEXTO
    ============================================================ */
 .text-centro {
     text-align: center;
@@ -278,7 +1096,6 @@ ol {
    SIN necesidad de un media query por cada tamaño. */
 .titulo-hero {
     font-size: clamp(2rem, 5vw, 3.5rem);
-    color: var(--color-texto-claro);
     font-weight: 700;
     line-height: 1.2;
 }
@@ -289,7 +1106,7 @@ ol {
 }
 
 /* ============================================================
-   8. BREAKPOINTS DE REFERENCIA (para cuando SÍ necesites
+   12. BREAKPOINTS DE REFERENCIA (para cuando SÍ necesites
       escribir tus propios media queries personalizados)
    ------------------------------------------------------------
    Estos son los tamaños estándar más usados en la industria.
@@ -302,7 +1119,7 @@ ol {
    ============================================================ */
 
 /* ============================================================
-   9. BOTÓN BASE (ejemplo de componente reutilizable)
+   13. BOTÓN BASE (ejemplo de componente reutilizable)
    ------------------------------------------------------------
    Un ejemplo de cómo construir tus propios "componentes",
    igual que Bootstrap tiene su .btn.
