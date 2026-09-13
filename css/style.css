@@ -81,22 +81,97 @@ html {
 /************************/
 .navbar {
     position: fixed;
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
-    border-radius: 20px;
+    border-radius: 0px;
     top: 0;
     z-index: 2;
     right: 0;
     left: 0;
     background: var(--color-fondo-alterno);
     border-bottom: 1px solid var(--color-borde);
+    transition: all 0.5s ease;
 }
+
+.navbar.is-scrolled {
+    width: 75%;
+    border-radius: 20px;
+    border-bottom: 1px solid var(--color-primario);
+}
+
 .navbar__content {
-    min-height: 68px;
+    min-height: 65px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 24px;
+}
+
+.navbar__toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 3;
+}
+
+.navbar__toggle span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: var(--color-texto, #14171c);
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.navbar__toggle.is-active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.navbar__toggle.is-active span:nth-child(2) {
+    opacity: 0;
+}
+.navbar__toggle.is-active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+    }
+
+    .navbar.is-scrolled {
+        width: 90%;
+    }
+
+    .navbar__toggle {
+        display: flex;
+    }
+
+    .navbar__menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: min(75%, 320px);
+        background: var(--color-fondo-alterno);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 96px 32px;
+        transition: right 0.35s ease;
+        box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .navbar__menu.is-open {
+        right: 0;
+    }
 }
 
 /************************/
@@ -190,6 +265,9 @@ html {
 /************************/
 #servicios {
     background-image: url("../assets/img/background_1.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* From Uiverse.io by iconicchandu */
@@ -350,6 +428,14 @@ html {
     box-shadow: inset 0 -2px 25px -4px var(--white);
 }
 
+/* .card .button:hover {
+    background-image: linear-gradient(
+        0deg,
+        hsl(189, 99%, 26%),
+        hsl(189, 92%, 58%) 100%
+    );
+} */
+
 .section {
     padding: 80px 0;
 }
@@ -399,9 +485,11 @@ h3 {
     gap: 16px;
 }
 .logo-placeholder {
-    min-width: 150px;
+    min-width: 250px;
     padding: 25px 18px;
-    border: 1px dashed #aebdc3;
+    border: 1px solid #aebdc3;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.255);
     color: var(--color-texto-claro);
     text-align: center;
     font:

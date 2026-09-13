@@ -1,52 +1,44 @@
-(function () {
-    const items = Array.from(document.querySelectorAll(".tl-item"));
-    const railFill = document.getElementById("railFill");
-    const timeline = document.getElementById("timeline");
-    const prefersReducedMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)",
-    ).matches;
+const toggle = document.querySelector(".navbar__toggle");
+const menu = document.querySelector(".navbar__menu");
 
-    // Si el usuario prefiere menos movimiento, mostramos todo activado de una vez.
-    if (prefersReducedMotion) {
-        items.forEach((item) => item.classList.add("is-active"));
-        if (railFill) railFill.style.height = "100%";
-        return;
+toggle.addEventListener("click", () => {
+    const isOpen = menu.classList.toggle("is-open");
+    toggle.classList.toggle("is-active");
+    toggle.setAttribute("aria-expanded", isOpen);
+});
+
+// Cierra el menú al hacer clic en un enlace (útil en one-page con anclas)
+menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+        menu.classList.remove("is-open");
+        toggle.classList.remove("is-active");
+        toggle.setAttribute("aria-expanded", "false");
+    });
+});
+
+const navbar = document.querySelector(".navbar");
+const scrollThreshold = 50; // px de scroll antes de activar el efecto
+
+let ticking = false;
+
+function updateNavbar() {
+    if (window.scrollY > scrollThreshold) {
+        navbar.classList.add("is-scrolled");
+    } else {
+        navbar.classList.remove("is-scrolled");
     }
+    ticking = false;
+}
 
-    // Activa cada checkpoint cuando cruza la línea de referencia (40% desde arriba).
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("is-active");
-                }
-            });
-        },
-        { rootMargin: "-40% 0px -50% 0px", threshold: 0 },
-    );
-
-    items.forEach((item) => observer.observe(item));
-
-    // Llena el riel según cuánto se ha recorrido la sección del timeline.
-    let ticking = false;
-
-    function updateRailFill() {
-        const rect = timeline.getBoundingClientRect();
-        const viewportReference = window.innerHeight * 0.4;
-        const progressed = viewportReference - rect.top;
-        const ratio = Math.min(Math.max(progressed / rect.height, 0), 1);
-        railFill.style.height = ratio * 100 + "%";
-        ticking = false;
-    }
-
-    function onScroll() {
+window.addEventListener(
+    "scroll",
+    () => {
         if (!ticking) {
-            window.requestAnimationFrame(updateRailFill);
+            window.requestAnimationFrame(updateNavbar);
             ticking = true;
         }
-    }
+    },
+    { passive: true },
+);
 
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    updateRailFill();
-})();
+updateNavbar(); // por si la página carga ya con scroll (ej. al recargar)
