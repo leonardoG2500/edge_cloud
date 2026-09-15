@@ -19,9 +19,9 @@ html {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
-    border: 2px solid #0aa0ff;
+    border: 2px solid var(--color-fondo);
     text-transform: uppercase;
-    color: #0aa0ff;
+    color: var(--color-fondo);
     text-decoration: none;
     font: 0.9rem;
     transition: 0.3s;
@@ -487,9 +487,9 @@ h3 {
 .logo-placeholder {
     min-width: 250px;
     padding: 25px 18px;
-    border: 1px solid #aebdc3;
+    border: 1px solid #f4f6f7;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.255);
+    background: rgba(255, 255, 255);
     color: var(--color-texto-claro);
     text-align: center;
     font:
