@@ -14,5 +14,5 @@ gsap.from(".btn2", {
     y: -200,
     ease: "power2.inOut",
     duration: 0.8,
-    stagger: 0.025,
+    stagger: 0.02,
 });

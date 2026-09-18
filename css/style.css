@@ -260,6 +260,11 @@ html {
 #ventajas img {
     width: 100%;
 }
+
+li {
+    list-style-type: "✅";
+}
+
 /************************/
 /* SERVICIOS */
 /************************/
@@ -488,7 +493,7 @@ h3 {
     min-width: 250px;
     padding: 25px 18px;
     border: 1px solid #f4f6f7;
-    border-radius: 8px;
+    border-radius: 20px;
     background: rgba(255, 255, 255);
     color: var(--color-texto-claro);
     text-align: center;
@@ -576,3 +581,11 @@ button {
         gap: 12px;
     }
 } */
+
+/* Clientes */
+#clientes {
+    background-image: url("../assets/img/background_2.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
