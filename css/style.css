@@ -496,7 +496,9 @@ h3 {
     border-radius: 20px;
     background: rgba(255, 255, 255);
     color: var(--color-texto-claro);
-    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
     font:
         0.9rem Arial,
         sans-serif;
