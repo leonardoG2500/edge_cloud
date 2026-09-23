@@ -268,12 +268,12 @@ li {
 /************************/
 /* SERVICIOS */
 /************************/
-#servicios {
+/* #servicios {
     background-image: url("../assets/img/background_1.webp");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-}
+} */
 
 /* From Uiverse.io by iconicchandu */
 .card {
@@ -585,8 +585,24 @@ button {
 } */
 
 /* Clientes */
-#clientes {
+/* #clientes {
     background-image: url("../assets/img/background_2.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+
+/* Ventajas */
+#ventajas {
+    background-image: url("../assets/img/background_3.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Certificaciones */
+#certificaciones {
+    background-image: url("../assets/img/background_4.webp");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

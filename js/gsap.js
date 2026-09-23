@@ -13,6 +13,7 @@ gsap.from(".logo", {
 gsap.from(".btn2", {
     y: -200,
     ease: "power2.inOut",
+    opacity: 0,
     duration: 0.8,
     stagger: 0.02,
 });
