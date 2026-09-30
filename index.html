@@ -14,6 +14,11 @@
 
         <!-- Google Fonts -->
 
+        <!-- Font Awesome -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            rel="stylesheet" />
+
         <!-- GSAP -->
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
 
@@ -87,7 +92,6 @@
             <!-- About Us Start -->
             <section class="section" id="nosotros">
                 <div class="container">
-                    <p class="text-centro text-claro mb-xs">Conócenos</p>
                     <div class="row align-items-center">
                         <div class="col-12 col-lg-6 about-content">
                             <h2 class="titulo-seccion text-claro">
@@ -174,7 +178,9 @@
                     <!-- <p class="text-centro text-claro mb-xs">
                         Lo que hacemos
                     </p> -->
-                    <h2 class="titulo-seccion text-claro">Servicios</h2>
+                    <h2 class="titulo-seccion text-claro text-centro">
+                        Servicios
+                    </h2>
                     <div
                         class="row align-items-center justify-content-center gap-lg">
                         <div class="col-12 col-sm-6 col-lg-3 card">
@@ -430,29 +436,68 @@
             <!-- Quienes nos Respaldan End -->
 
             <!-- Nuestros Procesos Start -->
-            <section class="section" id="proceso">
+            <section class="experience" id="experience">
                 <div class="container">
-                    <!-- <p class="text-centro text-claro mb-xs">Así trabajamos</p> -->
                     <h2 class="titulo-seccion text-centro text-claro">
                         Nuestro proceso
                     </h2>
-                    <div class="row">
-                        <article class="col-6 col-lg-3 process-step">
-                            <span>01</span>
-                            <h3>Escuchamos</h3>
-                        </article>
-                        <article class="col-6 col-lg-3 process-step">
-                            <span>02</span>
-                            <h3>Analizamos</h3>
-                        </article>
-                        <article class="col-6 col-lg-3 process-step">
-                            <span>03</span>
-                            <h3>Diseñamos</h3>
-                        </article>
-                        <article class="col-6 col-lg-3 process-step">
-                            <span>04</span>
-                            <h3>Acompañamos</h3>
-                        </article>
+                    <div class="timeline">
+                        <div class="timeline-item left" data-wow-delay="0.1s">
+                            <div class="timeline-text">
+                                <div class="timeline-date">PLANIFICAR</div>
+                                <div class="flex align-items-center">
+                                    <i class="fa fa-bullseye fa-3x me-3"></i>
+                                    <p style="text-align: justify">
+                                        Identificamos las necesidades de cada
+                                        cliente y definimos un plan integral
+                                        para el proyecto.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item right" data-wow-delay="0.3s">
+                            <div class="timeline-text">
+                                <div class="timeline-date">EJECUTAR</div>
+                                <div class="flex align-items-center">
+                                    <i class="fa fa-eye fa-3x me-3"></i>
+                                    <p style="text-align: justify">
+                                        Integramos nuestros equipos
+                                        especializados, tecnología y recursos
+                                        para ejecutar cada proyecto con calidad,
+                                        seguridad y eficiencia. mercado global.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item left" data-wow-delay="0.5s">
+                            <div class="timeline-text">
+                                <div class="timeline-date">VERIFICAR</div>
+                                <div class="flex align-items-center">
+                                    <i
+                                        class="fa-solid fa-hand-holding-heart fa-3x me-3"></i>
+                                    <p style="text-align: justify">
+                                        Supervisamos procesos y resultados para
+                                        asegurar el correcto funcionamiento y
+                                        desempeño de las soluciones
+                                        implementadas.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item right">
+                            <div class="timeline-text">
+                                <div class="timeline-date">OPTIMIZAR</div>
+                                <div class="flex align-items-center">
+                                    <i class="fa fa-eye fa-3x me-3"></i>
+                                    <p style="text-align: justify">
+                                        Evaluamos oportunidades de mejora y
+                                        proponemos acciones que permitan
+                                        fortalecer la operación de nuestros
+                                        clientes. mercado global.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -461,30 +506,66 @@
             <!-- Formulario Start -->
             <section class="section section--muted" id="formulario">
                 <div class="container form-layout">
-                    <div>
+                    <div
+                        class="align-items-center justify-content-center mb-md">
                         <p class="text-centro text-claro mb-xs">Hablemos</p>
                         <h2 class="titulo-seccion">Cuéntanos tu proyecto</h2>
                         <p class="">Información de contacto y ubicación</p>
                     </div>
-                    <form class="contact-form">
-                        <label for="nombre">Nombre</label
-                        ><input
-                            id="nombre"
-                            type="text"
-                            placeholder="Tu nombre" /><label for="correo"
-                            >Correo electrónico</label
-                        ><input
-                            id="correo"
-                            type="email"
-                            placeholder="tu@correo.com" /><label for="mensaje"
-                            >Mensaje</label
-                        ><textarea
-                            id="mensaje"
-                            rows="5"
-                            placeholder="¿Cómo podemos ayudarte?"></textarea>
-                        <button type="submit" class="boton">
-                            Enviar mensaje
-                        </button>
+                    <form id="formularioCotizacion">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="nombre"
+                                        name="nombre"
+                                        placeholder="Nombre"
+                                        required />
+                                    <label for="nombre">Nombre</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="correo"
+                                        name="correo"
+                                        placeholder="Correo"
+                                        required />
+                                    <label for="correo">Correo</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="telefono"
+                                        name="telefono"
+                                        placeholder="Telefono"
+                                        required />
+                                    <label for="telefono">Celular</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea
+                                        class="form-control"
+                                        placeholder="Mensaje"
+                                        id="mensaje"
+                                        name="mensaje"
+                                        style="height: 130px"
+                                        required></textarea>
+                                    <label for="mensaje">Mensaje</label>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button class="button">Enviar</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </section>
