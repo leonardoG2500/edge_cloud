@@ -444,9 +444,16 @@
                     <div class="timeline">
                         <div class="timeline-item left" data-wow-delay="0.1s">
                             <div class="timeline-text">
-                                <div class="timeline-date">PLANIFICAR</div>
+                                <div class="timeline-date">
+                                    <h2>PLANIFICAR</h2>
+                                </div>
                                 <div class="flex align-items-center">
-                                    <i class="fa fa-bullseye fa-3x me-3"></i>
+                                    <img
+                                        src="assets/img/iconos/planificar.svg"
+                                        alt=""
+                                        width="58"
+                                        height="58"
+                                        class="me-3" />
                                     <p style="text-align: justify">
                                         Identificamos las necesidades de cada
                                         cliente y definimos un plan integral
@@ -457,9 +464,16 @@
                         </div>
                         <div class="timeline-item right" data-wow-delay="0.3s">
                             <div class="timeline-text">
-                                <div class="timeline-date">EJECUTAR</div>
+                                <div class="timeline-date">
+                                    <h2>EJECUTAR</h2>
+                                </div>
                                 <div class="flex align-items-center">
-                                    <i class="fa fa-eye fa-3x me-3"></i>
+                                    <img
+                                        src="assets/img/iconos/ejecutar.svg"
+                                        alt=""
+                                        width="58"
+                                        height="58"
+                                        class="me-3" />
                                     <p style="text-align: justify">
                                         Integramos nuestros equipos
                                         especializados, tecnología y recursos
@@ -471,10 +485,16 @@
                         </div>
                         <div class="timeline-item left" data-wow-delay="0.5s">
                             <div class="timeline-text">
-                                <div class="timeline-date">VERIFICAR</div>
+                                <div class="timeline-date">
+                                    <h2>VERIFICAR</h2>
+                                </div>
                                 <div class="flex align-items-center">
-                                    <i
-                                        class="fa-solid fa-hand-holding-heart fa-3x me-3"></i>
+                                    <img
+                                        src="assets/img/iconos/verificar.svg"
+                                        alt=""
+                                        width="58"
+                                        height="58"
+                                        class="me-3" />
                                     <p style="text-align: justify">
                                         Supervisamos procesos y resultados para
                                         asegurar el correcto funcionamiento y
@@ -486,9 +506,16 @@
                         </div>
                         <div class="timeline-item right">
                             <div class="timeline-text">
-                                <div class="timeline-date">OPTIMIZAR</div>
+                                <div class="timeline-date">
+                                    <h2>OPTIMIZAR</h2>
+                                </div>
                                 <div class="flex align-items-center">
-                                    <i class="fa fa-eye fa-3x me-3"></i>
+                                    <img
+                                        src="assets/img/iconos/optimizar.svg"
+                                        alt=""
+                                        width="58"
+                                        height="58"
+                                        class="me-3" />
                                     <p style="text-align: justify">
                                         Evaluamos oportunidades de mejora y
                                         proponemos acciones que permitan
@@ -504,106 +531,136 @@
             <!-- Nuestros Procesos End -->
 
             <!-- Formulario Start -->
-            <section class="section section--muted" id="formulario">
-                <div class="container form-layout">
-                    <div
-                        class="align-items-center justify-content-center mb-md">
-                        <p class="text-centro text-claro mb-xs">Hablemos</p>
-                        <h2 class="titulo-seccion">Cuéntanos tu proyecto</h2>
-                        <p class="">Información de contacto y ubicación</p>
-                    </div>
-                    <form id="formularioCotizacion">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        id="nombre"
-                                        name="nombre"
-                                        placeholder="Nombre"
-                                        required />
-                                    <label for="nombre">Nombre</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input
-                                        type="email"
-                                        class="form-control"
-                                        id="correo"
-                                        name="correo"
-                                        placeholder="Correo"
-                                        required />
-                                    <label for="correo">Correo</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        id="telefono"
-                                        name="telefono"
-                                        placeholder="Telefono"
-                                        required />
-                                    <label for="telefono">Celular</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea
-                                        class="form-control"
-                                        placeholder="Mensaje"
-                                        id="mensaje"
-                                        name="mensaje"
-                                        style="height: 130px"
-                                        required></textarea>
-                                    <label for="mensaje">Mensaje</label>
-                                </div>
-                            </div>
-                            <div class="col-12 text-center">
-                                <button class="button">Enviar</button>
-                            </div>
+            <section class="section" id="formulario">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <p class="text-centro text-claro">Hablemos</p>
+                            <h2 class="titulo-seccion text-claro">
+                                Cuéntanos tu proyecto
+                            </h2>
+                            <p class="text-claro">
+                                <i class="fa fa-phone fa-lg me-2"></i> 477 123
+                                4567
+                            </p>
+                            <p class="text-claro">
+                                <i class="fa fa-phone fa-lg me-2"></i> 477 123
+                                4567
+                            </p>
+                            <p class="text-claro">
+                                <i class="fa fa-envelope fa-lg me-2"></i>
+                                info@empresa.com
+                            </p>
                         </div>
-                    </form>
+
+                        <div class="col-12 col-lg-6">
+                            <form id="formularioCotizacion">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="nombre"
+                                                name="nombre"
+                                                placeholder="Nombre"
+                                                required />
+                                            <label for="nombre">Nombre</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input
+                                                type="email"
+                                                class="form-control"
+                                                id="correo"
+                                                name="correo"
+                                                placeholder="Correo"
+                                                required />
+                                            <label for="correo">Correo</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="telefono"
+                                                name="telefono"
+                                                placeholder="Telefono"
+                                                required />
+                                            <label for="telefono"
+                                                >Celular</label
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea
+                                                class="form-control"
+                                                placeholder="Mensaje"
+                                                id="mensaje"
+                                                name="mensaje"
+                                                style="height: 130px"
+                                                required></textarea>
+                                            <label for="mensaje">Mensaje</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button class="button">Enviar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!-- Formulario End -->
 
             <!-- Footer 1 Start -->
-            <section class="section" id="contacto">
+            <footer class="section" id="contacto">
                 <div class="container">
-                    <p class="text-centro text-claro mb-xs">Estamos cerca</p>
-                    <h2 class="titulo-seccion">Contactos</h2>
+                    <div class="flex align-items-center justify-content-center">
+                        <img
+                            src="assets/img/Logo_E&C.webp"
+                            alt=""
+                            style="width: 30rem" />
+                    </div>
+
                     <div class="row">
                         <div
-                            class="col-12 col-md-4 contact-item flex-columna gap-xs">
-                            <strong>Correo</strong>
+                            class="col-12 col-md-4 align-items-center justify-content-center contact-item flex-columna gap-xs">
+                            <h3 class="text-claro text-centro">
+                                <strong>Contactanos</strong>
+                            </h3>
                             <span>contacto@edgecloud.com</span>
                         </div>
                         <div
-                            class="col-12 col-md-4 contact-item flex-columna gap-xs">
-                            <strong>Teléfono</strong>
+                            class="col-12 col-md-4 align-items-center justify-content-center contact-item flex-columna gap-xs">
+                            <h3 class="text-claro text-centro">
+                                <strong>Ubicación</strong>
+                            </h3>
                             <span>+00 000 000 0000</span>
                         </div>
                         <div
-                            class="col-12 col-md-4 contact-item flex-columna gap-xs">
-                            <strong>Dirección</strong>
+                            class="col-12 col-md-4 align-items-center justify-content-center contact-item flex-columna gap-xs">
+                            <h3 class="text-claro text-centro">
+                                <strong>Siguenos</strong>
+                            </h3>
                             <span>Ciudad, País</span>
                         </div>
                     </div>
                 </div>
-            </section>
+            </footer>
             <!-- Footer 1 End -->
         </main>
 
-        <footer class="footer">
+        <section class="footer">
             <div class="container flex-entre">
                 <strong>Edge &amp; Cloud</strong>
                 <span>© 2026 Todos los derechos reservados.</span>
             </div>
-        </footer>
+        </section>
 
         <script src="js/main.js"></script>
         <script src="js/gsap.js"></script>

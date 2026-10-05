@@ -466,8 +466,6 @@ h3 {
 .contact-item {
     min-height: 140px;
     padding: 22px;
-    border: 1px dashed #aebdc3;
-    background: rgba(255, 255, 255, 0.7);
 }
 .placeholder-card p,
 .contact-item span {
@@ -619,6 +617,14 @@ button {
     background-repeat: no-repeat;
 }
 
+/* Contacto */
+#formulario {
+    background-image: url("../assets/img/background_2.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 /* Nuestro Proceso */
 /*** Mision, vision y valores ***/
 .experience {
@@ -699,10 +705,16 @@ button {
     top: 44px;
     font-size: 16px;
     font-weight: 600;
-    color: #ffffff;
+    color: #fff;
     text-transform: uppercase;
     letter-spacing: 1px;
     z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .experience .timeline .timeline-date {
+        color: var(--color-secundario);
+    }
 }
 
 .experience .timeline .timeline-item.left .timeline-date {
