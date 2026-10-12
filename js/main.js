@@ -42,3 +42,8 @@ window.addEventListener(
 );
 
 updateNavbar(); // por si la página carga ya con scroll (ej. al recargar)
+
+// Prueba
+// import Swup from "https://unpkg.com/swup@4?module";
+
+// const swup = new Swup();

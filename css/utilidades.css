@@ -78,6 +78,7 @@ body {
     background-color: var(--color-fondo);
     line-height: 1.6; /* mejora la legibilidad de los párrafos */
     -webkit-font-smoothing: antialiased; /* texto más suave en Mac/iOS */
+    overflow-x: hidden; /* evita scroll horizontal por errores de diseño */
 }
 
 img {
