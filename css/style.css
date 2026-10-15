@@ -341,15 +341,7 @@ li {
     padding: 1rem;
     width: 18.7rem;
     height: 18rem;
-    background-color: hsla(240, 15%, 9%, 1);
-    background-image:
-        radial-gradient(at 88% 40%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
-        radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
-        radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
-        radial-gradient(at 0% 64%, hsl(189, 99%, 26%) 0px, transparent 85%),
-        radial-gradient(at 41% 94%, hsl(189, 97%, 36%) 0px, transparent 85%),
-        radial-gradient(at 100% 99%, hsl(188, 94%, 13%) 0px, transparent 85%);
-
+    background-color: rgb(94, 92, 92);
     border-radius: 1rem;
     box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
 }
@@ -368,8 +360,8 @@ li {
     height: calc(100% + 2px);
     background-image: linear-gradient(
         0deg,
-        hsl(0, 0%, 100%) -50%,
-        hsl(0, 0%, 40%) 100%
+        hsl(240, 20%, 99%) -50%,
+        hsl(234, 100%, 39%) 100%
     );
 
     border-radius: 1rem;
@@ -391,8 +383,8 @@ li {
     background-image: linear-gradient(
         0deg,
         hsla(0, 0%, 100%, 0) 0%,
-        hsl(189, 100%, 50%) 40%,
-        hsl(189, 100%, 50%) 60%,
+        hsl(0, 0%, 95%) 40%,
+        hsl(180, 5%, 88%) 60%,
         hsla(0, 0%, 40%, 0) 100%
     );
 
@@ -414,14 +406,14 @@ li {
     margin-top: 0.25rem;
     width: 65%;
 
-    font-size: 0.75rem;
-    color: var(--paragraph);
+    font-size: 0.8rem;
+    color: var(--white);
 }
 
 .card .line {
     width: 100%;
     height: 0.01rem;
-    background-color: var(--color-fondo-alterno);
+    background-color: var(--color-fondo);
 
     border: none;
 }
@@ -464,31 +456,21 @@ li {
 
 .card .button {
     cursor: pointer;
-
     padding: 0.5rem;
     width: 100%;
-    background-image: linear-gradient(
-        0deg,
-        hsl(189, 92%, 58%),
-        hsl(189, 99%, 26%) 100%
-    );
-
+    background-color: #fff;
     font-size: 1rem;
-    color: var(--white);
-
+    color: var(--color-fondo);
     margin-top: auto;
-    border: 0;
+    border: 3px solid var(--color-fondo);
     border-radius: 9999px;
     box-shadow: inset 0 -2px 25px -4px var(--white);
+    transition: all 0.3s ease;
 }
 
-/* .card .button:hover {
-    background-image: linear-gradient(
-        0deg,
-        hsl(189, 99%, 26%),
-        hsl(189, 92%, 58%) 100%
-    );
-} */
+.card .button:hover {
+    transform: translateY(-2px);
+}
 
 .section {
     padding: 80px 0;
