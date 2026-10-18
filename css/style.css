@@ -176,6 +176,86 @@ html {
 }
 
 /************************/
+/* DROPDOWN */
+/************************/
+
+.nav-item {
+    position: relative;
+    display: inline-block; /* ← esto lo devuelve a la misma línea */
+}
+
+.dd-menu {
+    list-style: none;
+    margin: 0;
+    padding: 8px;
+}
+
+.dd-menu li {
+    list-style: none;
+}
+
+.dd-menu a {
+    display: block;
+    padding: 12px 14px;
+    border-radius: 8px;
+    color: var(--color-texto);
+    text-decoration: none;
+    transition:
+        background 0.2s,
+        color 0.2s;
+}
+
+.dd-menu a:hover,
+.dd-menu a:focus-visible {
+    background: rgba(10, 160, 255, 0.12);
+    color: #0aa0ff;
+}
+
+/* Escritorio: flotante, abre con hover o con Tab */
+@media (min-width: 769px) {
+    .dd-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 270px;
+        z-index: 50;
+        background: var(--color-fondo-alterno);
+        border: 1px solid var(--color-borde);
+        border-radius: 12px;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(8px);
+        transition:
+            opacity 0.25s,
+            transform 0.25s,
+            visibility 0.25s;
+    }
+
+    .nav-item:hover .dd-menu,
+    .nav-item:focus-within .dd-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+/* Móvil: las subpáginas se ven siempre, indentadas bajo "Servicios" */
+@media (max-width: 768px) {
+    .dd-menu {
+        margin-top: 4px;
+        padding: 0 0 0 12px;
+        border-left: 2px solid var(--color-primario);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dd-menu {
+        transition: none;
+    }
+}
+
+/************************/
 /* HEADER */
 /************************/
 .hero {
@@ -519,7 +599,8 @@ h3 {
     gap: 16px;
 }
 .logo-placeholder {
-    min-width: 250px;
+    width: 310px;
+    height: 200px;
     padding: 25px 18px;
     border: 1px solid #f4f6f7;
     border-radius: 20px;
@@ -842,3 +923,61 @@ button {
     }
 }
 /*** Mision, vision y valores ***/
+
+/* Quienes nos respaldan */
+.respaldan-logo img {
+    width: 30rem;
+}
+
+/* Proceso prueba Start */
+@media (max-width: 767px) {
+    .proceso {
+        display: grid;
+        grid-template-columns: 38% 1fr; /* zona visible del aro | textos */
+        overflow-x: clip; /* clip, no hidden: no rompe el sticky */
+    }
+
+    .proceso-aro {
+        position: sticky;
+        top: 0;
+        height: 100svh;
+        display: grid;
+        align-items: center;
+        justify-items: start;
+    }
+
+    .aro,
+    .aro-nube {
+        grid-area: 1 / 1;
+        width: 300px;
+        aspect-ratio: 1;
+        margin-left: -150px; /* la mitad queda fuera de pantalla */
+    }
+    .aro {
+        position: relative;
+    }
+    .aro > img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .aro-nube {
+        width: 150px;
+        margin-left: -75px;
+        justify-self: start;
+        place-self: center start;
+    }
+
+    .paso {
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* alinea el texto con las 3 en punto */
+        opacity: 0.25;
+        transition: opacity 0.4s;
+    }
+    .paso.activo {
+        opacity: 1;
+    }
+}

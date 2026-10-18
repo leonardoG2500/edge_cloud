@@ -95,3 +95,28 @@ gsap.from(".btn2", {
 
 // Las imágenes cambian el layout al cargar: recalcula posiciones
 window.addEventListener("load", () => ScrollTrigger.refresh());
+
+(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: no-preference)");
+
+    document.querySelectorAll(".tiene-dropdown").forEach((item) => {
+        const enlaces = item.querySelectorAll(".dd-menu li");
+        if (!enlaces.length) return;
+
+        item.addEventListener("dd:abrir", () => {
+            if (!mq.matches) return;
+            gsap.fromTo(
+                enlaces,
+                { autoAlpha: 0, y: 8 },
+                {
+                    autoAlpha: 1,
+                    y: 0,
+                    duration: 0.25,
+                    stagger: 0.05,
+                    ease: "power2.out",
+                    overwrite: true,
+                },
+            );
+        });
+    });
+})();

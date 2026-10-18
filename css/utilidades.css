@@ -1091,6 +1091,10 @@ ol {
     color: var(--color-texto-claro);
 }
 
+.text-oscuro {
+    color: var(--color-texto);
+}
+
 /* Tamaños de texto responsive automáticos con clamp():
    clamp(mínimo, preferido, máximo)
    El texto crece/decrece solo según el ancho de pantalla,
