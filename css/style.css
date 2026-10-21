@@ -926,7 +926,15 @@ button {
 
 /* Quienes nos respaldan */
 .respaldan-logo img {
-    width: 30rem;
+    width: 40rem;
+    height: auto;
+}
+
+@media (max-width: 767px) {
+    .respaldan-logo img {
+        width: 25em;
+        height: auto;
+    }
 }
 
 /* Proceso prueba Start */
