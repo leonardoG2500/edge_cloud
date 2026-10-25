@@ -1066,6 +1066,9 @@ ol {
 .mb-xl {
     margin-bottom: var(--espacio-xl);
 }
+.mb-3 {
+    margin-bottom: var(--espacio-sm);
+}
 
 /* Padding en secciones completas (ej: <section class="py-lg">) */
 .py-sm {
@@ -1132,10 +1135,10 @@ ol {
 .boton {
     display: inline-block;
     padding: 0.75rem 1.75rem;
-    background-color: var(--color-primario);
-    color: white;
+    background-color: var(--color-texto-claro);
+    color: var(--color-fondo);
     border: none;
-    border-radius: var(--radio-sm);
+    border-radius: 30px;
     font-weight: 600;
     cursor: pointer;
     transition: var(--transicion); /* usa la variable de transición global */

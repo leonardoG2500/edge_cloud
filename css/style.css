@@ -613,6 +613,44 @@ h3 {
         0.9rem Arial,
         sans-serif;
 }
+
+/************************/
+/* CLIENTES */
+/************************/
+.clientes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* móvil: 2x2 */
+    gap: 16px;
+    max-width: 1000px;
+    margin: 32px auto 0;
+}
+
+@media (min-width: 769px) {
+    .clientes-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+    }
+}
+
+.cliente-slot {
+    display: grid;
+    place-items: center;
+    width: 310px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255);
+    border-radius: 12px;
+    overflow: hidden; /* recorta el logo que entra o sale */
+}
+
+.cliente-slot img {
+    grid-area: 1 / 1; /* el logo que sale y el que entra se apilan */
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
 .process-step {
     min-height: auto;
 }
@@ -735,6 +773,68 @@ button {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+/************************/
+/* FORMULARIO */
+/************************/
+.form-contacto {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.form-contacto label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    color: var(--color-texto-claro);
+}
+
+.form-contacto input:not([type="checkbox"]),
+.form-contacto select,
+.form-contacto textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font: inherit;
+    color: var(--color-texto);
+    background: var(--color-fondo-alterno);
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+.form-contacto input:focus-visible,
+.form-contacto select:focus-visible,
+.form-contacto textarea:focus-visible {
+    outline: none;
+    border-color: #0aa0ff;
+    box-shadow: 0 0 0 3px rgba(10, 160, 255, 0.25);
+}
+
+.form-contacto :user-invalid {
+    border-color: #ff6b6b;
+}
+
+.form-check a {
+    color: var(--color-primario);
+}
+
+.form-estado {
+    margin-top: 16px;
+    min-height: 1.5em;
+}
+.form-estado.ok {
+    color: #4ade80;
+}
+.form-estado.error {
+    color: #ff6b6b;
+}
+
+.form-contacto button[disabled] {
+    opacity: 0.6;
+    cursor: wait;
 }
 
 /* Nuestro Proceso */

@@ -120,3 +120,99 @@ window.addEventListener("load", () => ScrollTrigger.refresh());
         });
     });
 })();
+
+(() => {
+    const slots = gsap.utils.toArray("#clientes-grid .cliente-slot");
+    if (!slots.length) return;
+
+    // Todos los logos (incluye los 4 que ya están en el HTML, con la MISMA ruta)
+    const POOL = [
+        { src: "assets/img/clientes/club_leon.webp", alt: "Cliente 1" },
+        { src: "assets/img/clientes/envases.webp", alt: "Cliente 2" },
+        { src: "assets/img/clientes/gobierno_gto.webp", alt: "Cliente 3" },
+        { src: "assets/img/clientes/orbis.webp", alt: "Cliente 4" },
+        { src: "assets/img/clientes/poder_judicial.webp", alt: "Cliente 5" },
+        { src: "assets/img/clientes/psw.webp", alt: "Cliente 6" },
+        { src: "assets/img/clientes/tsubaki.webp", alt: "Cliente 7" },
+        { src: "assets/img/clientes/ryobi.webp", alt: "Cliente 8" },
+    ];
+    const INTERVALO = 2000; // ms entre cambios
+
+    if (POOL.length <= slots.length) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    // Precarga para que el cambio no parpadee
+    POOL.forEach((l) => {
+        const i = new Image();
+        i.src = l.src;
+    });
+
+    const enUso = new Set(
+        slots.map((s) => s.querySelector("img").getAttribute("src")),
+    );
+    let ultimo = -1;
+    let timer = null;
+
+    const cambiar = () => {
+        // Un cuadro al azar, distinto del último que cambió
+        let idx;
+        do {
+            idx = gsap.utils.random(0, slots.length - 1, 1);
+        } while (idx === ultimo);
+        ultimo = idx;
+
+        const slot = slots[idx];
+        const actual = slot.querySelector("img");
+        const libres = POOL.filter((l) => !enUso.has(l.src));
+        const nuevo = gsap.utils.random(libres);
+
+        const img = new Image();
+        img.src = nuevo.src;
+        img.alt = nuevo.alt;
+        slot.appendChild(img);
+
+        enUso.delete(actual.getAttribute("src"));
+        enUso.add(nuevo.src);
+
+        gsap.timeline({ onComplete: () => actual.remove() })
+            .to(actual, {
+                autoAlpha: 0,
+                y: -18,
+                duration: 0.4,
+                ease: "power2.in",
+            })
+            .fromTo(
+                img,
+                { autoAlpha: 0, y: 18 },
+                { autoAlpha: 1, y: 0, duration: 0.4, ease: "power2.out" },
+                "-=0.1",
+            );
+    };
+
+    const iniciar = () => {
+        if (!timer) timer = setInterval(cambiar, INTERVALO);
+    };
+    const detener = () => {
+        clearInterval(timer);
+        timer = null;
+    };
+
+    // Solo corre mientras la sección está en pantalla
+    ScrollTrigger.create({
+        trigger: "#clientes",
+        start: "top bottom",
+        end: "bottom top",
+        onToggle: (self) => (self.isActive ? iniciar() : detener()),
+    });
+
+    // Y se pausa si cambias de pestaña
+    document.addEventListener("visibilitychange", () => {
+        if (document.hidden) detener();
+        else if (
+            ScrollTrigger.getAll().some(
+                (t) => t.trigger?.id === "clientes" && t.isActive,
+            )
+        )
+            iniciar();
+    });
+})();

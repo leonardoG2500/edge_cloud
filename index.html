@@ -432,9 +432,8 @@
             <!-- Certificaciones End -->
 
             <!-- Clientes Start -->
-            <section class="section" id="clientes">
+            <!-- <section class="section" id="clientes">
                 <div class="container">
-                    <!-- <p class="text-centro text-claro mb-xs">Experiencia</p> -->
                     <h2 class="titulo-seccion text-centro text-claro">
                         Clientes
                     </h2>
@@ -473,6 +472,39 @@
                         </div>
                         <div class="logo-placeholder">
                             <img src="assets/img/clientes/ryobi.webp" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+            <section class="section" id="clientes">
+                <div class="container">
+                    <h2 class="titulo-seccion text-claro text-centro">
+                        Nuestros clientes
+                    </h2>
+
+                    <div
+                        class="clientes-grid align-items-center justify-content-center gap-lg"
+                        id="clientes-grid">
+                        <div class="cliente-slot">
+                            <img
+                                src="assets/img/clientes/club_leon.webp"
+                                alt="Cliente 1" />
+                        </div>
+                        <div class="cliente-slot">
+                            <img
+                                src="assets/img/clientes/envases.webp"
+                                alt="Cliente 2" />
+                        </div>
+                        <div class="cliente-slot">
+                            <img
+                                src="assets/img/clientes/gobierno_gto.webp"
+                                alt="Cliente 3" />
+                        </div>
+                        <div class="cliente-slot">
+                            <img
+                                src="assets/img/clientes/orbis.webp"
+                                alt="Cliente 4" />
                         </div>
                     </div>
                 </div>
@@ -668,75 +700,167 @@
                             <h2 class="titulo-seccion text-claro">
                                 Cuéntanos tu proyecto
                             </h2>
-                            <p class="text-claro">
-                                <i class="fa fa-phone fa-lg me-2"></i> 477 123
-                                4567
-                            </p>
-                            <p class="text-claro">
-                                <i class="fa fa-phone fa-lg me-2"></i> 477 123
-                                4567
-                            </p>
-                            <p class="text-claro">
-                                <i class="fa fa-envelope fa-lg me-2"></i>
-                                info@empresa.com
-                            </p>
+                            <div
+                                class="flex align-items-center gap-md mb-md text-claro">
+                                <div class="">
+                                    <i class="fa fa-map-marker-alt fa-2x"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h3>Dirección</h3>
+                                    <p>
+                                        Calle Circunvalación Pte. 1201-L4,
+                                        Jardines del Moral, 37160 León de los
+                                        Aldama, Gto.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex align-items-center gap-md mb-md text-claro">
+                                <div class="">
+                                    <i class="fa fa-map-marker-alt fa-2x"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h3>WhatsApp</h3>
+                                    <p>477 123 4567</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex align-items-center gap-md mb-md text-claro">
+                                <div class="">
+                                    <i class="fa fa-map-marker-alt fa-2x"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h3>Correo</h3>
+                                    <p>info@empresa.com</p>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="col-12 col-lg-6">
-                            <form id="formularioCotizacion">
+                            <form
+                                class="form-contacto"
+                                id="form-contacto"
+                                action="https://api.web3forms.com/submit"
+                                method="POST"
+                                novalidate>
+                                <input
+                                    type="hidden"
+                                    name="access_key"
+                                    value="TU_ACCESS_KEY" />
+                                <input
+                                    type="hidden"
+                                    name="subject"
+                                    value="Nueva solicitud desde el sitio web" />
+                                <input
+                                    type="hidden"
+                                    name="from_name"
+                                    value="Sitio web Edge & Cloud" />
+
+                                <!-- Honeypot anti-spam: los humanos no lo ven -->
+                                <input
+                                    type="checkbox"
+                                    name="botcheck"
+                                    class="form-trampa"
+                                    tabindex="-1"
+                                    autocomplete="off"
+                                    style="display: none" />
+
                                 <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                id="nombre"
-                                                name="nombre"
-                                                placeholder="Nombre"
-                                                required />
-                                            <label for="nombre">Nombre</label>
-                                        </div>
+                                    <div class="col-12 col-md-6">
+                                        <label for="f-nombre">Nombre</label>
+                                        <input
+                                            id="f-nombre"
+                                            name="nombre"
+                                            type="text"
+                                            autocomplete="name"
+                                            required />
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input
-                                                type="email"
-                                                class="form-control"
-                                                id="correo"
-                                                name="correo"
-                                                placeholder="Correo"
-                                                required />
-                                            <label for="correo">Correo</label>
-                                        </div>
+                                    <div class="col-12 col-md-6">
+                                        <label for="f-empresa">Empresa</label>
+                                        <input
+                                            id="f-empresa"
+                                            name="empresa"
+                                            type="text"
+                                            autocomplete="organization" />
                                     </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                id="telefono"
-                                                name="telefono"
-                                                placeholder="Telefono"
-                                                required />
-                                            <label for="telefono"
-                                                >Celular</label
-                                            >
-                                        </div>
+                                    <div class="col-12 col-md-6">
+                                        <label for="f-correo">Correo</label>
+                                        <input
+                                            id="f-correo"
+                                            name="email"
+                                            type="email"
+                                            autocomplete="email"
+                                            required />
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label for="f-tel">Teléfono</label>
+                                        <input
+                                            id="f-tel"
+                                            name="telefono"
+                                            type="tel"
+                                            autocomplete="tel" />
                                     </div>
                                     <div class="col-12">
-                                        <div class="form-floating">
-                                            <textarea
-                                                class="form-control"
-                                                placeholder="Mensaje"
-                                                id="mensaje"
-                                                name="mensaje"
-                                                style="height: 130px"
-                                                required></textarea>
-                                            <label for="mensaje">Mensaje</label>
-                                        </div>
+                                        <label for="f-servicio"
+                                            >Servicio de interés</label
+                                        >
+                                        <select
+                                            id="f-servicio"
+                                            name="servicio"
+                                            required>
+                                            <option value="">
+                                                Selecciona una opción
+                                            </option>
+                                            <option>
+                                                Mantenimiento industrial
+                                            </option>
+                                            <option>Electromecánica</option>
+                                            <option>Facilities</option>
+                                            <option>
+                                                Proyectos de nueva generación
+                                            </option>
+                                            <option>Otro</option>
+                                        </select>
                                     </div>
-                                    <div class="col-12 text-center">
-                                        <button class="boton">Enviar</button>
+                                    <div class="col-12">
+                                        <label for="f-mensaje"
+                                            >Cuéntanos tu proyecto</label
+                                        >
+                                        <textarea
+                                            id="f-mensaje"
+                                            name="mensaje"
+                                            rows="5"
+                                            required></textarea>
+                                    </div>
+                                    <div class="col-12 flex-centrado gap-sm">
+                                        <label class="form-check">
+                                            <input
+                                                type="checkbox"
+                                                id="f-privacidad"
+                                                name="privacidad"
+                                                required />
+                                            <p>
+                                                He leído el
+                                                <a
+                                                    href="/aviso-de-privacidad/"
+                                                    target="_blank"
+                                                    rel="noopener"
+                                                    >aviso de privacidad</a
+                                                >
+                                            </p>
+                                        </label>
+                                    </div>
+                                    <div class="col-12 text-centro">
+                                        <button type="submit" class="boton">
+                                            Enviar solicitud
+                                        </button>
+                                        <p
+                                            class="form-estado"
+                                            id="form-estado"
+                                            role="status"
+                                            aria-live="polite"></p>
                                     </div>
                                 </div>
                             </form>
