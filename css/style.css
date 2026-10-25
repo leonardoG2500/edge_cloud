@@ -421,7 +421,7 @@ li {
     padding: 1rem;
     width: 18.7rem;
     height: 18rem;
-    background-color: rgb(94, 92, 92);
+    background-color: rgb(255, 255, 255);
     border-radius: 1rem;
     box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
 }
@@ -462,11 +462,17 @@ li {
     height: 10rem;
     background-image: linear-gradient(
         0deg,
-        hsla(0, 0%, 100%, 0) 0%,
-        hsl(0, 0%, 95%) 40%,
-        hsl(180, 5%, 88%) 60%,
-        hsla(0, 0%, 40%, 0) 100%
+        hsla(170, 100%, 47%, 0.212) 0%,
+        hsl(184, 100%, 50%) 40%,
+        hsl(182, 100%, 46%) 60%,
+        hsla(197, 100%, 43%, 0.397) 100%
     );
+    box-shadow:
+        0 0 1.2rem rgba(65, 208, 255, 0.945),
+        0 0 2.5rem rgba(65, 209, 255, 0.55),
+        0 0 4rem rgba(65, 209, 255, 0.35);
+    filter: blur(0.15rem);
+    opacity: 1;
 
     animation: rotate 8s linear infinite;
 }
@@ -479,7 +485,7 @@ li {
 
 .card .card_title__container .card_title {
     font-size: 1.1rem;
-    color: var(--white);
+    color: var(--black);
 }
 
 .card .card_title__container .card_paragraph {
@@ -487,7 +493,7 @@ li {
     width: 65%;
 
     font-size: 0.8rem;
-    color: var(--white);
+    color: var(--black);
 }
 
 .card .line {
