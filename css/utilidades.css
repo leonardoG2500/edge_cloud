@@ -1138,7 +1138,7 @@ ol {
     background-color: var(--color-texto-claro);
     color: var(--color-fondo);
     border: none;
-    border-radius: 30px;
+    border-radius: 40px;
     font-weight: 600;
     cursor: pointer;
     transition: var(--transicion); /* usa la variable de transición global */
