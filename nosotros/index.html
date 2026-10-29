@@ -60,8 +60,9 @@
                                 >
                             </li>
                             <li>
-                                <a href="../servicios/paneles-solares/"
-                                    >Paneles Solares</a
+                                <a
+                                    href="../servicios/sistemas-administracion-energia/"
+                                    >Sistemas de administración de energia</a
                                 >
                             </li>
                             <li>
@@ -201,7 +202,7 @@
                             <div class="card_title__container about-content">
                                 <h3 class="card_title text-centro">Valores</h3>
                                 <hr class="line" />
-                                <div class="card_paragraph">
+                                <div class="card_paragraph valores">
                                     <ul class="list-unstyled">
                                         <li>Integridad</li>
                                         <li>Compromiso</li>
@@ -220,6 +221,26 @@
                 </div>
             </section>
             <!-- Servicios End -->
+
+            <style>
+                .valores ul li {
+                    position: relative;
+                    padding-left: 25px; /* Espacio para la imagen */
+                }
+
+                .valores ul li::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 20px; /* Ajusta el ancho de tu imagen */
+                    height: 20px; /* Ajusta el alto de tu imagen */
+                    background-image: url("../assets/img/check_icon.webp");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            </style>
 
             <!-- Quienes nos Respaldan Start -->
             <section class="section" id="certificaciones">
@@ -297,13 +318,19 @@
                                 <strong>Siguenos</strong>
                             </h3>
                             <div class="flex gap-xs">
-                                <a class="boton" href="">
+                                <a
+                                    class="boton"
+                                    href="https://www.facebook.com/profile.php?id=61553718295104">
                                     <i class="fa-brands fa-facebook-f"></i>
                                 </a>
-                                <a class="boton" href="">
+                                <a
+                                    class="boton"
+                                    href="https://www.instagram.com/edgecloud.mx/">
                                     <i class="fa-brands fa-instagram"></i>
                                 </a>
-                                <a class="boton" href="">
+                                <a
+                                    class="boton"
+                                    href="https://www.linkedin.com/company/edge-cloud">
                                     <i class="fa-brands fa-linkedin-in"></i>
                                 </a>
                             </div>
@@ -315,9 +342,9 @@
         </main>
 
         <section class="footer">
-            <div class="container flex-entre">
-                <strong>Edge &amp; Cloud</strong>
+            <div class="container flex">
                 <span>© 2026 Todos los derechos reservados.</span>
+                <i class="fa-solid fa-cat"></i>
             </div>
         </section>
 

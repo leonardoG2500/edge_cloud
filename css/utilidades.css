@@ -69,11 +69,7 @@
 }
 
 body {
-    font-family:
-        system-ui,
-        -apple-system,
-        "Segoe UI",
-        sans-serif;
+    font-family: "Roboto", sans-serif;
     color: var(--color-texto);
     background-color: var(--color-fondo);
     line-height: 1.6; /* mejora la legibilidad de los párrafos */
