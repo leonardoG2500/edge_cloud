@@ -73,28 +73,57 @@ mm.add(
     },
 );
 
-gsap.from(".logo", {
-    // color: "red",
-    // backgroundColor: "yellow",
-    y: -100,
-    opacity: 0,
-    // rotate: 360,
-    // scale: 3,
-    duration: 1,
-    // delay: 2,
-    ease: "power2.inOut",
+/* ------------------------------------------------------------------ */
+/* Animación de entrada del navbar (logo + botones)                    */
+/* ------------------------------------------------------------------ */
+// Al terminar (o si algo la interrumpe) quitamos los estilos inline:
+// así los elementos quedan EXACTAMENTE en su posición natural, sin
+// restos de translate que los dejen "un poco arriba".
+const limpiarIntroNavbar = () =>
+    gsap.set([".logo", ".btn2"], { clearProps: "transform,opacity" });
+
+const introNavbar = gsap.timeline({
+    onComplete: limpiarIntroNavbar,
+    onInterrupt: limpiarIntroNavbar,
 });
 
-gsap.from(".btn2", {
-    y: -200,
-    ease: "power2.inOut",
-    opacity: 0,
-    duration: 0.8,
-    stagger: 0.02,
-});
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    introNavbar
+        .fromTo(
+            ".logo",
+            { y: -100, opacity: 0 },
+            { y: 0, opacity: 1, duration: 1, ease: "power2.inOut" },
+            0,
+        )
+        .fromTo(
+            ".btn2",
+            { y: -200, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                stagger: 0.02,
+                ease: "power2.inOut",
+            },
+            0,
+        );
 
-// Las imágenes cambian el layout al cargar: recalcula posiciones
+    // Red de seguridad: si por cualquier motivo (pestaña en segundo plano,
+    // frame perdido, etc.) la animación no llegó al final, forzamos el
+    // estado final para que nunca se quede a medio camino.
+    gsap.delayedCall(1.6, () => {
+        if (introNavbar.progress() < 1) {
+            introNavbar.progress(1);
+            limpiarIntroNavbar();
+        }
+    });
+}
+
+// Las imágenes/fuentes cambian el layout al cargar: recalcula posiciones
 window.addEventListener("load", () => ScrollTrigger.refresh());
+if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(() => ScrollTrigger.refresh());
+}
 
 (() => {
     const mq = window.matchMedia("(prefers-reduced-motion: no-preference)");

@@ -25,7 +25,13 @@ body {
     color: var(--color-fondo);
     text-decoration: none;
     font: 0.9rem;
-    transition: 0.3s;
+    /* NO usar "transition: all" aquí: incluiría transform y opacity,
+       que son las propiedades que anima GSAP, y ambas se pelearían
+       (el navegador interpola cada frame y el botón nunca llega fino). */
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease,
+        background-color 0.3s ease;
     background-color: transparent;
     cursor: pointer;
 }
@@ -1042,14 +1048,21 @@ button {
 /*** Mision, vision y valores ***/
 
 /* Quienes nos respaldan */
+.respaldan-logo {
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
 .respaldan-logo img {
-    width: 40rem;
+    width: 19rem;
     height: auto;
 }
 
 @media (max-width: 767px) {
     .respaldan-logo img {
-        width: 25em;
+        width: 16em;
         height: auto;
     }
 }
