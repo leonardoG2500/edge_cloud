@@ -74,6 +74,11 @@ body {
     border: 2px solid #0aa0ff;
 }
 
+.active-btn2 {
+    border: 2px solid #0aa0ff;
+    color: #0aa0ff;
+}
+
 .btn2 .spn2 {
     position: relative;
     z-index: 3;
@@ -213,6 +218,11 @@ body {
 
 .dd-menu a:hover,
 .dd-menu a:focus-visible {
+    background: rgba(10, 160, 255, 0.12);
+    color: #0aa0ff;
+}
+
+.active {
     background: rgba(10, 160, 255, 0.12);
     color: #0aa0ff;
 }
@@ -381,7 +391,7 @@ body {
 }
 
 .about-image img {
-    height: 70%;
+    width: 70%;
 }
 
 .about-content {
