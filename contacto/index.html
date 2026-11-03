@@ -122,136 +122,232 @@
             </header>
             <!-- Header End -->
 
-            <!-- About Us Start -->
-            <section class="section" id="nosotros">
+            <!-- Formulario Start -->
+            <section class="section">
                 <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-12 col-lg-6 about-content">
-                            <h2 class="titulo-seccion text-claro">
-                                Quiénes somos
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <h2 class="titulo-seccion text-claro text-centro">
+                                ENCUÉNTRANOS
                             </h2>
-                            <p class="placeholder">
-                                <strong>Edge & Cloud</strong> es el aliado
-                                estratégico que garantiza la continuidad
-                                operativa de la industria.
-                            </p>
-                            <br />
-                            <p class="placeholder">
-                                Diseñamos soluciones integrales a través de
-                                servicios especializados en
-                                <strong>Mantenimiento Industrial</strong>,
-                                <strong>Electromecánica</strong>,
-                                <strong>Facilities</strong> y
-                                <strong>Proyectos de Nueva Generación</strong>.
-                            </p>
-                            <div class="text-centro">
-                                <a href="" class="boton">Ver más</a>
+                            <div
+                                class="flex align-items-center gap-md mb-md text-claro">
+                                <div class="">
+                                    <i class="fa-brands fa-whatsapp fa-2x"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h3>WhatsApp</h3>
+                                    <p>+52 479 149 3088</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex align-items-center gap-md mb-md text-claro">
+                                <div class="">
+                                    <i class="fa-solid fa-envelope fa-2x"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h3>Correo</h3>
+                                    <p>contacto@edgecloud.com.mx</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex align-items-center gap-md mb-md text-claro">
+                                <div class="">
+                                    <i class="fa fa-map-marker-alt fa-2x"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h3>Dirección</h3>
+                                    <p>
+                                        Calle Circunvalación Pte. 1201-L4,
+                                        Jardines del Moral, 37160 León de los
+                                        Aldama, Gto.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex align-items-center gap-md mb-md text-claro">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.132918228652!2d-101.698141!3d21.147108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bbf0060730683%3A0x98f03d83532e0166!2sEdge%20%26%20Cloud!5e0!3m2!1ses-419!2smx!4v1793167601738!5m2!1ses-419!2smx"
+                                    width="600"
+                                    height="300"
+                                    style="border-radius: 20px"
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
                             </div>
                         </div>
 
-                        <div class="col-12 col-lg-6 about-image">
-                            <img
-                                src="../assets/img/isologo_claro.webp"
-                                alt="" />
+                        <div class="col-12 col-lg-6">
+                            <p class="text-centro text-claro">Hablemos</p>
+                            <h2 class="titulo-seccion text-claro text-centro">
+                                CUÉNTANOS TU PROYECTO
+                            </h2>
+                            <form
+                                class="form-contacto"
+                                id="form-contacto"
+                                action="https://api.web3forms.com/submit"
+                                method="POST"
+                                novalidate>
+                                <input
+                                    type="hidden"
+                                    name="access_key"
+                                    value="e3fe17c4-9fad-44d9-98a3-0899930dfc7f" />
+                                <input
+                                    type="hidden"
+                                    name="subject"
+                                    value="Nueva solicitud desde el sitio web" />
+                                <input
+                                    type="hidden"
+                                    name="from_name"
+                                    value="Sitio web Edge & Cloud" />
+
+                                <!-- Honeypot anti-spam: los humanos no lo ven -->
+                                <input
+                                    type="checkbox"
+                                    name="botcheck"
+                                    class="form-trampa"
+                                    tabindex="-1"
+                                    autocomplete="off"
+                                    style="display: none" />
+
+                                <div class="row g-3">
+                                    <div class="col-12 col-md-6">
+                                        <label for="f-nombre">Nombre</label>
+                                        <input
+                                            id="f-nombre"
+                                            name="nombre"
+                                            type="text"
+                                            autocomplete="name"
+                                            required />
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label for="f-empresa">Empresa</label>
+                                        <input
+                                            id="f-empresa"
+                                            name="empresa"
+                                            type="text"
+                                            autocomplete="organization" />
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label for="f-correo">Correo</label>
+                                        <input
+                                            id="f-correo"
+                                            name="email"
+                                            type="email"
+                                            autocomplete="email"
+                                            required />
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label for="f-tel">Teléfono</label>
+                                        <input
+                                            id="f-tel"
+                                            name="telefono"
+                                            type="tel"
+                                            autocomplete="tel" />
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="f-servicio"
+                                            >Servicio de interés</label
+                                        >
+                                        <select
+                                            id="f-servicio"
+                                            name="servicio"
+                                            required>
+                                            <option value="">
+                                                Selecciona una opción
+                                            </option>
+                                            <option>
+                                                Seguridad inteligente
+                                            </option>
+                                            <option>Paneles Solares</option>
+                                            <option>
+                                                Automatización y control
+                                                industrial
+                                            </option>
+                                            <option>
+                                                Tecnología e infraestructura
+                                                digital
+                                            </option>
+                                            <option>
+                                                Mantemiento industrial y
+                                                facilities
+                                            </option>
+                                            <option>
+                                                Ingeniería eléctrica y
+                                                electromecánica
+                                            </option>
+                                            <option>
+                                                Maquinaria y equipamiento
+                                                industrial
+                                            </option>
+                                            <option>Otro</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="f-mensaje"
+                                            >Cuéntanos tu proyecto</label
+                                        >
+                                        <textarea
+                                            id="f-mensaje"
+                                            name="mensaje"
+                                            rows="5"
+                                            required></textarea>
+                                    </div>
+                                    <div class="col-12 flex-centrado gap-sm">
+                                        <label class="form-check">
+                                            <input
+                                                type="checkbox"
+                                                id="f-privacidad"
+                                                name="privacidad"
+                                                required />
+                                            <p>
+                                                He leído el
+                                                <a
+                                                    href="../aviso-privacidad/"
+                                                    target="_blank"
+                                                    rel="noopener"
+                                                    >aviso de privacidad</a
+                                                >
+                                            </p>
+                                        </label>
+                                    </div>
+                                    <div class="col-12 text-centro">
+                                        <button type="submit" class="boton">
+                                            Enviar solicitud
+                                        </button>
+                                        <p
+                                            class="form-estado"
+                                            id="form-estado"
+                                            role="status"
+                                            aria-live="polite"></p>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- About Us End -->
+            <!-- Formulario End -->
 
-            <!-- Servicios Start -->
-            <section class="section" id="servicios">
-                <div class="container">
-                    <!-- <p class="text-centro text-claro mb-xs">
-                        Lo que hacemos
-                    </p> -->
-                    <h2 class="titulo-seccion text-claro text-centro">
-                        Filosofía
-                    </h2>
-                    <div
-                        class="row align-items-center justify-content-center gap-lg">
-                        <div class="col-12 col-sm-6 col-lg-3 card">
-                            <div class="card__border"></div>
-                            <div class="card_title__container">
-                                <h3 class="card_title text-centro">Misión</h3>
-                                <hr class="line" />
-                                <span class="card_paragraph"
-                                    >Diseñamos, instalamos y mantenemos sistemas
-                                    electricos de alta, media y baja tensión,
-                                    garantizando eficiencia, seguridad y
-                                    cumplimiento normativo.</span
-                                >
-                            </div>
-                            <button class="button">Ver más</button>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-lg-3 card">
-                            <div class="card__border"></div>
-                            <div class="card_title__container">
-                                <h3 class="card_title text-centro">Visión</h3>
-                                <hr class="line" />
-                                <span class="card_paragraph"
-                                    >Desarrollamos proyectos de construcción
-                                    indutrial y estructuras metalicas con los
-                                    más altos estandares de calidad, seguridad y
-                                    cumplimiento.</span
-                                >
-                            </div>
-                            <button class="button">Ver más</button>
-                        </div>
-
-                        <div class="card col-12 col-sm-6 col-lg-3">
-                            <div class="card__border"></div>
-                            <div class="card_title__container">
-                                <h3 class="card_title text-centro">Valores</h3>
-                                <hr class="line" />
-                                <span class="card_paragraph">
-                                    Contectamos tu empresa con el futuro a
-                                    través de soluciones tecnológicas robustas,
-                                    seguras y escalables que impulsan la
-                                    eficiencia y la innovación.
-                                </span>
-                            </div>
-                            <button class="button">Ver más</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Servicios End -->
-
-            <!-- Quienes nos Respaldan Start -->
             <section class="section" id="certificaciones">
-                <div class="container">
+                <div class="container text-centro">
                     <!-- <p class="text-centro text-claro mb-xs">Confianza</p> -->
                     <h2 class="titulo-seccion text-centro text-claro">
-                        Quiénes nos respaldan
+                        Cuentanos más sobre tu proyecto
                     </h2>
-                    <div
-                        class="row align-items-center justify-content-center gap-lg">
-                        <div class="col-12 col-lg-3 logo-placeholder">
-                            <img
-                                src="../assets/img/respaldos/duns.webp"
-                                alt="" />
-                        </div>
-                        <div class="col-12 col-lg-3 logo-placeholder">
-                            <img
-                                src="../assets/img/respaldos/marca_gto.webp"
-                                alt="" />
-                        </div>
-                        <div class="col-12 col-lg-3 logo-placeholder">
-                            C<img
-                                src="../assets/img/respaldos/repse.webp"
-                                alt="" />
-                        </div>
-                        <div class="col-12 col-lg-3 logo-placeholder">
-                            <img
-                                src="../assets/img/respaldos/secretaria_trabajo.webp"
-                                alt="" />
-                        </div>
-                    </div>
+                    <a
+                        href="https://wa.me/524791493088"
+                        class="boton"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Visitar sitio externo (abre en una nueva pestaña): contacto de WhatsApp de Edge Cloud"
+                        ><i class="fa-brands fa-whatsapp"></i> Contactanos</a
+                    >
                 </div>
             </section>
-            <!-- Quienes nos Respaldan End -->
 
             <!-- Footer 1 Start -->
             <footer class="section" id="contacto">
@@ -319,6 +415,11 @@
                         </div>
                     </div>
                 </div>
+                <div class="text-centro">
+                    <a class="text-claro" href="/aviso-privacidad/"
+                        >Aviso de privacidad</a
+                    >
+                </div>
             </footer>
             <!-- Footer 1 End -->
         </main>
@@ -326,11 +427,32 @@
         <section class="footer">
             <div class="container flex">
                 <span>© 2026 Todos los derechos reservados.</span>
-                <p>Creado por <i class="fa-solid fa-cat"></i></p>
+                <p>
+                    Creado por
+                    <a
+                        href="https://lgonzalez-ec.github.io/portafolio/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><i class="fa-solid fa-cat"></i
+                    ></a>
+                </p>
             </div>
         </section>
 
         <script src="../js/main.js"></script>
         <script src="../js/gsap.js"></script>
+        <script src="../js/formulario.js"></script>
+
+        <!-- Modal de respuesta de formulario -->
+        <div class="modal" id="form-modal" aria-hidden="true">
+            <div class="modal__overlay" data-modal-close></div>
+            <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                <button class="modal__close" data-modal-close aria-label="Cerrar">&times;</button>
+                <div class="modal__icon" id="modal-icon"></div>
+                <h3 class="modal__title" id="modal-title"></h3>
+                <p class="modal__text" id="modal-text"></p>
+                <button class="modal__btn" data-modal-close>Aceptar</button>
+            </div>
+        </div>
     </body>
 </html>

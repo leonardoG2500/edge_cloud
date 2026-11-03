@@ -440,6 +440,9 @@
                                 <img
                                     src="assets/img/certificados/schneider_electric.webp"
                                     alt="Brand 9" />
+                                <img
+                                    src="assets/img/certificados/extreme_networks.webp"
+                                    alt="Brand 10" />
                             </div>
                         </div>
                     </div>
@@ -612,7 +615,7 @@
                                 <input
                                     type="hidden"
                                     name="access_key"
-                                    value="TU_ACCESS_KEY" />
+                                    value="e3fe17c4-9fad-44d9-98a3-0899930dfc7f" />
                                 <input
                                     type="hidden"
                                     name="subject"
@@ -724,7 +727,7 @@
                                             <p>
                                                 He leído el
                                                 <a
-                                                    href="/aviso-de-privacidad/"
+                                                    href="/aviso-privacidad/"
                                                     target="_blank"
                                                     rel="noopener"
                                                     >aviso de privacidad</a
@@ -834,7 +837,9 @@
                     </div>
                 </div>
                 <div class="text-centro">
-                    <a class="text-claro" href="">Aviso de privacidad</a>
+                    <a class="text-claro" href="/aviso-privacidad/"
+                        >Aviso de privacidad</a
+                    >
                 </div>
             </footer>
             <!-- Footer 1 End -->
@@ -843,7 +848,15 @@
         <section class="footer">
             <div class="container flex">
                 <span>© 2026 Todos los derechos reservados.</span>
-                <p>Creado por <i class="fa-solid fa-cat"></i></p>
+                <p>
+                    Creado por
+                    <a
+                        href="https://lgonzalez-ec.github.io/portafolio/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><i class="fa-solid fa-cat"></i
+                    ></a>
+                </p>
             </div>
         </section>
 
@@ -854,5 +867,27 @@
 
         <script src="js/gsap.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/formulario.js"></script>
+
+        <!-- Modal de respuesta de formulario -->
+        <div class="modal" id="form-modal" aria-hidden="true">
+            <div class="modal__overlay" data-modal-close></div>
+            <div
+                class="modal__content"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="modal-title">
+                <button
+                    class="modal__close"
+                    data-modal-close
+                    aria-label="Cerrar">
+                    &times;
+                </button>
+                <div class="modal__icon" id="modal-icon"></div>
+                <h3 class="modal__title" id="modal-title"></h3>
+                <p class="modal__text" id="modal-text"></p>
+                <button class="modal__btn" data-modal-close>Aceptar</button>
+            </div>
+        </div>
     </body>
 </html>

@@ -1,0 +1,924 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Aviso de Privacidad | Edge &amp; Cloud</title>
+        <meta
+            content="Aviso de Privacidad de Edge &amp; Cloud: tratamiento, finalidades, cookies, transferencias y derechos ARCO sobre tus datos personales."
+            name="description" />
+
+        <!-- favicon -->
+        <link href="../assets/img/icono.svg" rel="icon" />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet" />
+
+        <!-- Font Awesome -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            rel="stylesheet" />
+
+        <!-- GSAP -->
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+        <link rel="stylesheet" href="../css/utilidades.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+
+        <style>
+            .aviso-privacidad {
+                text-align: left;
+            }
+
+            .aviso-privacidad .aviso-bloque {
+                margin-bottom: 2.25rem;
+            }
+
+            .aviso-privacidad .aviso-empresa {
+                color: var(--color-primario);
+                margin-bottom: 0.5rem;
+            }
+
+            .aviso-privacidad .aviso-titulo {
+                color: var(--color-primario);
+                font-size: clamp(1.15rem, 2vw, 1.45rem);
+                line-height: 1.3;
+                margin: 0 0 0.9rem;
+            }
+
+            .aviso-privacidad .aviso-subtitulo {
+                color: var(--color-primario);
+                font-size: 1.05rem;
+                margin: 1.5rem 0 0.5rem;
+            }
+
+            .aviso-privacidad p {
+                line-height: 1.75;
+                margin: 0 0 1rem;
+            }
+
+            .aviso-privacidad ul,
+            .aviso-privacidad ol {
+                margin: 0 0 1rem 1.35rem;
+                padding: 0;
+            }
+
+            .aviso-privacidad li {
+                line-height: 1.65;
+                list-style: disc;
+                margin-bottom: 0.45rem;
+            }
+
+            .aviso-privacidad ol li {
+                list-style: decimal;
+            }
+
+            .aviso-privacidad a {
+                color: var(--color-primario);
+                text-decoration: underline;
+            }
+
+            .aviso-privacidad .aviso-intro {
+                font-size: 1.05rem;
+            }
+
+            .aviso-privacidad .aviso-meta {
+                color: var(--color-texto-claro);
+                opacity: 0.8;
+            }
+
+            @media (max-width: 576px) {
+                .aviso-privacidad .aviso-bloque {
+                    margin-bottom: 1.75rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navbar Start -->
+        <nav class="navbar" aria-label="Navegación principal">
+            <div class="container navbar__content flex-entre">
+                <a class="brand" href="../">
+                    <img
+                        class="logo"
+                        src="../assets/img/Logo_E&C_.webp"
+                        alt="Edge &amp; Cloud"
+                        style="width: 200px" />
+                </a>
+
+                <button
+                    class="navbar__toggle"
+                    aria-label="Abrir menú"
+                    aria-expanded="false"
+                    aria-controls="navbar-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="navbar__menu" id="navbar-menu">
+                    <a class="btn2" href="../nosotros/"
+                        ><span class="spn2">Quiénes somos</span></a
+                    >
+                    <div class="nav-item">
+                        <a class="btn2"><span class="spn2">Servicios</span></a>
+                        <ul class="dd-menu">
+                            <li>
+                                <a
+                                    href="../servicios/tecnologia-infraestructura-digital/"
+                                    >Tecnología e infraestructura digital</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../servicios/seguridad-inteligente/"
+                                    >Seguridad inteligente</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../servicios/mantenimiento-industrial/"
+                                    >Mantemiento industrial y facilities</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="../servicios/automatizacion-control-industrial/"
+                                    >Automatización y control industrial</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="../servicios/sistemas-administracion-energia/"
+                                    >Sistemas de administración de energia</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="../servicios/ingenieria-electrica-y-electromecanica/"
+                                    >Ingeniería eléctrica y electromecánica</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="../servicios/maquinaria-equipamiento-industrial/"
+                                    >Maquinaria y equipamiento industrial</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- <a class="btn2" href="#clientes"
+                        ><span class="spn2">Clientes</span></a
+                    > -->
+                    <a class="btn2" href="../contacto/"
+                        ><span class="spn2">Contacto</span></a
+                    >
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <main id="swup" class="transition-fade">
+            <!-- Header Start -->
+            <header class="hero-section" id="inicio">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <h1 class="titulo-hero text-claro">
+                            AVISO DE PRIVACIDAD
+                        </h1>
+                    </div>
+                </div>
+            </header>
+            <!-- Header End -->
+
+            <!-- Aviso de Privacidad Start -->
+            <section class="section">
+                <div class="container">
+                    <div class="flex flex-columna text-claro aviso-privacidad">
+                        <!-- Introducción -->
+                        <div class="aviso-bloque">
+                            <h2 class="aviso-empresa text-centro">
+                                EDGE &amp; CLOUD S. DE R.L. DE C.V.
+                            </h2>
+                            <p class="text-centro aviso-meta">
+                                Última actualización:
+                                <strong>27 de octubre de 2026</strong>
+                            </p>
+                            <p class="aviso-intro" style="text-align: justify">
+                                En
+                                <strong
+                                    >EDGE &amp; CLOUD S. DE R.L. DE C.V.</strong
+                                >
+                                (en adelante,
+                                <strong>“EDGE &amp; CLOUD”</strong>),
+                                reconocemos la importancia de proteger los datos
+                                personales de nuestros clientes, prospectos,
+                                proveedores, colaboradores y usuarios de nuestro
+                                sitio web. Por ello, nos comprometemos a
+                                tratarlos de manera legítima, responsable y
+                                confidencial, de conformidad con la legislación
+                                mexicana aplicable en materia de protección de
+                                datos personales.
+                            </p>
+                        </div>
+
+                        <!-- 1. Identidad y domicilio del responsable -->
+                        <div class="aviso-bloque">
+                            <h3 class="aviso-titulo">
+                                1. Identidad y domicilio del responsable
+                            </h3>
+                            <p style="text-align: justify">
+                                EDGE &amp; CLOUD S. DE R.L. DE C.V., con
+                                domicilio en Calle Circunvalación Pte. 1201,
+                                Interior 4, Jardines del Moral, C.P. 37160, León
+                                de los Aldama, Guanajuato, México, es
+                                responsable del tratamiento de los datos
+                                personales que recaba, así como de su uso y
+                                protección.
+                            </p>
+                            <p style="text-align: justify">
+                                Para cualquier duda, aclaración o solicitud
+                                relacionada con este Aviso de Privacidad,
+                                ponemos a disposición los siguientes medios de
+                                contacto:
+                            </p>
+                            <ul>
+                                <li>
+                                    Correo electrónico:
+                                    <a href="mailto:contacto@edgecloud.com.mx"
+                                        >contacto@edgecloud.com.mx</a
+                                    >
+                                </li>
+                                <li>
+                                    Teléfono:
+                                    <a href="tel:+524791493088">479 149 3088</a>
+                                </li>
+                                <li>
+                                    Domicilio: Calle Circunvalación Pte. 1201,
+                                    Interior 4, Jardines del Moral, C.P. 37160,
+                                    León de los Aldama, Guanajuato, México.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- 2. Datos personales que podemos recabar -->
+                        <div class="aviso-bloque">
+                            <h3 class="aviso-titulo">
+                                2. Datos personales que podemos recabar
+                            </h3>
+                            <p style="text-align: justify">
+                                EDGE &amp; CLOUD podrá recabar, directamente de
+                                las personas titulares o a través de los medios
+                                habilitados para ello, las siguientes categorías
+                                de datos personales, según la relación que
+                                mantengan con la empresa:
+                            </p>
+                            <p style="text-align: justify">
+                                a) Datos de identificación: nombre completo,
+                                empresa u organización a la que pertenece y,
+                                cuando resulte necesario, cargo o puesto.
+                            </p>
+                            <p style="text-align: justify">
+                                b) Datos de contacto: correo electrónico, número
+                                telefónico, domicilio laboral y otros medios de
+                                contacto que la persona titular proporcione
+                                voluntariamente.
+                            </p>
+                            <p style="text-align: justify">
+                                c) Datos profesionales y empresariales: puesto,
+                                área de trabajo, nombre de la empresa, sector o
+                                industria, necesidades de negocio,
+                                requerimientos de servicios y demás información
+                                relacionada con una solicitud comercial o
+                                profesional.
+                            </p>
+                            <p style="text-align: justify">
+                                d) Datos relacionados con la relación comercial:
+                                información necesaria para elaborar
+                                cotizaciones, propuestas, contratos, dar
+                                seguimiento a proyectos, gestionar servicios y
+                                mantener la comunicación con clientes,
+                                prospectos y proveedores.
+                            </p>
+                            <p style="text-align: justify">
+                                e) Datos de navegación y datos técnicos:
+                                dirección IP, tipo de navegador, dispositivo,
+                                sistema operativo, páginas visitadas, fecha y
+                                hora de acceso, cookies y tecnologías similares,
+                                cuando estas se encuentren habilitadas en el
+                                sitio web.
+                            </p>
+                            <p style="text-align: justify">
+                                Los datos se recabarán únicamente en la medida
+                                en que resulten pertinentes para las finalidades
+                                descritas en este Aviso de Privacidad.
+                            </p>
+                            <p style="text-align: justify">
+                                EDGE &amp; CLOUD no solicita de manera ordinaria
+                                datos personales sensibles a través de su sitio
+                                web. En caso de que excepcionalmente resulte
+                                necesario recabarlos, se informará a la persona
+                                titular y se obtendrá el consentimiento que
+                                corresponda conforme a la legislación aplicable.
+                            </p>
+                        </div>
+
+                        <!-- 3. Medios de obtención de los datos personales -->
+                        <div class="aviso-bloque">
+                            <h3 class="aviso-titulo">
+                                3. Medios de obtención de los datos personales
+                            </h3>
+                            <p style="text-align: justify">
+                                Los datos personales podrán obtenerse mediante:
+                            </p>
+                            <ul>
+                                <li>
+                                    Formularios de contacto o solicitudes de
+                                    información disponibles en el sitio web.
+                                </li>
+                                <li>
+                                    Correos electrónicos, llamadas telefónicas y
+                                    otros medios de comunicación habilitados por
+                                    la empresa.
+                                </li>
+                                <li>
+                                    Solicitudes de cotización, propuestas
+                                    comerciales, reuniones y comunicaciones de
+                                    seguimiento.
+                                </li>
+                                <li>
+                                    Relaciones contractuales, comerciales o
+                                    profesionales con clientes, proveedores y
+                                    aliados de negocio.
+                                </li>
+                                <li>
+                                    Cookies y tecnologías similares utilizadas
+                                    en el sitio web, cuando corresponda.
+                                </li>
+                            </ul>
+                            <p style="text-align: justify">
+                                Cuando los datos personales no sean obtenidos
+                                directamente de su titular, EDGE &amp; CLOUD
+                                observará las obligaciones de información y
+                                demás disposiciones que resulten aplicables.
+                            </p>
+                        </div>
+
+                        <!-- 4. Finalidades del tratamiento de los datos personales -->
+                        <div class="aviso-bloque">
+                            <h3 class="aviso-titulo">
+                                4. Finalidades del tratamiento de los datos
+                                personales
+                            </h3>
+                            <p style="text-align: justify">
+                                Los datos personales recabados serán tratados
+                                para las siguientes finalidades.
+                            </p>
+
+                            <h4 class="aviso-subtitulo">
+                                A. Finalidades primarias
+                            </h4>
+                            <p style="text-align: justify">
+                                Son aquellas necesarias para atender las
+                                solicitudes de las personas titulares y mantener
+                                las relaciones comerciales o profesionales
+                                correspondientes:
+                            </p>
+                            <ol>
+                                <li>
+                                    Atender solicitudes de información sobre los
+                                    servicios y soluciones de EDGE &amp; CLOUD.
+                                </li>
+                                <li>
+                                    Contactar a prospectos, clientes,
+                                    proveedores y aliados comerciales.
+                                </li>
+                                <li>
+                                    Elaborar, enviar y dar seguimiento a
+                                    cotizaciones, propuestas comerciales y
+                                    presentaciones de servicios.
+                                </li>
+                                <li>
+                                    Identificar necesidades empresariales y
+                                    determinar la viabilidad de posibles
+                                    proyectos.
+                                </li>
+                                <li>
+                                    Gestionar relaciones comerciales,
+                                    contractuales y profesionales.
+                                </li>
+                                <li>
+                                    Coordinar la prestación de servicios, la
+                                    ejecución de proyectos y la comunicación
+                                    relacionada con estos.
+                                </li>
+                                <li>
+                                    Cumplir obligaciones legales, contractuales,
+                                    administrativas y fiscales que resulten
+                                    aplicables.
+                                </li>
+                                <li>
+                                    Atender aclaraciones, solicitudes, quejas y
+                                    requerimientos relacionados con nuestros
+                                    servicios.
+                                </li>
+                            </ol>
+
+                            <h4 class="aviso-subtitulo">
+                                B. Finalidades secundarias
+                            </h4>
+                            <p style="text-align: justify">
+                                De manera adicional, EDGE &amp; CLOUD podrá
+                                tratar los datos personales para las siguientes
+                                finalidades, siempre que resulten aplicables y
+                                se cumplan los requisitos legales
+                                correspondientes:
+                            </p>
+                            <ol>
+                                <li>
+                                    Enviar información corporativa, novedades,
+                                    boletines, invitaciones a eventos y
+                                    actualizaciones relacionadas con nuestros
+                                    servicios.
+                                </li>
+                                <li>
+                                    Realizar actividades de prospección
+                                    comercial y comunicar nuevas soluciones
+                                    empresariales.
+                                </li>
+                                <li>
+                                    Evaluar la efectividad de nuestras
+                                    comunicaciones y mejorar la experiencia de
+                                    navegación en el sitio web.
+                                </li>
+                                <li>
+                                    Elaborar estadísticas internas y análisis
+                                    comerciales, preferentemente mediante
+                                    información agregada o disociada.
+                                </li>
+                            </ol>
+                            <p style="text-align: justify">
+                                Si la persona titular no desea que sus datos
+                                personales sean tratados para las finalidades
+                                secundarias, podrá manifestarlo mediante una
+                                solicitud al correo electrónico
+                                <a href="mailto:contacto@edgecloud.com.mx"
+                                    >contacto@edgecloud.com.mx</a
+                                >. Esta decisión no condicionará la atención de
+                                una solicitud comercial ni la prestación de los
+                                servicios que correspondan.
+                            </p>
+                        </div>
+
+                        <!-- 5. Cookies y tecnologías de seguimiento -->
+                        <div class="aviso-bloque">
+                            <h3 class="aviso-titulo">
+                                5. Cookies y tecnologías de seguimiento
+                            </h3>
+                            <p style="text-align: justify">
+                                El sitio web de EDGE &amp; CLOUD podrá utilizar
+                                cookies, píxeles y tecnologías similares para
+                                facilitar la navegación, recordar determinadas
+                                preferencias, obtener información estadística y,
+                                cuando corresponda, medir el desempeño de las
+                                campañas digitales.
+                            </p>
+                            <p style="text-align: justify">
+                                Estas tecnologías pueden recopilar información
+                                técnica sobre el dispositivo, el navegador y la
+                                interacción con el sitio web.
+                            </p>
+                            <p style="text-align: justify">
+                                La persona usuaria podrá configurar su navegador
+                                para bloquear o eliminar cookies. Sin embargo,
+                                algunas funciones del sitio podrían verse
+                                afectadas.
+                            </p>
+                            <p style="text-align: justify">
+                                En caso de utilizar cookies de terceros,
+                                herramientas de analítica o plataformas
+                                publicitarias, EDGE &amp; CLOUD deberá
+                                identificar las tecnologías efectivamente
+                                implementadas y proporcionar información sobre
+                                su funcionamiento y las opciones de
+                                configuración o consentimiento que resulten
+                                aplicables.
+                            </p>
+                        </div>
+
+                        <!-- 6. Transferencia de datos personales -->
+                        <div class="aviso-bloque">
+                            <h3 class="aviso-titulo">
+                                6. Transferencia de datos personales
+                            </h3>
+                            <p style="text-align: justify">
+                                EDGE &amp; CLOUD no comercializa los datos
+                                personales de las personas titulares.
+                            </p>
+                            <p style="text-align: justify">
+                                Los datos podrán ser comunicados a terceros
+                                únicamente cuando resulte necesario para cumplir
+                                las finalidades descritas en este Aviso de
+                                Privacidad y exista una base jurídica que lo
+                                permita.
+                            </p>
+                            <p style="text-align: justify">
+                                Entre los posibles destinatarios se encuentran:
+                            </p>
+                            <ul>
+                                <li>
+                                    Proveedores de alojamiento web,
+                                    infraestructura tecnológica y servicios de
+                                    soporte.
+                                </li>
+                                <li>
+                                    Proveedores de correo electrónico,
+                                    herramientas de comunicación y gestión
+                                    comercial.
+                                </li>
+                                <li>
+                                    Proveedores de analítica digital y
+                                    tecnologías implementadas en el sitio web.
+                                </li>
+                                <li>
+                                    Asesores profesionales y prestadores de
+                                    servicios administrativos, contables o
+                                    legales.
+                                </li>
+                                <li>
+                                    Autoridades competentes, cuando exista una
+                                    obligación legal o un requerimiento
+                                    debidamente fundado.
+                                </li>
+                            </ul>
+                            <p style="text-align: justify">
+                                Cuando corresponda, EDGE &amp; CLOUD adoptará
+                                las medidas contractuales y de seguridad
+                                necesarias para proteger los datos personales y
+                                limitar su tratamiento a las finalidades
+                                autorizadas.
+                            </p>
+                            <p style="text-align: justify">
+                                Las transferencias que requieran consentimiento
+                                se realizarán previa obtención de este, salvo
+                                que se actualice alguna excepción prevista en la
+                                legislación aplicable.
+                            </p>
+                        </div>
+
+                        <!-- 7. Medidas de seguridad y confidencialidad -->
+                        <div class="aviso-bloque">
+                            <h3 class="aviso-titulo">
+                                7. Medidas de seguridad y confidencialidad
+                            </h3>
+                            <p style="text-align: justify">
+                                EDGE &amp; CLOUD implementará las medidas de
+                                seguridad administrativas, técnicas y físicas
+                                que resulten razonables y necesarias para
+                                proteger los datos personales contra daño,
+                                pérdida, alteración, destrucción, uso, acceso o
+                                tratamiento no autorizado.
+                            </p>
+                            <p style="text-align: justify">
+                                El acceso a los datos se limitará al personal y
+                                a los proveedores que lo requieran para el
+                                desempeño de sus funciones o la prestación de
+                                los servicios correspondientes.
+                            </p>
+                            <p style="text-align: justify">
+                                No obstante, ninguna transmisión o
+                                almacenamiento electrónico puede garantizar una
+                                seguridad absoluta. Por ello, la empresa
+                                procurará mantener medidas de protección acordes
+                                con la naturaleza de la información y los
+                                riesgos asociados a su tratamiento.
+                            </p>
+                        </div>
+
+                        <!-- 8. Conservación de los datos personales -->
+                        <div class="aviso-bloque">
+                            <h3 class="aviso-titulo">
+                                8. Conservación de los datos personales
+                            </h3>
+                            <p style="text-align: justify">
+                                Los datos personales serán conservados durante
+                                el tiempo necesario para cumplir las finalidades
+                                que motivaron su obtención, atender las
+                                obligaciones contractuales y legales
+                                correspondientes y, cuando proceda, determinar
+                                posibles responsabilidades derivadas de su
+                                tratamiento.
+                            </p>
+                            <p style="text-align: justify">
+                                Una vez cumplidas dichas finalidades y
+                                concluidos los plazos de conservación
+                                aplicables, los datos serán eliminados o
+                                sometidos al procedimiento de bloqueo y
+                                supresión que corresponda, conforme a la
+                                legislación vigente.
+                            </p>
+                        </div>
+
+                        <!-- 9. Derechos ARCO -->
+                        <div class="aviso-bloque">
+                            <h3 class="aviso-titulo">9. Derechos ARCO</h3>
+                            <p style="text-align: justify">
+                                La persona titular de los datos personales podrá
+                                ejercer, en cualquier momento y conforme a los
+                                requisitos legales aplicables, los siguientes
+                                derechos:
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>Acceso:</strong> conocer qué datos
+                                    personales posee EDGE &amp; CLOUD y las
+                                    condiciones generales de su tratamiento.
+                                </li>
+                                <li>
+                                    <strong>Rectificación:</strong> solicitar la
+                                    corrección de datos personales inexactos,
+                                    incompletos o desactualizados.
+                                </li>
+                                <li>
+                                    <strong>Cancelación:</strong> solicitar la
+                                    eliminación de sus datos personales cuando
+                                    proceda legalmente.
+                                </li>
+                                <li>
+                                    <strong>Oposición:</strong> oponerse al
+                                    tratamiento de sus datos personales en los
+                                    supuestos previstos por la legislación
+                                    aplicable.
+                                </li>
+                            </ul>
+                            <p style="text-align: justify">
+                                Para ejercer cualquiera de estos derechos, la
+                                persona titular podrá enviar una solicitud al
+                                correo electrónico
+                                <a href="mailto:contacto@edgecloud.com.mx"
+                                    >contacto@edgecloud.com.mx</a
+                                >
+                                o presentarla en el domicilio señalado en este
+                                Aviso de Privacidad.
+                            </p>
+                            <p style="text-align: justify">
+                                La solicitud deberá incluir, al menos:
+                            </p>
+                            <ol>
+                                <li>
+                                    Nombre de la persona titular y un medio para
+                                    comunicarle la respuesta.
+                                </li>
+                                <li>
+                                    Documentos que permitan acreditar su
+                                    identidad y, en su caso, la representación
+                                    legal correspondiente.
+                                </li>
+                                <li>
+                                    Una descripción clara y precisa de los datos
+                                    personales respecto de los cuales desea
+                                    ejercer sus derechos.
+                                </li>
+                                <li>
+                                    El derecho que desea ejercer y la
+                                    información o documentación que facilite la
+                                    localización de los datos.
+                                </li>
+                                <li>
+                                    Los elementos o documentos que sustenten la
+                                    solicitud, cuando corresponda.
+                                </li>
+                            </ol>
+                            <p style="text-align: justify">
+                                EDGE &amp; CLOUD dará trámite a la solicitud y
+                                comunicará la determinación correspondiente
+                                dentro de los plazos y bajo las condiciones
+                                establecidos en la legislación aplicable. En
+                                caso de resultar procedente, se realizarán las
+                                acciones correspondientes en los términos
+                                legales.
+                            </p>
+                            <p style="text-align: justify">
+                                El ejercicio de estos derechos es gratuito, sin
+                                perjuicio de los costos legalmente permitidos
+                                por reproducción, envío u otros conceptos
+                                aplicables.
+                            </p>
+                        </div>
+
+                        <!-- 10. Revocación del consentimiento -->
+                        <div class="aviso-bloque">
+                            <h3 class="aviso-titulo">
+                                10. Revocación del consentimiento y limitación
+                                del uso o divulgación
+                            </h3>
+                            <p style="text-align: justify">
+                                La persona titular podrá revocar el
+                                consentimiento que, en su caso, hubiera otorgado
+                                para el tratamiento de sus datos personales, así
+                                como solicitar la limitación de su uso o
+                                divulgación, mediante una solicitud dirigida a
+                                <a href="mailto:contacto@edgecloud.com.mx"
+                                    >contacto@edgecloud.com.mx</a
+                                >.
+                            </p>
+                            <p style="text-align: justify">
+                                La solicitud deberá identificar a la persona
+                                titular, los datos involucrados y el tratamiento
+                                respecto del cual solicita la revocación o
+                                limitación.
+                            </p>
+                            <p style="text-align: justify">
+                                EDGE &amp; CLOUD atenderá la solicitud conforme
+                                a los procedimientos y plazos previstos en la
+                                legislación aplicable. La revocación no tendrá
+                                efectos retroactivos y podrá estar sujeta a las
+                                excepciones legales correspondientes, incluidas
+                                aquellas relacionadas con obligaciones
+                                contractuales o de conservación.
+                            </p>
+                            <p style="text-align: justify">
+                                Cuando se solicite dejar de recibir
+                                comunicaciones promocionales, la empresa
+                                adoptará las medidas correspondientes para
+                                excluir a la persona titular de dichas
+                                comunicaciones, sin afectar las notificaciones
+                                operativas, contractuales o legales que deban
+                                mantenerse.
+                            </p>
+                        </div>
+
+                        <!-- 11. Cambios al Aviso de Privacidad -->
+                        <div class="aviso-bloque">
+                            <h3 class="aviso-titulo">
+                                11. Cambios al Aviso de Privacidad
+                            </h3>
+                            <p style="text-align: justify">
+                                EDGE &amp; CLOUD se reserva el derecho de
+                                actualizar o modificar el presente Aviso de
+                                Privacidad cuando resulte necesario por cambios
+                                legislativos, modificaciones en sus procesos
+                                internos, incorporación de nuevos servicios,
+                                actualizaciones tecnológicas o cualquier otra
+                                circunstancia que lo justifique.
+                            </p>
+                            <p style="text-align: justify">
+                                Las modificaciones estarán disponibles en el
+                                sitio web oficial de EDGE &amp; CLOUD, dentro de
+                                la sección denominada “Aviso de Privacidad”.
+                            </p>
+                            <p style="text-align: justify">
+                                Se recomienda a las personas usuarias consultar
+                                periódicamente esta sección para conocer la
+                                versión vigente.
+                            </p>
+                            <p style="text-align: justify">
+                                Cuando los cambios impliquen modificaciones
+                                relevantes en el tratamiento de los datos
+                                personales, EDGE &amp; CLOUD adoptará los
+                                mecanismos de información y obtención del
+                                consentimiento que resulten legalmente
+                                necesarios.
+                            </p>
+                        </div>
+
+                        <!-- 12. Contacto -->
+                        <div class="aviso-bloque">
+                            <h3 class="aviso-titulo">12. Contacto</h3>
+                            <p style="text-align: justify">
+                                Para cualquier duda, aclaración, solicitud o
+                                comentario relacionado con el tratamiento de
+                                datos personales, puedes comunicarte con EDGE
+                                &amp; CLOUD a través de los siguientes medios:
+                            </p>
+                            <p>
+                                <strong
+                                    >EDGE &amp; CLOUD S. DE R.L. DE C.V.</strong
+                                >
+                            </p>
+                            <ul>
+                                <li>
+                                    Correo electrónico:
+                                    <a href="mailto:contacto@edgecloud.com.mx"
+                                        >contacto@edgecloud.com.mx</a
+                                    >
+                                </li>
+                                <li>
+                                    Teléfono:
+                                    <a href="tel:+524791493088">479 149 3088</a>
+                                </li>
+                                <li>
+                                    Domicilio: Calle Circunvalación Pte. 1201,
+                                    Interior 4, Jardines del Moral, C.P. 37160,
+                                    León de los Aldama, Guanajuato, México.
+                                </li>
+                            </ul>
+                            <p style="text-align: justify">
+                                Este Aviso de Privacidad se emite para informar
+                                a las personas titulares sobre el tratamiento de
+                                sus datos personales, en términos de la Ley
+                                Federal de Protección de Datos Personales en
+                                Posesión de los Particulares y demás
+                                disposiciones aplicables.
+                            </p>
+                            <p class="aviso-meta">
+                                Última actualización: 27 de octubre de 2026.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Aviso de Privacidad End -->
+
+            <!-- Footer 1 Start -->
+            <footer class="section" id="contacto">
+                <div class="container">
+                    <div class="flex align-items-center justify-content-center">
+                        <img
+                            src="../assets/img/Logo_E&C.webp"
+                            alt=""
+                            style="width: 30rem" />
+                    </div>
+
+                    <div class="row">
+                        <div
+                            class="col-12 col-md-4 align-items-center justify-content-center contact-item flex-columna gap-xs text-centro">
+                            <h3 class="text-claro text-centro">
+                                <strong>Contactanos</strong>
+                            </h3>
+                            <span>
+                                <i class="fa-solid fa-envelope"></i>
+                                contacto@edgecloud.com.mx
+                            </span>
+                            <span>
+                                <i class="fa-brands fa-whatsapp"></i> +52 479
+                                149 3088
+                            </span>
+                        </div>
+                        <div
+                            class="col-12 col-md-4 align-items-center justify-content-center contact-item flex-columna gap-xs">
+                            <h3 class="text-claro text-centro">
+                                <strong>Horario</strong>
+                            </h3>
+                            <span>Lunes a Viernes: 9:00 AM - 6:00 PM</span>
+                        </div>
+                        <div
+                            class="col-12 col-md-4 align-items-center justify-content-center contact-item flex-columna gap-xs">
+                            <h3 class="text-claro text-centro">
+                                <strong>Siguenos</strong>
+                            </h3>
+                            <div class="flex gap-xs">
+                                <a
+                                    class="boton"
+                                    href="https://www.facebook.com/profile.php?id=61553718295104"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Visitar sitio externo (abre en una nueva pestaña): perfil de Facebook de Edge Cloud">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a
+                                    class="boton"
+                                    href="https://www.instagram.com/edgecloud.mx/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Visitar sitio externo (abre en una nueva pestaña): perfil de Instagram de Edge Cloud">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a
+                                    class="boton"
+                                    href="https://www.linkedin.com/company/edge-cloud"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Visitar sitio externo (abre en una nueva pestaña): perfil de LinkedIn de Edge Cloud">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- Footer 1 End -->
+        </main>
+
+        <section class="footer">
+            <div class="container flex">
+                <span>© 2026 Todos los derechos reservados.</span>
+                <p>
+                    Creado por
+                    <a
+                        href="https://lgonzalez-ec.github.io/portafolio/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><i class="fa-solid fa-cat"></i
+                    ></a>
+                </p>
+            </div>
+        </section>
+
+        <script src="../js/main.js"></script>
+        <script src="../js/gsap.js"></script>
+    </body>
+</html>
