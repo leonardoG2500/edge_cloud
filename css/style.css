@@ -14,6 +14,75 @@ body {
 }
 
 /************************/
+/* TRANSICIÓN: CORTE DE COLOR */
+/************************/
+@view-transition {
+    navigation: auto;
+}
+
+:root {
+    --vt-color: var(--color-primario, #0aa0ff); /* color de la banda */
+}
+
+/* El fondo que se ve entre la página que sale y la que entra */
+::view-transition {
+    background: var(--vt-color);
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    mix-blend-mode: normal; /* sin el mezclado por defecto */
+    animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+    animation-fill-mode: both;
+}
+
+/* La página vieja se borra de izquierda a derecha */
+::view-transition-old(root) {
+    z-index: 1;
+    animation-name: corte-sale;
+    animation-duration: 0.5s;
+}
+
+/* La nueva se revela en el mismo sentido, un poco después */
+::view-transition-new(root) {
+    z-index: 2;
+    animation-name: corte-entra;
+    animation-duration: 0.5s;
+    animation-delay: 0.25s;
+}
+
+@keyframes corte-sale {
+    from {
+        clip-path: inset(0 0 0 0);
+    }
+    to {
+        clip-path: inset(0 0 0 100%);
+    }
+}
+
+@keyframes corte-entra {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/* El navbar no se desvanece con la página: permanece y solo cambia de estado */
+.navbar {
+    view-transition-name: navbar;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    ::view-transition-group(*),
+    ::view-transition-old(*),
+    ::view-transition-new(*) {
+        animation: none !important;
+    }
+}
+
+/************************/
 /* Efectos de botones/btn */
 /************************/
 .btn2 {
