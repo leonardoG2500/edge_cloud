@@ -20,13 +20,9 @@ body {
     navigation: auto;
 }
 
-:root {
-    --vt-color: var(--color-primario, #0aa0ff); /* color de la banda */
-}
-
 /* El fondo que se ve entre la página que sale y la que entra */
 ::view-transition {
-    background: var(--vt-color);
+    background: var(--color-fondo);
 }
 
 ::view-transition-old(root),
@@ -1340,4 +1336,39 @@ button {
     font:
         0.9rem Arial,
         sans-serif;
+}
+
+/* Boton WhastApp */
+.wa-float {
+    position: fixed;
+    bottom: 35px;
+    right: 24px;
+    z-index: 30;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25d366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s;
+    text-decoration: none;
+    pointer-events: auto;
+}
+
+.wa-float:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+}
+
+.wa-float i {
+    font-size: 30px;
+    color: #fff;
+}
+
+.music-float > * {
+    pointer-events: auto;
 }
