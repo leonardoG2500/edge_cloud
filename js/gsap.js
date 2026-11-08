@@ -245,3 +245,94 @@ if (document.fonts && document.fonts.ready) {
             iniciar();
     });
 })();
+
+/* ============================================================
+   ANIMACIÓN DEL MODAL DE FORMULARIO
+   - Se ejecuta solo si existe <dialog id="modal-form">.
+   - Si GSAP no está disponible o el usuario prefiere menos
+     movimiento, el modal abre y cierra sin animación.
+   ============================================================ */
+(() => {
+    const dialog = document.getElementById("modal-form");
+    if (!dialog) return;
+
+    const gsapApi = window.gsap;
+    if (!gsapApi) return;
+
+    const caja = dialog.querySelector(".modal-form__caja");
+    if (!caja) return;
+
+    const prefiereMenosMovimiento = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+    );
+
+    let cerrando = false;
+
+    dialog.addEventListener("modal-form:abierto", () => {
+        cerrando = false;
+        if (prefiereMenosMovimiento.matches) return;
+
+        gsapApi.fromTo(
+            caja,
+            { autoAlpha: 0, y: 24 },
+            {
+                autoAlpha: 1,
+                y: 0,
+                duration: 0.28,
+                ease: "power2.out",
+                overwrite: true,
+            },
+        );
+    });
+
+    dialog.addEventListener("modal-form:cerrar", (evento) => {
+        if (prefiereMenosMovimiento.matches || cerrando) return;
+
+        // El JS del formulario cierra el <dialog> si no prevenimos el evento.
+        if (evento.cancelable) evento.preventDefault();
+        cerrando = true;
+
+        gsapApi.to(caja, {
+            autoAlpha: 0,
+            y: 16,
+            duration: 0.2,
+            ease: "power2.in",
+            overwrite: true,
+            onComplete: () => {
+                gsapApi.set(caja, {
+                    clearProps: "opacity,visibility,transform",
+                });
+                gsapApi.set(dialog, { clearProps: "opacity,visibility" });
+                cerrando = false;
+                if (dialog.open) {
+                    try {
+                        dialog.close();
+                    } catch (error) {
+                        dialog.removeAttribute("open");
+                    }
+                }
+            },
+        });
+    });
+
+    // Red de seguridad: si la animación no termina, cierra igual.
+    dialog.addEventListener("modal-form:cerrar", () => {
+        if (!dialog.open) return;
+        gsapApi.delayedCall(0.6, () => {
+            if (!dialog.open || !cerrando) return;
+            cerrando = false;
+            gsapApi.set(caja, { clearProps: "opacity,visibility,transform" });
+            try {
+                dialog.close();
+            } catch (error) {
+                dialog.removeAttribute("open");
+            }
+        });
+    });
+
+    dialog.addEventListener("close", () => {
+        cerrando = false;
+        gsapApi.set(caja, { clearProps: "opacity,visibility,transform" });
+        gsapApi.set(dialog, { clearProps: "opacity,visibility" });
+    });
+})();

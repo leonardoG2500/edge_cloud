@@ -34,14 +34,14 @@ body {
 
 /* La página vieja se borra de izquierda a derecha */
 ::view-transition-old(root) {
-    z-index: 1;
+    z-index: 100;
     animation-name: corte-sale;
     animation-duration: 0.5s;
 }
 
 /* La nueva se revela en el mismo sentido, un poco después */
 ::view-transition-new(root) {
-    z-index: 2;
+    z-index: 101;
     animation-name: corte-entra;
     animation-duration: 0.5s;
     animation-delay: 0.25s;
@@ -162,7 +162,7 @@ body {
     margin: 0 auto;
     border-radius: 0px;
     top: 0;
-    z-index: 999;
+    z-index: 900;
     right: 0;
     left: 0;
     background: var(--color-fondo-alterno);
@@ -1341,7 +1341,7 @@ button {
 /* Boton WhastApp */
 .wa-float {
     position: fixed;
-    bottom: 35px;
+    bottom: 55px;
     right: 24px;
     z-index: 30;
     width: 60px;
@@ -1372,3 +1372,255 @@ button {
 .music-float > * {
     pointer-events: auto;
 }
+
+/* ============================================================
+   FORMULARIO - ESTADOS Y MODALES
+   Bloque nuevo. No modifica los estilos existentes del formulario.
+   ============================================================ */
+:root {
+    --form-error-texto: #ffc2c2;
+    --form-error-borde: #ff7b7b;
+    --form-error-fondo: rgba(255, 107, 107, 0.12);
+    --form-foco: #0aa0ff;
+    --modal-fondo: #0f1026;
+    --modal-superficie: #171a3a;
+    --modal-borde: rgba(255, 255, 255, 0.14);
+    --modal-texto: #f4f6ff;
+    --modal-texto-suave: rgba(244, 246, 255, 0.82);
+    --modal-exito: #4ade80;
+    --modal-error: #ff7b7b;
+    --modal-aviso: #fbbf24;
+    --modal-radio: 16px;
+    --modal-boton-alto: 44px;
+}
+
+/* Honeypot: oculto con clase, sin atributo style en línea */
+.form-trampa {
+    position: absolute !important;
+    left: -9999px !important;
+    top: auto !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Mensajes de error en línea: vacíos = sin espacio visible */
+.form-error {
+    display: block;
+    margin-top: 0.375rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--form-error-texto);
+    background: var(--form-error-fondo);
+    border-left: 3px solid var(--form-error-borde);
+    border-radius: 0 6px 6px 0;
+    overflow-wrap: anywhere;
+}
+
+.form-error:empty {
+    display: none;
+}
+
+/* Icono + texto: el error no depende únicamente del color */
+.form-error::before {
+    content: "\26A0\FE0E";
+    margin-right: 0.35rem;
+    font-weight: 700;
+}
+
+/* Campo inválido (el checkbox conserva su tamaño táctil) */
+.form-contacto input[aria-invalid="true"]:not([type="checkbox"]),
+.form-contacto select[aria-invalid="true"],
+.form-contacto textarea[aria-invalid="true"] {
+    border-color: var(--form-error-borde);
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2);
+}
+
+.form-contacto input[type="checkbox"][aria-invalid="true"] {
+    outline: 3px solid var(--form-error-borde);
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+.form-contacto[aria-busy="true"] {
+    cursor: progress;
+}
+
+.form-contacto[aria-busy="true"] .boton {
+    cursor: wait;
+}
+
+/* Casilla de privacidad: el enlace debe seguir siendo clicable */
+.form-check a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.form-check a:focus-visible {
+    outline: 2px solid var(--form-foco);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* ===== MODAL ÚNICO REUTILIZABLE (<dialog>) ===== */
+.modal-form {
+    width: 100%;
+    max-width: 30rem;
+    max-height: calc(100dvh - 2rem);
+    margin: auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--modal-texto);
+    overflow: visible;
+}
+
+.modal-form::backdrop {
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(3px);
+}
+
+.modal-form__caja {
+    position: relative;
+    max-height: calc(100dvh - 2rem);
+    padding: clamp(1.5rem, 5vw, 2.25rem);
+    padding-top: clamp(2.75rem, 7vw, 3.25rem);
+    text-align: center;
+    background: var(--modal-fondo);
+    border: 1px solid var(--modal-borde);
+    border-radius: var(--modal-radio);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+}
+
+.modal-form__cerrar {
+    position: absolute;
+    top: 0.35rem;
+    right: 0.35rem;
+    width: var(--modal-boton-alto);
+    height: var(--modal-boton-alto);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--modal-texto);
+    font-size: 1.9rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal-form__cerrar:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.modal-form__cerrar:focus-visible,
+.modal-form__btn:focus-visible {
+    outline: 3px solid var(--form-foco);
+    outline-offset: 3px;
+}
+
+.modal-form__titulo {
+    margin-bottom: 0.6rem;
+    font-size: clamp(1.35rem, 4.5vw, 1.65rem);
+    line-height: 1.25;
+    color: var(--modal-texto);
+}
+
+.modal-form[data-estado="exito"] .modal-form__titulo {
+    color: var(--modal-exito);
+}
+
+.modal-form[data-estado="error"] .modal-form__titulo,
+.modal-form[data-estado="spam"] .modal-form__titulo {
+    color: var(--modal-error);
+}
+
+.modal-form[data-estado="limite"] .modal-form__titulo,
+.modal-form[data-estado="sinconexion"] .modal-form__titulo {
+    color: var(--modal-aviso);
+}
+
+.modal-form__texto {
+    margin-bottom: 1.4rem;
+    color: var(--modal-texto-suave);
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.modal-form__acciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.65rem;
+}
+
+.modal-form__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--modal-boton-alto);
+    padding: 0.65rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font: inherit;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+
+.modal-form__btn[hidden] {
+    display: none;
+}
+
+.modal-form__btn--wa {
+    background: #25d366;
+    color: #06331a;
+}
+
+.modal-form__btn--wa:hover {
+    filter: brightness(1.08);
+}
+
+/* Bloquea el scroll de la página mientras el modal está abierto */
+body:has(.modal-form[open]) {
+    overflow: hidden;
+}
+
+/* Responsive desde 320px: sin scroll horizontal y botones táctiles */
+@media (max-width: 360px) {
+    .modal-form {
+        max-width: calc(100vw - 1rem);
+    }
+
+    .modal-form__caja {
+        padding: 2.5rem 1rem 1.25rem;
+        border-radius: 12px;
+    }
+
+    .modal-form__acciones {
+        flex-direction: column;
+    }
+
+    .modal-form__btn {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .modal-form,
+    .modal-form * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+

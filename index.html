@@ -97,7 +97,7 @@
                 </button>
 
                 <div class="navbar__menu" id="navbar-menu">
-                    <a class="btn2" href="/nosotros/index.html"
+                    <a class="btn2" href="/nosotros/"
                         ><span class="spn2">Quiénes somos</span></a
                     >
                     <div class="nav-item">
@@ -149,7 +149,7 @@
                     <!-- <a class="btn2" href="#clientes"
                         ><span class="spn2">Clientes</span></a
                     > -->
-                    <a class="btn2" href="/contacto/index.html"
+                    <a class="btn2" href="/contacto/"
                         ><span class="spn2">Contacto</span></a
                     >
                 </div>
@@ -657,7 +657,7 @@
                                 <input
                                     type="hidden"
                                     name="access_key"
-                                    value="e3fe17c4-9fad-44d9-98a3-0899930dfc7f" />
+                                    value="964a720c-3bef-4e26-8bf9-e03caa636681" />
                                 <input
                                     type="hidden"
                                     name="subject"
@@ -674,7 +674,7 @@
                                     class="form-trampa"
                                     tabindex="-1"
                                     autocomplete="off"
-                                    style="display: none" />
+                                    aria-hidden="true" />
 
                                 <div class="row g-3">
                                     <div class="col-12 col-md-6">
@@ -684,7 +684,13 @@
                                             name="nombre"
                                             type="text"
                                             autocomplete="name"
+                                            maxlength="80"
+                                            aria-describedby="error-nombre"
                                             required />
+                                        <p
+                                            class="form-error"
+                                            id="error-nombre"
+                                            data-error-para="nombre"></p>
                                     </div>
                                     <div class="col-12 col-md-6">
                                         <label for="f-empresa">Empresa</label>
@@ -692,7 +698,14 @@
                                             id="f-empresa"
                                             name="empresa"
                                             type="text"
-                                            autocomplete="organization" />
+                                            autocomplete="organization"
+                                            maxlength="100"
+                                            aria-describedby="error-empresa"
+                                            required />
+                                        <p
+                                            class="form-error"
+                                            id="error-empresa"
+                                            data-error-para="empresa"></p>
                                     </div>
                                     <div class="col-12 col-md-6">
                                         <label for="f-correo">Correo</label>
@@ -701,7 +714,14 @@
                                             name="email"
                                             type="email"
                                             autocomplete="email"
+                                            inputmode="email"
+                                            maxlength="120"
+                                            aria-describedby="error-correo"
                                             required />
+                                        <p
+                                            class="form-error"
+                                            id="error-correo"
+                                            data-error-para="email"></p>
                                     </div>
                                     <div class="col-12 col-md-6">
                                         <label for="f-tel">Teléfono</label>
@@ -709,7 +729,16 @@
                                             id="f-tel"
                                             name="telefono"
                                             type="tel"
-                                            autocomplete="tel" />
+                                            autocomplete="tel"
+                                            inputmode="tel"
+                                            maxlength="20"
+                                            pattern="^(\+?52[\s.-]?)?(\(?\d{2,3}\)?[\s.-]?)?\d{3,4}[\s.-]?\d{4}$"
+                                            aria-describedby="error-telefono"
+                                            required />
+                                        <p
+                                            class="form-error"
+                                            id="error-telefono"
+                                            data-error-para="telefono"></p>
                                     </div>
                                     <div class="col-12">
                                         <label for="f-servicio"
@@ -718,6 +747,7 @@
                                         <select
                                             id="f-servicio"
                                             name="servicio"
+                                            aria-describedby="error-servicio"
                                             required>
                                             <option value="">
                                                 Selecciona una opción
@@ -748,6 +778,10 @@
                                             </option>
                                             <option>Otro</option>
                                         </select>
+                                        <p
+                                            class="form-error"
+                                            id="error-servicio"
+                                            data-error-para="servicio"></p>
                                     </div>
                                     <div class="col-12">
                                         <label for="f-mensaje"
@@ -757,7 +791,13 @@
                                             id="f-mensaje"
                                             name="mensaje"
                                             rows="5"
+                                            maxlength="1500"
+                                            aria-describedby="error-mensaje"
                                             required></textarea>
+                                        <p
+                                            class="form-error"
+                                            id="error-mensaje"
+                                            data-error-para="mensaje"></p>
                                     </div>
                                     <div class="col-12 flex-centrado gap-sm">
                                         <label class="form-check">
@@ -765,6 +805,7 @@
                                                 type="checkbox"
                                                 id="f-privacidad"
                                                 name="privacidad"
+                                                aria-describedby="error-privacidad"
                                                 required />
                                             <p>
                                                 He leído el
@@ -777,6 +818,12 @@
                                             </p>
                                         </label>
                                     </div>
+                                    <div class="col-12">
+                                        <p
+                                            class="form-error"
+                                            id="error-privacidad"
+                                            data-error-para="privacidad"></p>
+                                    </div>
                                     <div class="col-12 text-centro">
                                         <button type="submit" class="boton">
                                             Enviar solicitud
@@ -785,10 +832,79 @@
                                             class="form-estado"
                                             id="form-estado"
                                             role="status"
-                                            aria-live="polite"></p>
+                                            aria-live="polite"
+                                            aria-atomic="true"></p>
                                     </div>
                                 </div>
                             </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Formulario End -->
+
+            <!-- Formulario Start -->
+            <section class="section" id="formulario">
+                <div class="container">
+                    <h2 class="titulo-seccion text-claro text-centro">
+                        ENCUÉNTRANOS
+                    </h2>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <div
+                                class="flex align-items-center gap-md mb-md text-claro">
+                                <div class="">
+                                    <i class="fa-brands fa-whatsapp fa-2x"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h3>WhatsApp</h3>
+                                    <p>+52 479 149 3088</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex align-items-center gap-md mb-md text-claro">
+                                <div class="">
+                                    <i class="fa-solid fa-envelope fa-2x"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h3>Correo</h3>
+                                    <p>contacto@edgecloud.com.mx</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex align-items-center gap-md mb-md text-claro">
+                                <div class="">
+                                    <i class="fa fa-map-marker-alt fa-2x"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h3>Dirección</h3>
+                                    <p>
+                                        Calle Circunvalación Pte. 1201-L4,
+                                        Jardines del Moral, 37160 León de los
+                                        Aldama, Gto.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6">
+                            <!-- <p class="text-centro text-claro">Hablemos</p>
+                            <h2 class="titulo-seccion text-claro text-centro">
+                                CUÉNTANOS TU PROYECTO
+                            </h2> -->
+                            <div
+                                class="flex align-items-center gap-md mb-md text-claro">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.132918228652!2d-101.698141!3d21.147108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bbf0060730683%3A0x98f03d83532e0166!2sEdge%20%26%20Cloud!5e0!3m2!1ses-419!2smx!4v1793167601738!5m2!1ses-419!2smx"
+                                    width="600"
+                                    height="300"
+                                    style="border-radius: 20px"
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -915,29 +1031,37 @@
             const swup = new Swup();
         </script> -->
 
-        <script src="js/gsap.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/formulario.js"></script>
-
-        <!-- Modal de respuesta de formulario -->
-        <div class="modal" id="form-modal" aria-hidden="true">
-            <div class="modal__overlay" data-modal-close></div>
-            <div
-                class="modal__content"
-                role="dialog"
-                aria-modal="true"
-                aria-labelledby="modal-title">
+        <!-- Modal único reutilizable (se llena desde JS) -->
+        <dialog
+            id="modal-form"
+            class="modal-form"
+            aria-labelledby="modal-titulo"
+            aria-describedby="modal-texto">
+            <div class="modal-form__caja">
                 <button
-                    class="modal__close"
-                    data-modal-close
-                    aria-label="Cerrar">
+                    type="button"
+                    class="modal-form__cerrar"
+                    data-modal-cerrar
+                    aria-label="Cerrar ventana">
                     &times;
                 </button>
-                <div class="modal__icon" id="modal-icon"></div>
-                <h3 class="modal__title" id="modal-title"></h3>
-                <p class="modal__text" id="modal-text"></p>
-                <button class="modal__btn" data-modal-close>Aceptar</button>
+                <h2 class="modal-form__titulo" id="modal-titulo"></h2>
+                <p class="modal-form__texto" id="modal-texto"></p>
+                <div class="modal-form__acciones" data-modal-acciones>
+                    <a
+                        class="boton modal-form__btn modal-form__btn--wa"
+                        data-modal-wa
+                        href="#"
+                        target="_blank"
+                        rel="noopener"
+                        hidden
+                        >WhatsApp</a
+                    >
+                </div>
             </div>
-        </div>
+        </dialog>
+
+        <script src="js/gsap.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>

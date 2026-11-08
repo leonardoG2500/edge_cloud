@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://edgecloud.com.mx/sitemap.xml
