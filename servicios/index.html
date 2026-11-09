@@ -60,6 +60,7 @@
 
         <link rel="stylesheet" href="../css/utilidades.css" />
         <link rel="stylesheet" href="../css/style.css" />
+        <script src="../js/precarga-init.js"></script>
     </head>
     <body>
         <!-- Navbar Start -->
@@ -103,30 +104,30 @@
 
         <main id="swup" class="transition-fade">
             <!-- Header Start -->
-            <header class="hero-section" id="inicio">
+            <header class="hero-section" id="inicio" data-reveal="arriba">
                 <div class="container">
                     <div class="row align-items-center justify-content-center">
-                        <h1 class="titulo-hero text-claro">Servicios</h1>
+                        <h1 class="titulo-hero text-claro" data-reveal-item>Servicios</h1>
                     </div>
                 </div>
             </header>
             <!-- Header End -->
 
             <!-- About Us Start -->
-            <section class="section" id="nosotros">
+            <section class="section" id="nosotros" data-reveal="izquierda">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-12 col-lg-6 about-content">
-                            <h2 class="titulo-seccion text-claro">
+                            <h2 class="titulo-seccion text-claro" data-reveal-item>
                                 Quiénes somos
                             </h2>
-                            <p class="placeholder">
+                            <p class="placeholder" data-reveal-item>
                                 <strong>Edge & Cloud</strong> es el aliado
                                 estratégico que garantiza la continuidad
                                 operativa de la industria.
                             </p>
                             <br />
-                            <p class="placeholder">
+                            <p class="placeholder" data-reveal-item>
                                 Diseñamos soluciones integrales a través de
                                 servicios especializados en
                                 <strong>Mantenimiento Industrial</strong>,
@@ -135,7 +136,7 @@
                                 <strong>Proyectos de Nueva Generación</strong>.
                             </p>
                             <div class="text-centro">
-                                <a href="" class="boton">Ver más</a>
+                                <a href="" class="boton" data-reveal-item>Ver más</a>
                             </div>
                         </div>
 
@@ -150,17 +151,18 @@
             <!-- About Us End -->
 
             <!-- Servicios Start -->
-            <section class="section" id="servicios">
+            <section class="section" id="servicios" data-reveal="arriba">
                 <div class="container">
                     <!-- <p class="text-centro text-claro mb-xs">
                         Lo que hacemos
                     </p> -->
-                    <h2 class="titulo-seccion text-claro text-centro">
+                    <h2 class="titulo-seccion text-claro text-centro" data-reveal-item>
                         Filosofía
                     </h2>
                     <div
-                        class="row align-items-center justify-content-center gap-lg">
-                        <div class="col-12 col-sm-6 col-lg-3 card">
+                        class="row align-items-center justify-content-center gap-lg"
+                        data-reveal-group>
+                        <div class="col-12 col-sm-6 col-lg-3 card" data-reveal-item>
                             <div class="card__border"></div>
                             <div class="card_title__container">
                                 <h3 class="card_title text-centro">Misión</h3>
@@ -175,7 +177,7 @@
                             <button class="button">Ver más</button>
                         </div>
 
-                        <div class="col-12 col-sm-6 col-lg-3 card">
+                        <div class="col-12 col-sm-6 col-lg-3 card" data-reveal-item>
                             <div class="card__border"></div>
                             <div class="card_title__container">
                                 <h3 class="card_title text-centro">Visión</h3>
@@ -190,7 +192,7 @@
                             <button class="button">Ver más</button>
                         </div>
 
-                        <div class="card col-12 col-sm-6 col-lg-3">
+                        <div class="card col-12 col-sm-6 col-lg-3" data-reveal-item>
                             <div class="card__border"></div>
                             <div class="card_title__container">
                                 <h3 class="card_title text-centro">Valores</h3>
@@ -210,14 +212,15 @@
             <!-- Servicios End -->
 
             <!-- Quienes nos Respaldan Start -->
-            <section class="section" id="certificaciones">
+            <section class="section" id="certificaciones" data-reveal="arriba">
                 <div class="container">
                     <!-- <p class="text-centro text-claro mb-xs">Confianza</p> -->
-                    <h2 class="titulo-seccion text-centro text-claro">
+                    <h2 class="titulo-seccion text-centro text-claro" data-reveal-item>
                         Quiénes nos respaldan
                     </h2>
                     <div
-                        class="row align-items-center justify-content-center gap-lg">
+                        class="row align-items-center justify-content-center gap-lg"
+                        data-reveal-item>
                         <div class="col-12 col-lg-3 logo-placeholder">
                             <img
                                 src="../assets/img/respaldos/duns.webp"

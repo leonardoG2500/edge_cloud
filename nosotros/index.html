@@ -61,6 +61,7 @@
 
         <link rel="stylesheet" href="../css/utilidades.css" />
         <link rel="stylesheet" href="../css/style.css" />
+        <script src="../js/precarga-init.js"></script>
     </head>
     <body>
         <!-- Navbar Start -->
@@ -146,30 +147,30 @@
 
         <main id="swup" class="transition-fade">
             <!-- Header Start -->
-            <header class="hero-section" id="inicio">
+            <header class="hero-section" id="inicio" data-reveal="arriba">
                 <div class="container">
                     <div class="row align-items-center justify-content-center">
-                        <h1 class="titulo-hero text-claro">QUIÉNES SOMOS</h1>
+                        <h1 class="titulo-hero text-claro" data-reveal-item>QUIÉNES SOMOS</h1>
                     </div>
                 </div>
             </header>
             <!-- Header End -->
 
             <!-- About Us Start -->
-            <section class="section" id="nosotros">
+            <section class="section" id="nosotros" data-reveal="izquierda">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-12 col-lg-6 about-content">
-                            <h2 class="titulo-seccion text-claro">
+                            <h2 class="titulo-seccion text-claro" data-reveal-item>
                                 ¿QUIÉNES SOMOS?
                             </h2>
-                            <p class="placeholder">
+                            <p class="placeholder" data-reveal-item>
                                 Edge & Cloud es el aliado estratégico que
                                 garantiza la continuidad operativa de la
                                 industria.
                             </p>
                             <br />
-                            <p class="placeholder">
+                            <p class="placeholder" data-reveal-item>
                                 Diseñamos e integramos soluciones especializadas
                                 en
                                 <strong
@@ -179,14 +180,14 @@
                                     Proyectos de Nueva Generación.</strong
                                 >
                             </p>
-                            <p class="placeholder">
+                            <p class="placeholder" data-reveal-item>
                                 Conectamos tecnología, seguridad e ingeniería
                                 para aportar inteligencia a los procesos
                                 productivos, fortalecer la operación de las
                                 instalaciones y contribuir a la eficiencia y
                                 continuidad operativa de nuestros clientes.
                             </p>
-                            <p class="placeholder">
+                            <p class="placeholder" data-reveal-item>
                                 <strong
                                     >Nuestro valor central es la
                                     integración.</strong
@@ -205,17 +206,18 @@
             <!-- About Us End -->
 
             <!-- Filosofia Start -->
-            <section class="section" id="servicios">
+            <section class="section" id="servicios" data-reveal="arriba">
                 <div class="container">
                     <!-- <p class="text-centro text-claro mb-xs">
                         Lo que hacemos
                     </p> -->
-                    <h2 class="titulo-seccion text-claro text-centro">
+                    <h2 class="titulo-seccion text-claro text-centro" data-reveal-item>
                         FILOSOFÍA
                     </h2>
                     <div
-                        class="row align-items-center justify-content-center gap-lg">
-                        <div class="col-12 col-sm-6 col-lg-3 card">
+                        class="row align-items-center justify-content-center gap-lg"
+                        data-reveal-group>
+                        <div class="col-12 col-sm-6 col-lg-3 card" data-reveal-item>
                             <div class="card__border"></div>
                             <div class="card_title__container">
                                 <h3 class="card_title text-centro">MISIÓN</h3>
@@ -233,7 +235,7 @@
                             </div>
                         </div>
 
-                        <div class="col-12 col-sm-6 col-lg-3 card">
+                        <div class="col-12 col-sm-6 col-lg-3 card" data-reveal-item>
                             <div class="card__border"></div>
                             <div class="card_title__container">
                                 <h3 class="card_title text-centro">VISIÓN</h3>
@@ -250,7 +252,7 @@
                             </div>
                         </div>
 
-                        <div class="card col-12 col-sm-6 col-lg-3">
+                        <div class="card col-12 col-sm-6 col-lg-3" data-reveal-item>
                             <div class="card__border"></div>
                             <div class="card_title__container about-content">
                                 <h3 class="card_title text-centro">VALORES</h3>
@@ -296,14 +298,15 @@
             </style>
 
             <!-- Quienes nos Respaldan Start -->
-            <section class="section" id="certificaciones">
+            <section class="section" id="certificaciones" data-reveal="arriba">
                 <div class="container-fluid">
                     <!-- <p class="text-centro text-claro mb-xs">Confianza</p> -->
-                    <h2 class="titulo-seccion text-centro text-claro">
+                    <h2 class="titulo-seccion text-centro text-claro" data-reveal-item>
                         QUIENES NOS RESPALDAN
                     </h2>
                     <div
-                        class="row align-items-center justify-content-center text-centro g-1">
+                        class="row align-items-center justify-content-center text-centro g-1"
+                        data-reveal-item>
                         <div
                             class="col-12 col-lg-3 respaldan-logo d-flex justify-content-center align-items-center">
                             <img

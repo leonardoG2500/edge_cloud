@@ -69,6 +69,7 @@
 
         <link rel="stylesheet" href="../../css/utilidades.css" />
         <link rel="stylesheet" href="../../css/style.css" />
+        <script src="../../js/precarga-init.js"></script>
     </head>
     <body>
         <!-- Navbar Start -->
@@ -153,10 +154,10 @@
 
         <main id="swup" class="transition-fade">
             <!-- Header Start -->
-            <header class="hero-section" id="inicio">
+            <header class="hero-section" id="inicio" data-reveal="arriba">
                 <div class="container">
                     <div class="row align-items-center justify-content-center">
-                        <h1 class="titulo-hero text-claro">
+                        <h1 class="titulo-hero text-claro" data-reveal-item>
                             MANTENIMIENTO INDUSTRIAL Y FACILITIES
                         </h1>
                     </div>
@@ -165,18 +166,18 @@
             <!-- Header End -->
 
             <!-- About Us Start -->
-            <section class="section" id="nosotros">
+            <section class="section" id="nosotros" data-reveal="izquierda">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-12 col-lg-6 about-content">
-                            <h2 class="titulo-seccion text-claro text-centro">
+                            <h2 class="titulo-seccion text-claro text-centro" data-reveal-item>
                                 MANTENEMOS TU OPERACIÓN
                                 <br />
                                 <strong style="color: #099fff"
                                     >EN MOVIMIENTO</strong
                                 >
                             </h2>
-                            <p class="placeholder">
+                            <p class="placeholder" data-reveal-item>
                                 Garantizamos la continuidad operativa y el
                                 óptimo desempeño de tus instalaciones con planes
                                 de mantenimiento preventivo, correctivo y
@@ -197,17 +198,17 @@
             <!-- About Us End -->
 
             <!-- Servicios Start -->
-            <section class="section" id="">
+            <section class="section" id="" data-reveal="arriba">
                 <div class="container-fluid">
                     <!-- <p class="text-centro text-claro mb-xs">
                         Lo que hacemos
                     </p> -->
-                    <h2 class="titulo-seccion text-claro text-centro">
+                    <h2 class="titulo-seccion text-claro text-centro" data-reveal-item>
                         Areas del servicio
                     </h2>
                     <div
-                        class="row text-centro align-items-center justify-content-center gap-lg">
-                        <div class="service-card flex-columna gap-xs">
+                        class="row text-centro align-items-center justify-content-center gap-lg" data-reveal-group>
+                        <div class="service-card flex-columna gap-xs" data-reveal-item>
                             <h3 class="">MANTENIMIENTO PREVENTIVO</h3>
                             <p>
                                 Inspecciones periódicas, limpieza, ajustes y
@@ -216,7 +217,7 @@
                             </p>
                         </div>
 
-                        <div class="service-card flex-columna gap-xs">
+                        <div class="service-card flex-columna gap-xs" data-reveal-item>
                             <h3 class="">MANTENIMIENTO CORRECTIVO</h3>
                             <p>
                                 Atención rápida y eficiente ante cualquier falla
@@ -225,7 +226,7 @@
                             </p>
                         </div>
 
-                        <div class="service-card flex-columna gap-xs">
+                        <div class="service-card flex-columna gap-xs" data-reveal-item>
                             <h3 class="">REPARACIONES Y AJUSTES</h3>
                             <p>
                                 Intervenciones rápidas por personal calificado
@@ -233,7 +234,7 @@
                             </p>
                         </div>
 
-                        <div class="service-card flex-columna gap-xs">
+                        <div class="service-card flex-columna gap-xs" data-reveal-item>
                             <h3 class="">INSPECCIONES Y DIAGNÓSTICOS</h3>
                             <p>
                                 Evaluaciones detalladas para identificar
@@ -241,7 +242,7 @@
                             </p>
                         </div>
 
-                        <div class="service-card flex-columna gap-xs">
+                        <div class="service-card flex-columna gap-xs" data-reveal-item>
                             <h3 class="">MANTENIMIENTO PREDICTIVO</h3>
                             <p>
                                 Monitoreo y análisis de condición de equipos
@@ -250,7 +251,7 @@
                             </p>
                         </div>
 
-                        <div class="service-card flex-columna gap-xs">
+                        <div class="service-card flex-columna gap-xs" data-reveal-item>
                             <h3 class="">MONITOREO Y ANÁLISIS</h3>
                             <p>
                                 Tecnologia avanzada para el análisis de
@@ -258,7 +259,7 @@
                             </p>
                         </div>
 
-                        <div class="service-card flex-columna gap-xs">
+                        <div class="service-card flex-columna gap-xs" data-reveal-item>
                             <h3 class="">SERVICIOS FACILITIES</h3>
                             <p>
                                 Gestión integral de instalaciones para asegurar
@@ -266,7 +267,7 @@
                             </p>
                         </div>
 
-                        <div class="service-card flex-columna gap-xs">
+                        <div class="service-card flex-columna gap-xs" data-reveal-item>
                             <h3 class="">GESTIÓN DE INSTALACIONES</h3>
                             <p>
                                 Mantenimiento general de infraestructura,
@@ -274,7 +275,7 @@
                             </p>
                         </div>
 
-                        <div class="service-card flex-columna gap-xs">
+                        <div class="service-card flex-columna gap-xs" data-reveal-item>
                             <h3 class="">MAQUINADOS INDUSTRIALES</h3>
                             <p>
                                 Diseño y mecanizado CNC convencional de
@@ -283,7 +284,7 @@
                             </p>
                         </div>
 
-                        <!-- <div class="service-card flex-columna gap-xs">
+                        <!-- <div class="service-card flex-columna gap-xs" data-reveal-item>
                             <h3 class=""></h3>
                             <p></p>
                         </div> -->
@@ -299,7 +300,7 @@
                         Beneficios
                     </h2>
                     <div
-                        class="row text-centro align-items-center justify-content-center gap-lg">
+                        class="row text-centro align-items-center justify-content-center gap-lg" data-reveal-group>
                         <div class="logo-placeholder flex-columna gap-xs">
                             <img
                                 src="../../assets/img/iconos/ejecutar.svg"
@@ -341,17 +342,17 @@
             <!-- Servicios End -->
 
             <!-- Quienes nos Respaldan Start -->
-            <section class="section" id="certificaciones">
+            <section class="section" id="certificaciones" data-reveal="zoom">
                 <div class="container text-centro">
                     <!-- <p class="text-centro text-claro mb-xs">Confianza</p> -->
-                    <h2 class="titulo-seccion text-centro text-claro">
+                    <h2 class="titulo-seccion text-centro text-claro" data-reveal-item>
                         Cuentanos más sobre tu proyecto
                     </h2>
                     <a
                         href="https://wa.me/524791493088"
                         class="boton"
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noopener noreferrer" data-reveal-item
                         aria-label="Visitar sitio externo (abre en una nueva pestaña): contacto de WhatsApp de Edge Cloud"
                         ><i class="fa-brands fa-whatsapp"></i> Contactanos</a
                     >

@@ -539,7 +539,7 @@ body {
         hsla(170, 100%, 47%, 0.212) 0%,
         hsl(184, 100%, 50%) 40%,
         hsl(182, 100%, 46%) 60%,
-        hsla(197, 100%, 43%, 0.397) 100%
+        hsla(0, 100%, 43%, 0.397) 100%
     );
     box-shadow:
         0 0 1.2rem rgba(65, 208, 255, 0.945),
@@ -1624,3 +1624,61 @@ body:has(.modal-form[open]) {
     }
 }
 
+/* ============================================================
+   ANIMACIONES DE APARICIÓN (REVEAL)
+   ------------------------------------------------------------
+   Solo presentación. El HTML y el orden de lectura no cambian.
+   - js-reveal lo agrega precarga-init.js en <head>.
+   - gsap.js quita la clase js-reveal si GSAP no toma el control.
+   - data-reveal-item marca lo que se anima.
+   - reveal-listo se agrega al terminar y deja el elemento visible
+     aunque se limpien los estilos en línea con clearProps.
+   ============================================================ */
+:root {
+    --reveal-dist-y: 40px;
+    --reveal-dist-x: 50px;
+    --reveal-escala: 0.92;
+    --reveal-duracion: 0.65s;
+    --reveal-stagger: 0.09s;
+    --reveal-retraso-hero: 0.35s;
+}
+
+html.js-reveal [data-reveal-item]:not(.reveal-listo) {
+    visibility: hidden;
+    /* Evita que las transiciones CSS (por ejemplo, .boton) peleen con GSAP. */
+    transition: none !important;
+}
+
+html.js-reveal [data-reveal-item].reveal-listo {
+    visibility: visible;
+}
+
+/* Los desplazamientos laterales nunca deben crear scroll horizontal. */
+html.js-reveal body {
+    overflow-x: clip;
+}
+
+/* El footer y zonas con animación propia no forman parte del sistema. */
+html.js-reveal .footer [data-reveal-item],
+html.js-reveal .navbar [data-reveal-item],
+html.js-reveal footer [data-reveal-item],
+html.js-reveal dialog [data-reveal-item],
+html.js-reveal #precarga [data-reveal-item] {
+    visibility: visible;
+}
+
+@media (max-width: 767px) {
+    :root {
+        --reveal-dist-y: 24px;
+        --reveal-dist-x: 24px;
+        --reveal-escala: 0.95;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html.js-reveal [data-reveal-item],
+    html.js-reveal [data-reveal-item]:not(.reveal-listo) {
+        visibility: visible !important;
+        transition: none !important;
+    }
+}

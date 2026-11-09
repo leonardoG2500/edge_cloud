@@ -204,7 +204,7 @@ if (track && typeof gsap !== "undefined") {
        ------------------------------------------------------------------ */
     const CONFIG = Object.freeze({
         // Clave pública de Web3Forms. Es la única que debes cambiar aquí.
-        accessKey: "964a720c-3bef-4e26-8bf9-e03caa636681",
+        accessKey: "e3fe17c4-9fad-44d9-98a3-0899930dfc7f",
         endpoint: "https://api.web3forms.com/submit",
         formatoRespuesta: "json", // "json" | "texto"
         timeoutMs: 15000,

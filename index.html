@@ -73,6 +73,7 @@
 
         <link rel="stylesheet" href="css/utilidades.css" />
         <link rel="stylesheet" href="css/style.css" />
+        <script src="js/precarga-init.js"></script>
     </head>
     <body>
         <!-- Navbar Start -->
@@ -159,14 +160,14 @@
 
         <main>
             <!-- Header Start -->
-            <header class="hero" id="inicio">
+            <header class="hero" id="inicio" data-reveal="arriba">
                 <div class="container">
                     <div class="row align-items-center gy-5">
                         <div class="col-12 col-lg-6">
-                            <h1 class="titulo-hero text-claro">
+                            <h1 class="titulo-hero text-claro" data-reveal-item>
                                 INNOVACIÓN QUE IMPULSA
                             </h1>
-                            <p class="placeholder">
+                            <p class="placeholder" data-reveal-item>
                                 TECNOLOGÍA, SEGURIDAD E INGENIERÍA PARA TU
                                 INDUSTRIA
                             </p>
@@ -177,6 +178,7 @@
                                     class="boton"
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    data-reveal-item
                                     aria-label="Visitar sitio externo (abre en una nueva pestaña): contacto de WhatsApp de Edge Cloud"
                                     ><i class="fa-brands fa-whatsapp"></i>
                                     Contáctanos</a
@@ -195,19 +197,21 @@
             <!-- Header End -->
 
             <!-- About Us Start -->
-            <section class="section" id="nosotros">
+            <section class="section" id="nosotros" data-reveal="izquierda">
                 <div class="container">
                     <div class="row align-items-center gy-5">
                         <div class="col-12 col-lg-6 about-content">
-                            <h2 class="titulo-seccion text-claro">
+                            <h2
+                                class="titulo-seccion text-claro"
+                                data-reveal-item>
                                 BIENVENIDOS A EDGE & CLOUD
                             </h2>
-                            <p class="placeholder">
+                            <p class="placeholder" data-reveal-item>
                                 Somos el aliado estratégico que garantiza la
                                 continuidad operativa de la industria.
                             </p>
                             <br />
-                            <p class="placeholder">
+                            <p class="placeholder" data-reveal-item>
                                 Integramos soluciones especializadas en
                                 Tecnologías de la Información e Infraestructura
                                 Digital, Sistemas de Seguridad, Mantenimiento
@@ -218,7 +222,12 @@
                             </p>
                             <br />
                             <div class="text-centro">
-                                <a href="/nosotros/" class="boton">Ver más</a>
+                                <a
+                                    href="/nosotros/"
+                                    class="boton"
+                                    data-reveal-item
+                                    >Ver más</a
+                                >
                             </div>
                         </div>
 
@@ -234,7 +243,7 @@
             <!-- About Us End -->
 
             <!-- Ventajas Start -->
-            <section class="section" id="ventajas">
+            <section class="section" id="ventajas" data-reveal="derecha">
                 <div class="container">
                     <!-- <p class="text-centro text-claro mb-xs">
                         Nuestro valor
@@ -247,10 +256,12 @@
                                 alt="" />
                         </div>
                         <div class="col-12 col-lg-6 about-content">
-                            <h2 class="titulo-seccion text-claro">
+                            <h2
+                                class="titulo-seccion text-claro"
+                                data-reveal-item>
                                 NUESTRAS VENTAJAS
                             </h2>
-                            <ul>
+                            <ul data-reveal-item>
                                 <li>
                                     <h3 class="text-claro">
                                         Ingenería integral
@@ -282,18 +293,23 @@
             <!-- Ventajas End -->
 
             <!-- Servicios Start -->
-            <section class="section" id="servicios">
+            <section class="section" id="servicios" data-reveal="arriba">
                 <div class="container">
                     <!-- <p class="text-centro text-claro mb-xs">
                         Lo que hacemos
                     </p> -->
-                    <h2 class="titulo-seccion text-claro text-centro">
+                    <h2
+                        class="titulo-seccion text-claro text-centro"
+                        data-reveal-item>
                         SERVICIOS
                     </h2>
                     <div
-                        class="row align-items-center justify-content-center gap-lg">
-                        <div class="card col-12 col-sm-6 col-lg-3">
-                            <div class="card__border"></div>
+                        class="row align-items-center justify-content-center gap-lg"
+                        data-reveal-group>
+                        <div
+                            class="card col-12 col-sm-6 col-lg-3"
+                            data-reveal-item>
+                            <div class="card__border" data-reveal-item></div>
                             <div class="card_title__container">
                                 <h3 class="card_title text-centro">
                                     TECNOLOGÍA E INFRAESTRUCTURA DIGITAL
@@ -313,8 +329,10 @@
                             >
                         </div>
 
-                        <div class="col-12 col-sm-6 col-lg-3 card">
-                            <div class="card__border"></div>
+                        <div
+                            class="col-12 col-sm-6 col-lg-3 card"
+                            data-reveal-item>
+                            <div class="card__border" data-reveal-item></div>
                             <div class="card_title__container">
                                 <h3 class="card_title text-centro">
                                     SEGURIDAD INTELIGENTE
@@ -334,8 +352,10 @@
                             >
                         </div>
 
-                        <div class="col-12 col-sm-6 col-lg-3 card">
-                            <div class="card__border"></div>
+                        <div
+                            class="col-12 col-sm-6 col-lg-3 card"
+                            data-reveal-item>
+                            <div class="card__border" data-reveal-item></div>
                             <div class="card_title__container">
                                 <h3 class="card_title text-centro">
                                     MANTENIMIENTO INDUSTRIAL Y FACILITIES
@@ -356,8 +376,10 @@
                             >
                         </div>
 
-                        <div class="col-12 col-sm-6 col-lg-3 card">
-                            <div class="card__border"></div>
+                        <div
+                            class="col-12 col-sm-6 col-lg-3 card"
+                            data-reveal-item>
+                            <div class="card__border" data-reveal-item></div>
                             <div class="card_title__container">
                                 <h3 class="card_title text-centro">
                                     AUTOMATIZACIÓN Y CONTROL INDUSTRIAL
@@ -377,8 +399,10 @@
                             >
                         </div>
 
-                        <div class="col-12 col-sm-6 col-lg-3 card">
-                            <div class="card__border"></div>
+                        <div
+                            class="col-12 col-sm-6 col-lg-3 card"
+                            data-reveal-item>
+                            <div class="card__border" data-reveal-item></div>
                             <div class="card_title__container">
                                 <h3 class="card_title text-centro">
                                     SISTEMAS DE ADMINISTRACIÓN DE ENERGÍA
@@ -398,8 +422,10 @@
                             >
                         </div>
 
-                        <div class="col-12 col-sm-6 col-lg-3 card">
-                            <div class="card__border"></div>
+                        <div
+                            class="col-12 col-sm-6 col-lg-3 card"
+                            data-reveal-item>
+                            <div class="card__border" data-reveal-item></div>
                             <div class="card_title__container">
                                 <h3 class="card_title text-centro">
                                     INGENIERÍA ELÉCTRICA Y ELECTROMECÁNICA
@@ -419,8 +445,10 @@
                             >
                         </div>
 
-                        <div class="col-12 col-sm-6 col-lg-3 card">
-                            <div class="card__border"></div>
+                        <div
+                            class="col-12 col-sm-6 col-lg-3 card"
+                            data-reveal-item>
+                            <div class="card__border" data-reveal-item></div>
                             <div class="card_title__container">
                                 <h3 class="card_title text-centro">
                                     MAQUINARIA Y EQUIPAMIENTO INDUSTRIAL
@@ -444,15 +472,17 @@
             <!-- Servicios End -->
 
             <!-- Certificaciones Start -->
-            <section class="section" id="certificaciones">
+            <section class="section" id="certificaciones" data-reveal="zoom">
                 <div class="container-fluid">
                     <!-- <p class="text-centro text-claro mb-xs">Confianza</p> -->
-                    <h2 class="titulo-seccion text-centro text-claro">
+                    <h2
+                        class="titulo-seccion text-centro text-claro"
+                        data-reveal-item>
                         NUESTROS CERTIFICADOS
                     </h2>
                     <div
                         class="row align-items-center justify-content-center gap-lg">
-                        <div class="carousel">
+                        <div class="carousel" data-reveal-item>
                             <div class="carousel-track" id="track">
                                 <!-- Logos de ejemplo -->
                                 <img
@@ -493,31 +523,43 @@
             <!-- Certificaciones End -->
 
             <!-- Clientes Start -->
-            <section class="section" id="clientes">
+            <section class="section" id="clientes" data-reveal="zoom">
                 <div class="container-fluid">
-                    <h2 class="titulo-seccion text-claro text-centro">
+                    <h2
+                        class="titulo-seccion text-claro text-centro"
+                        data-reveal-item>
                         ELLOS HAN CONFIADO EN NOSOTROS
                     </h2>
 
                     <div
                         class="logo-row align-items-center justify-content-center gap-lg"
-                        id="clientes-grid">
-                        <div class="col-12 col-lg-3 cliente-slot">
+                        id="clientes-grid"
+                        data-reveal-group
+                        data-reveal="zoom">
+                        <div
+                            class="col-12 col-lg-3 cliente-slot"
+                            data-reveal-item>
                             <img
                                 src="assets/img/clientes/club_leon.webp"
                                 alt="Cliente 1" />
                         </div>
-                        <div class="col-12 col-lg-3 cliente-slot">
+                        <div
+                            class="col-12 col-lg-3 cliente-slot"
+                            data-reveal-item>
                             <img
                                 src="assets/img/clientes/envases.webp"
                                 alt="Cliente 2" />
                         </div>
-                        <div class="col-12 col-lg-3 cliente-slot">
+                        <div
+                            class="col-12 col-lg-3 cliente-slot"
+                            data-reveal-item>
                             <img
                                 src="assets/img/clientes/gobierno_gto.webp"
                                 alt="Cliente 3" />
                         </div>
-                        <div class="col-12 col-lg-3 cliente-slot">
+                        <div
+                            class="col-12 col-lg-3 cliente-slot"
+                            data-reveal-item>
                             <img
                                 src="assets/img/clientes/orbis.webp"
                                 alt="Cliente 4" />
@@ -528,14 +570,17 @@
             <!-- Clientes End -->
 
             <!-- Quienes nos Respaldan Start -->
-            <section class="section" id="certificaciones">
+            <section class="section" id="certificaciones" data-reveal="arriba">
                 <div class="container-fluid">
                     <!-- <p class="text-centro text-claro mb-xs">Confianza</p> -->
-                    <h2 class="titulo-seccion text-centro text-claro">
+                    <h2
+                        class="titulo-seccion text-centro text-claro"
+                        data-reveal-item>
                         QUIENES NOS RESPALDAN
                     </h2>
                     <div
-                        class="row align-items-center justify-content-center text-centro g-1">
+                        class="row align-items-center justify-content-center text-centro g-1"
+                        data-reveal-item>
                         <div
                             class="col-12 col-lg-3 respaldan-logo d-flex justify-content-center align-items-center">
                             <img
@@ -570,9 +615,11 @@
             <!-- Quienes nos Respaldan End -->
 
             <!-- Nuestros Procesos Start -->
-            <section class="experience" id="experience">
+            <section class="experience" id="experience" data-reveal="arriba">
                 <div class="container">
-                    <h2 class="titulo-seccion text-centro text-claro">
+                    <h2
+                        class="titulo-seccion text-centro text-claro"
+                        data-reveal-item>
                         NUESTRO PROCESO PEVO
                     </h2>
                     <div class="">
@@ -586,11 +633,13 @@
             <!-- Nuestros Procesos End -->
 
             <!-- Formulario Start -->
-            <section class="section" id="formulario">
+            <section class="section" id="formulario" data-reveal="arriba">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-6">
-                            <h2 class="titulo-seccion text-claro text-centro">
+                            <h2
+                                class="titulo-seccion text-claro text-centro"
+                                data-reveal-item>
                                 ENCUÉNTRANOS
                             </h2>
                             <div
@@ -645,19 +694,22 @@
 
                         <div class="col-12 col-lg-6">
                             <p class="text-centro text-claro">Hablemos</p>
-                            <h2 class="titulo-seccion text-claro text-centro">
+                            <h2
+                                class="titulo-seccion text-claro text-centro"
+                                data-reveal-item>
                                 CUÉNTANOS TU PROYECTO
                             </h2>
                             <form
                                 class="form-contacto"
                                 id="form-contacto"
+                                data-reveal-item
                                 action="https://api.web3forms.com/submit"
                                 method="POST"
                                 novalidate>
                                 <input
                                     type="hidden"
                                     name="access_key"
-                                    value="964a720c-3bef-4e26-8bf9-e03caa636681" />
+                                    value="e3fe17c4-9fad-44d9-98a3-0899930dfc7f" />
                                 <input
                                     type="hidden"
                                     name="subject"
@@ -844,7 +896,7 @@
             <!-- Formulario End -->
 
             <!-- Formulario Start -->
-            <section class="section" id="formulario">
+            <!-- <section class="section" id="formulario">
                 <div class="container">
                     <h2 class="titulo-seccion text-claro text-centro">
                         ENCUÉNTRANOS
@@ -890,10 +942,6 @@
                         </div>
 
                         <div class="col-12 col-lg-6">
-                            <!-- <p class="text-centro text-claro">Hablemos</p>
-                            <h2 class="titulo-seccion text-claro text-centro">
-                                CUÉNTANOS TU PROYECTO
-                            </h2> -->
                             <div
                                 class="flex align-items-center gap-md mb-md text-claro">
                                 <iframe
@@ -908,13 +956,15 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- Formulario End -->
 
-            <section class="section" id="">
+            <section class="section" id="" data-reveal="zoom">
                 <div class="container text-centro">
                     <!-- <p class="text-centro text-claro mb-xs">Confianza</p> -->
-                    <h2 class="titulo-seccion text-centro text-claro">
+                    <h2
+                        class="titulo-seccion text-centro text-claro"
+                        data-reveal-item>
                         Cuéntanos más sobre tu proyecto
                     </h2>
                     <a
@@ -922,6 +972,7 @@
                         class="boton"
                         target="_blank"
                         rel="noopener noreferrer"
+                        data-reveal-item
                         aria-label="Visitar sitio externo (abre en una nueva pestaña): contacto de WhatsApp de Edge Cloud"
                         ><i class="fa-brands fa-whatsapp"></i> Contactanos</a
                     >

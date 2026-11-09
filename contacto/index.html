@@ -69,6 +69,7 @@
 
         <link rel="stylesheet" href="../css/utilidades.css" />
         <link rel="stylesheet" href="../css/style.css" />
+        <script src="../js/precarga-init.js"></script>
     </head>
     <body>
         <!-- Navbar Start -->
@@ -154,21 +155,21 @@
 
         <main id="swup" class="transition-fade">
             <!-- Header Start -->
-            <header class="hero-section" id="inicio">
+            <header class="hero-section" id="inicio" data-reveal="arriba">
                 <div class="container">
                     <div class="row align-items-center justify-content-center">
-                        <h1 class="titulo-hero text-claro">Contactanos</h1>
+                        <h1 class="titulo-hero text-claro" data-reveal-item>Contactanos</h1>
                     </div>
                 </div>
             </header>
             <!-- Header End -->
 
             <!-- Formulario Start -->
-            <section class="section">
+            <section class="section" data-reveal="arriba">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-6">
-                            <h2 class="titulo-seccion text-claro text-centro">
+                            <h2 class="titulo-seccion text-claro text-centro" data-reveal-item>
                                 ENCUÉNTRANOS
                             </h2>
                             <div
@@ -223,19 +224,20 @@
 
                         <div class="col-12 col-lg-6">
                             <p class="text-centro text-claro">Hablemos</p>
-                            <h2 class="titulo-seccion text-claro text-centro">
+                            <h2 class="titulo-seccion text-claro text-centro" data-reveal-item>
                                 CUÉNTANOS TU PROYECTO
                             </h2>
                             <form
                                 class="form-contacto"
                                 id="form-contacto"
+                                data-reveal-item
                                 action="https://api.web3forms.com/submit"
                                 method="POST"
                                 novalidate>
                                 <input
                                     type="hidden"
                                     name="access_key"
-                                    value="TU_ACCESS_KEY" />
+                                    value="e3fe17c4-9fad-44d9-98a3-0899930dfc7f" />
                                 <input
                                     type="hidden"
                                     name="subject"
@@ -421,10 +423,10 @@
             </section>
             <!-- Formulario End -->
 
-            <section class="section" id="certificaciones">
+            <section class="section" id="certificaciones" data-reveal="zoom">
                 <div class="container text-centro">
                     <!-- <p class="text-centro text-claro mb-xs">Confianza</p> -->
-                    <h2 class="titulo-seccion text-centro text-claro">
+                    <h2 class="titulo-seccion text-centro text-claro" data-reveal-item>
                         Cuentanos más sobre tu proyecto
                     </h2>
                     <a
@@ -432,6 +434,7 @@
                         class="boton"
                         target="_blank"
                         rel="noopener noreferrer"
+                        data-reveal-item
                         aria-label="Visitar sitio externo (abre en una nueva pestaña): contacto de WhatsApp de Edge Cloud"
                         ><i class="fa-brands fa-whatsapp"></i> Contactanos</a
                     >
@@ -559,7 +562,9 @@
                         href="#"
                         target="_blank"
                         rel="noopener"
-                        hidden>WhatsApp</a>
+                        hidden
+                        >WhatsApp</a
+                    >
                 </div>
             </div>
         </dialog>
