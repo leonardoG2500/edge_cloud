@@ -3,6 +3,9 @@
 }
 html {
     scroll-behavior: smooth;
+    /* iOS/Safari: evita que el texto se agrande solo al girar el dispositivo */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 body {
@@ -234,7 +237,8 @@ body {
         position: fixed;
         top: 0;
         right: -100%;
-        height: 100vh;
+        height: 100vh; /* respaldo para Safari antiguo */
+        height: 100dvh; /* altura real visible en iOS (barra del navegador) */
         width: min(75%, 320px);
         background: var(--color-fondo-alterno);
         display: flex;
@@ -242,6 +246,7 @@ body {
         align-items: flex-start;
         gap: 8px;
         padding: 96px 32px;
+        overflow-y: auto;
         transition: right 0.35s ease;
         box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
     }
@@ -313,6 +318,21 @@ body {
             visibility 0.25s;
     }
 
+    .nav-item.abierto .dd-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .dd-toggle {
+        cursor: pointer;
+    }
+}
+
+/* Hover/foco solo donde de verdad hay mouse (Mac/PC).
+   En iPhone/iPad Safari reporta "hover: none": así el toque no deja
+   el :hover pegado y las opciones no se quedan visibles. */
+@media (min-width: 769px) and (hover: hover) {
     .nav-item:hover .dd-menu,
     .nav-item:focus-within .dd-menu {
         opacity: 1;
@@ -321,12 +341,43 @@ body {
     }
 }
 
-/* Móvil: las subpáginas se ven siempre, indentadas bajo "Servicios" */
+/* Móvil: "Servicios" funciona como acordeón.
+   display: none evita que las opciones ocultas sigan ocupando espacio. */
 @media (max-width: 768px) {
     .dd-menu {
-        margin-top: 4px;
+        display: none;
+        margin: 4px 0 0;
         padding: 0 0 0 12px;
         border-left: 2px solid var(--color-primario);
+    }
+
+    .nav-item.abierto .dd-menu {
+        display: block;
+    }
+
+    .dd-toggle {
+        cursor: pointer;
+    }
+
+    .dd-toggle .spn2 {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* Chevron para indicar que "Servicios" se despliega */
+    .dd-toggle .spn2::after {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-right: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+        transform: rotate(45deg) translate(-1px, -2px);
+        transition: transform 0.25s ease;
+    }
+
+    .nav-item.abierto .dd-toggle .spn2::after {
+        transform: rotate(-135deg) translate(-1px, -2px);
     }
 }
 
@@ -357,7 +408,8 @@ body {
         250% 250%;
     background-repeat: no-repeat, no-repeat;
 
-    min-height: 95vh;
+    min-height: 95vh; /* respaldo para Safari/iOS antiguos */
+    min-height: 95dvh; /* evita que el hero quede descentrado en iOS */
     display: flex;
     align-items: center;
     position: relative;
@@ -417,7 +469,8 @@ body {
         250% 250%;
     background-repeat: no-repeat, no-repeat;
 
-    min-height: 50vh;
+    min-height: 50vh; /* respaldo */
+    min-height: 50dvh;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -451,8 +504,8 @@ body {
 /************************/
 .about-image {
     display: flex;
-    justify-items: center;
-    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-image img {
@@ -460,8 +513,10 @@ body {
 }
 
 .about-content {
-    justify-items: center;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /************************/
@@ -529,7 +584,7 @@ body {
     z-index: 200;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%), rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
     transform-origin: left;
 
     width: 200%;
@@ -539,7 +594,7 @@ body {
         hsla(170, 100%, 47%, 0.212) 0%,
         hsl(184, 100%, 50%) 40%,
         hsl(182, 100%, 46%) 60%,
-        hsla(0, 100%, 43%, 0.397) 100%
+        hsla(197, 100%, 43%, 0.397) 100%
     );
     box-shadow:
         0 0 1.2rem rgba(65, 208, 255, 0.945),
@@ -552,8 +607,11 @@ body {
 }
 
 @keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
     to {
-        transform: rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
 
@@ -953,6 +1011,7 @@ button {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.7);
+    -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
 }
 
@@ -1253,6 +1312,7 @@ button {
     .proceso-aro {
         position: sticky;
         top: 0;
+        height: 100vh; /* respaldo */
         height: 100svh;
         display: grid;
         align-items: center;
@@ -1283,6 +1343,7 @@ button {
     }
 
     .paso {
+        min-height: 100vh; /* respaldo */
         min-height: 100svh;
         display: flex;
         flex-direction: column;
@@ -1470,6 +1531,7 @@ button {
 .modal-form {
     width: 100%;
     max-width: 30rem;
+    max-height: calc(100vh - 2rem); /* respaldo */
     max-height: calc(100dvh - 2rem);
     margin: auto;
     padding: 0;
@@ -1481,11 +1543,13 @@ button {
 
 .modal-form::backdrop {
     background: rgba(0, 0, 0, 0.72);
+    -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
 }
 
 .modal-form__caja {
     position: relative;
+    max-height: calc(100vh - 2rem); /* respaldo */
     max-height: calc(100dvh - 2rem);
     padding: clamp(1.5rem, 5vw, 2.25rem);
     padding-top: clamp(2.75rem, 7vw, 3.25rem);

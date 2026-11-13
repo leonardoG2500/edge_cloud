@@ -71,9 +71,9 @@
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
-        <link rel="stylesheet" href="css/utilidades.css" />
-        <link rel="stylesheet" href="css/style.css" />
-        <script src="js/precarga-init.js"></script>
+        <link rel="stylesheet" href="css/utilidades.css?v=20261111" />
+        <link rel="stylesheet" href="css/style.css?v=20261111" />
+        <script src="js/precarga-init.js?v=20261111"></script>
     </head>
     <body>
         <!-- Navbar Start -->
@@ -101,8 +101,15 @@
                     <a class="btn2" href="/nosotros/"
                         ><span class="spn2">Quiénes somos</span></a
                     >
-                    <div class="nav-item">
-                        <a class="btn2"><span class="spn2">Servicios</span></a>
+                    <div class="nav-item tiene-dropdown">
+                        <a
+                            class="btn2 dd-toggle"
+                            role="button"
+                            tabindex="0"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            ><span class="spn2">Servicios</span></a
+                        >
 
                         <ul class="dd-menu">
                             <li>
@@ -147,9 +154,6 @@
                             </li>
                         </ul>
                     </div>
-                    <!-- <a class="btn2" href="#clientes"
-                        ><span class="spn2">Clientes</span></a
-                    > -->
                     <a class="btn2" href="/contacto/"
                         ><span class="spn2">Contacto</span></a
                     >
@@ -213,9 +217,12 @@
                             <br />
                             <p class="placeholder" data-reveal-item>
                                 Integramos soluciones especializadas en
-                                Tecnologías de la Información e Infraestructura
-                                Digital, Sistemas de Seguridad, Mantenimiento
-                                Industrial y Proyectos de Nueva Generación,
+                                <strong
+                                    >Tecnologías de la Información e
+                                    Infraestructura Digital, Sistemas de
+                                    Seguridad, Mantenimiento Industrial y
+                                    Proyectos de Nueva Generación,</strong
+                                >
                                 conectando tecnología, seguridad e ingeniería
                                 para impulsar la eficiencia y confiabilidad de
                                 las operaciones.
@@ -1112,7 +1119,7 @@
             </div>
         </dialog>
 
-        <script src="js/gsap.js"></script>
-        <script src="js/main.js"></script>
+        <script src="js/gsap.js?v=20261111"></script>
+        <script src="js/main.js?v=20261112"></script>
     </body>
 </html>

@@ -1,5 +1,10 @@
 gsap.registerPlugin(ScrollTrigger);
 
+// iOS Safari cambia la altura visible al mostrar/ocultar su barra.
+// Sin esto, ScrollTrigger se recalcula solo y puede descolocar las
+// animaciones (o dejar elementos sin revelar) al hacer scroll.
+ScrollTrigger.config({ ignoreMobileResize: true });
+
 const heroLogo = document.querySelector(".hero-logo");
 const aboutLogo = document.querySelector(".about-logo");
 
@@ -800,4 +805,31 @@ if (document.fonts && document.fonts.ready) {
             }
         },
     );
+
+    // Red de seguridad para Safari/iOS: si por el cambio de altura del
+    // navegador un ScrollTrigger no se dispara, revela lo que ya está
+    // dentro de la pantalla para que no quede invisible.
+    const rescatarVisibles = () => {
+        const pendientes = Array.from(
+            document.querySelectorAll(
+                CONFIG.selectorItem + ":not(.reveal-listo)",
+            ),
+        ).filter((el) => {
+            if (el.closest(EXCLUIDOS)) return false;
+            if (el.closest(CONFIG.selectorHeroe)) return false;
+            if (esAncestroItem(el)) return false;
+            const r = el.getBoundingClientRect();
+            return r.bottom > 0 && r.top < window.innerHeight;
+        });
+
+        if (pendientes.length) marcarVisible(pendientes);
+    };
+
+    window.setTimeout(rescatarVisibles, 2500);
+
+    window.addEventListener("pageshow", (event) => {
+        if (!event.persisted) return;
+        ScrollTrigger.refresh();
+        window.setTimeout(rescatarVisibles, 300);
+    });
 })();

@@ -7,13 +7,37 @@ toggle.addEventListener("click", () => {
     toggle.setAttribute("aria-expanded", isOpen);
 });
 
-// Cierra el menú al hacer clic en un enlace (útil en one-page con anclas)
+// Cierra el menú al hacer clic en un enlace (útil en one-page con anclas).
+// El botón "Servicios" del dropdown NO navega, así que no debe cerrar el menú.
 menu.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
+        if (link.classList.contains("dd-toggle")) return;
         menu.classList.remove("is-open");
         toggle.classList.remove("is-active");
         toggle.setAttribute("aria-expanded", "false");
     });
+});
+
+document.addEventListener("click", (e) => {
+    // 1) Si el menú está cerrado, no hay nada que hacer
+    if (!menu.classList.contains("is-open")) return;
+
+    // 2) Si el clic fue dentro del panel o en la hamburguesa, no cerrar
+    if (menu.contains(e.target) || toggle.contains(e.target)) return;
+
+    // 3) Clic fuera: mismo cierre que ya usas en los enlaces
+    menu.classList.remove("is-open");
+    toggle.classList.remove("is-active");
+    toggle.setAttribute("aria-expanded", "false");
+});
+
+// Safari/iOS guarda la página en memoria (bfcache) y al volver puede
+// restaurar el menú abierto. Lo cerramos al regresar con "Atrás".
+window.addEventListener("pageshow", (e) => {
+    if (!e.persisted) return;
+    menu.classList.remove("is-open");
+    toggle.classList.remove("is-active");
+    toggle.setAttribute("aria-expanded", "false");
 });
 
 const navbar = document.querySelector(".navbar");
@@ -69,8 +93,34 @@ updateNavbar(); // por si la página carga ya con scroll (ej. al recargar)
         const btn = item.querySelector(".dd-toggle");
         let timer;
 
+        // Safari/iOS: al tocar una opción del submenú, el navegador dispara un
+        // focusout sin relatedTarget (no enfoca los enlaces) y a veces un
+        // mouseleave sintético. Si cerramos ahí, en móvil el .dd-menu pasa a
+        // display:none y el enlace desaparece debajo del dedo antes de que
+        // llegue el clic: el submenú se cierra y la página nunca se abre.
+        // Por eso ignoramos los cierres automáticos durante un toque.
+        let ultimoToque = 0;
+        const vieneDeToque = () => Date.now() - ultimoToque < 1000;
+
+        item.addEventListener(
+            "touchstart",
+            () => {
+                ultimoToque = Date.now();
+                clearTimeout(timer); // cancela un cierre por hover pendiente
+            },
+            { passive: true },
+        );
+
         btn.addEventListener("click", (e) => {
             e.stopPropagation();
+            e.preventDefault();
+            item.classList.contains("abierto") ? cerrar(item) : abrir(item);
+        });
+
+        // El toggle es un <a> sin href: permitimos abrirlo con Enter/Espacio
+        btn.addEventListener("keydown", (e) => {
+            if (e.key !== "Enter" && e.key !== " ") return;
+            e.preventDefault();
             item.classList.contains("abierto") ? cerrar(item) : abrir(item);
         });
 
@@ -81,12 +131,17 @@ updateNavbar(); // por si la página carga ya con scroll (ej. al recargar)
         });
         item.addEventListener("mouseleave", () => {
             if (!hoverMQ.matches) return;
+            if (vieneDeToque()) return; // mouseleave sintético en iOS/iPad
             timer = setTimeout(() => cerrar(item), 150);
         });
 
-        // Si el foco sale del item con Tab, se cierra
+        // Si el foco sale del item con Tab, se cierra.
+        // En táctil no cerramos: iOS no enfoca los enlaces y el blur llega
+        // sin relatedTarget justo cuando el dedo toca una opción.
         item.addEventListener("focusout", (e) => {
-            if (!item.contains(e.relatedTarget)) cerrar(item);
+            if (vieneDeToque()) return;
+            if (!e.relatedTarget || item.contains(e.relatedTarget)) return;
+            cerrar(item);
         });
     });
 
@@ -115,6 +170,11 @@ updateNavbar(); // por si la página carga ya con scroll (ej. al recargar)
             if (!menu.classList.contains("is-open")) cerrarTodos();
         }).observe(menu, { attributes: true, attributeFilter: ["class"] });
     }
+
+    // Al volver con "Atrás" en Safari/iOS (bfcache), cierra el acordeón
+    window.addEventListener("pageshow", (e) => {
+        if (e.persisted) cerrarTodos();
+    });
 })();
 
 if (
